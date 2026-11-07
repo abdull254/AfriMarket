@@ -1,0 +1,432 @@
+ComplaintID,TransactionID,ComplaintDate,fraud_signal,fraud_type,matched_keyword,ComplaintStatus,ComplaintText,TransactionAmt,isFraud,priority
+CMP00182,2997622,2026-01-09T18:10:11.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,171.0,0,1
+CMP00306,3024202,2026-01-14T17:46:48.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,100.0,0,1
+CMP00784,3046374,2026-01-18T19:00:46.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",77.0,0,1
+CMP00357,3015703,2026-01-22T13:04:43.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Resolved,I do not recognize this purchase and need someone to investigate.,317.5,0,1
+CMP00680,3000219,2026-01-24T11:03:45.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",82.95,0,1
+CMP00298,3059197,2026-01-27T17:21:43.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Open,The seller's information appears suspicious and I need assistance.,39.178,0,1
+CMP00853,3070379,2026-01-29T17:10:32.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,42.95,0,1
+CMP00651,3112770,2026-01-30T20:14:21.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,49.438,0,1
+CMP01178,3063782,2026-02-04T13:51:48.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Open,I noticed a charge on my account that I did not authorize.,101.733,0,1
+CMP01155,3105028,2026-02-05T17:21:30.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Resolved,I do not recognize this purchase and need someone to investigate.,35.95,0,1
+CMP00861,3021075,2026-02-05T19:10:29.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Open,I noticed a charge on my account that I did not authorize.,50.0,0,1
+CMP00449,3054260,2026-02-06T17:19:37.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,35.95,0,1
+CMP00918,3027125,2026-02-07T12:21:22.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,335.0,1,1
+CMP00567,3044653,2026-02-07T13:48:07.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,226.0,0,1
+CMP01102,3069293,2026-02-12T14:03:03.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,117.0,0,1
+CMP00069,3142304,2026-02-14T02:36:11.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Open,I noticed a charge on my account that I did not authorize.,67.95,0,1
+CMP00963,3057707,2026-02-17T07:13:46.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Open,I do not recognize this purchase and need someone to investigate.,90.482,1,1
+CMP00205,3056428,2026-02-18T00:42:44.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,150.0,0,1
+CMP00356,3140148,2026-02-18T18:01:43.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,75.0,0,1
+CMP00153,3133526,2026-02-18T21:02:43.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,57.95,0,1
+CMP00465,3181280,2026-02-22T16:44:38.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Resolved,I noticed a charge on my account that I did not authorize.,24.5,1,1
+CMP00771,3179832,2026-02-23T00:38:24.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,92.0,0,1
+CMP00675,3172939,2026-02-25T21:04:05.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Under Review,I do not recognize this purchase and need someone to investigate.,24.5,0,1
+CMP00034,3116001,2026-02-27T17:35:34.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,24.5,0,1
+CMP00981,3184684,2026-02-28T18:22:15.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Resolved,The seller's information appears suspicious and I need assistance.,16.674,0,1
+CMP00225,3141551,2026-02-28T23:04:32.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,82.95,0,1
+CMP00907,3166046,2026-03-04T04:23:41.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Under Review,I do not recognize this purchase and need someone to investigate.,107.95,0,1
+CMP00835,3143016,2026-03-04T15:39:49.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,150.0,0,1
+CMP00527,3144143,2026-03-06T20:50:52.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Resolved,The seller's information appears suspicious and I need assistance.,49.0,0,1
+CMP00259,3158125,2026-03-10T19:29:09.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,32.356,0,1
+CMP00459,3228752,2026-03-11T01:59:59.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,29.5,0,1
+CMP00284,3217508,2026-03-11T03:26:53.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,59.0,0,1
+CMP00690,3215540,2026-03-12T17:29:23.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,280.0,0,1
+CMP01145,3218185,2026-03-13T13:30:27.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,67.95,0,1
+CMP00199,3220990,2026-03-15T00:27:03.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Under Review,I do not recognize this purchase and need someone to investigate.,34.0,0,1
+CMP00582,3184913,2026-03-15T19:28:33.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,102.0,0,1
+CMP00474,3184988,2026-03-15T19:45:19.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,57.0,0,1
+CMP00181,3207389,2026-03-18T21:46:34.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Resolved,The seller's information appears suspicious and I need assistance.,35.95,0,1
+CMP00852,3236613,2026-03-19T20:30:40.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,18.428,0,1
+CMP00911,3239596,2026-03-20T19:50:10.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Under Review,"My card was charged, but I never placed this order.",100.0,0,1
+CMP00276,3214702,2026-03-22T10:53:38.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Open,I noticed a charge on my account that I did not authorize.,112.99,0,1
+CMP00067,3250634,2026-03-25T17:34:37.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Resolved,I noticed a charge on my account that I did not authorize.,44.0,1,1
+CMP00613,3262881,2026-04-01T16:40:52.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Resolved,I do not recognize this purchase and need someone to investigate.,55.0,0,1
+CMP00658,3236777,2026-04-01T21:12:29.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,57.95,0,1
+CMP01143,3220653,2026-04-01T23:01:48.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",59.0,1,1
+CMP00060,3229278,2026-04-04T14:14:59.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,52.203,0,1
+CMP00632,3287237,2026-04-06T20:41:19.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Open,"My card was charged, but I never placed this order.",47.95,1,1
+CMP00256,3311653,2026-04-09T20:14:08.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Open,"My card was charged, but I never placed this order.",842.0,0,1
+CMP00323,3317522,2026-04-09T23:21:55.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,34.0,0,1
+CMP00349,3301073,2026-04-11T15:38:16.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Open,"My card was charged, but I never placed this order.",24.772,0,1
+CMP00728,3253628,2026-04-11T18:30:51.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,27.854,0,1
+CMP00018,3262926,2026-04-12T16:54:10.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Under Review,"My card was charged, but I never placed this order.",171.0,0,1
+CMP00942,3245118,2026-04-12T17:37:16.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,80.721,0,1
+CMP00130,3329320,2026-04-12T17:47:32.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,39.0,0,1
+CMP00652,3262100,2026-04-16T05:05:12.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,88.95,0,1
+CMP00230,3279099,2026-04-17T11:40:48.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,25.95,0,1
+CMP00379,3336645,2026-04-20T19:48:43.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,67.913,0,1
+CMP01032,3332114,2026-04-23T15:38:55.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,108.95,0,1
+CMP00046,3280155,2026-04-23T19:02:06.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,226.0,0,1
+CMP01132,3314025,2026-04-27T01:55:53.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Resolved,I noticed a charge on my account that I did not authorize.,83.5,0,1
+CMP00924,3371945,2026-04-27T17:52:13.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,45.0,0,1
+CMP00068,3341281,2026-04-28T04:33:53.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,2161.0,0,1
+CMP00202,3297965,2026-04-29T16:04:18.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,69.95,1,1
+CMP00242,3381937,2026-04-29T21:02:31.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Open,The seller's information appears suspicious and I need assistance.,150.0,0,1
+CMP00541,3348085,2026-04-30T17:25:36.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",107.0,1,1
+CMP00289,3311333,2026-05-01T19:46:34.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",113.0,1,1
+CMP00988,3387489,2026-05-01T21:24:25.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,138.966,0,1
+CMP00462,3313859,2026-05-03T01:31:16.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Open,I believe this seller may be misleading customers.,57.95,0,1
+CMP00497,3367247,2026-05-06T00:37:23.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,15.0,1,1
+CMP00029,3406744,2026-05-06T22:18:59.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,57.95,0,1
+CMP00568,3385047,2026-05-08T00:24:09.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Under Review,I believe this seller may be misleading customers.,47.95,0,1
+CMP00036,3381114,2026-05-09T16:43:09.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Open,The seller's information appears suspicious and I need assistance.,35.95,1,1
+CMP00257,3371088,2026-05-11T13:29:52.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Open,"My card was charged, but I never placed this order.",131.0,1,1
+CMP00831,3396758,2026-05-13T20:11:36.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,34.0,0,1
+CMP00847,3388942,2026-05-14T07:01:21.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Under Review,"My card was charged, but I never placed this order.",208.5,0,1
+CMP01051,3384242,2026-05-14T19:49:35.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,20.0,0,1
+CMP01016,3406475,2026-05-17T20:39:07.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,29.0,0,1
+CMP00139,3443474,2026-05-24T00:34:00.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Open,I noticed a charge on my account that I did not authorize.,107.95,0,1
+CMP00440,3416132,2026-05-29T15:09:59.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Resolved,I do not recognize this purchase and need someone to investigate.,20.95,0,1
+CMP00872,3455273,2026-05-29T17:49:46.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,72.055,1,1
+CMP00281,3413220,2026-05-29T18:21:55.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,30.95,0,1
+CMP00776,3460843,2026-05-29T18:30:27.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,77.0,0,1
+CMP00881,3418619,2026-05-30T02:37:51.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,86.318,1,1
+CMP00209,3449084,2026-05-31T15:01:42.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,159.0,0,1
+CMP00271,3482354,2026-05-31T20:28:28.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",47.95,0,1
+CMP01053,3483689,2026-06-02T14:46:46.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",49.0,1,1
+CMP00260,3429524,2026-06-04T00:55:39.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",317.5,1,1
+CMP00521,3447340,2026-06-05T20:55:17.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,250.0,1,1
+CMP01147,3450900,2026-06-06T00:39:43.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Open,I do not recognize this purchase and need someone to investigate.,117.0,0,1
+CMP01091,3476009,2026-06-15T15:30:50.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,100.0,0,1
+CMP00179,3522817,2026-06-20T10:48:29.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Under Review,"My card was charged, but I never placed this order.",226.0,0,1
+CMP00939,3495080,2026-06-20T23:21:21.000Z,HIGH,UNAUTHORIZED_CHARGE,do not recognize,Open,I do not recognize this purchase and need someone to investigate.,139.95,0,1
+CMP01154,3508739,2026-06-22T16:49:48.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,28.035,1,1
+CMP00433,3539078,2026-06-23T20:03:17.000Z,HIGH,UNAUTHORIZED_CHARGE,not authorize,Under Review,I noticed a charge on my account that I did not authorize.,80.416,1,1
+CMP00693,3543730,2026-06-26T12:32:11.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Open,The seller stopped responding after I made the payment.,49.95,0,1
+CMP00932,3506862,2026-07-03T22:02:40.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,58.0,0,1
+CMP00787,3573192,2026-07-06T15:23:02.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,117.0,0,1
+CMP01172,3511600,2026-07-07T16:00:47.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,87.95,0,1
+CMP01189,3527594,2026-07-09T22:16:24.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Resolved,The seller stopped responding after I made the payment.,77.0,0,1
+CMP00767,3537129,2026-07-10T01:22:38.000Z,HIGH,UNAUTHORIZED_CHARGE,never placed,Resolved,"My card was charged, but I never placed this order.",107.95,0,1
+CMP01035,3534824,2026-07-10T13:04:36.000Z,HIGH,SUSPICIOUS_SELLER,suspicious,Under Review,The seller's information appears suspicious and I need assistance.,54.0,1,1
+CMP00625,3524048,2026-07-13T19:25:23.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,226.0,0,1
+CMP00280,3572329,2026-07-14T01:38:17.000Z,HIGH,SUSPICIOUS_SELLER,stopped responding,Under Review,The seller stopped responding after I made the payment.,124.95,0,1
+CMP01171,3551713,2026-07-15T01:35:24.000Z,HIGH,SUSPICIOUS_SELLER,mislead,Resolved,I believe this seller may be misleading customers.,226.0,0,1
+CMP00269,2992965,2026-01-08T03:53:15.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",47.95,0,2
+CMP00707,2990652,2026-01-10T19:46:10.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",50.874,0,2
+CMP00386,3016041,2026-01-11T15:02:07.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,80.0,0,2
+CMP00737,3008899,2026-01-11T16:25:22.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",450.0,0,2
+CMP00090,3011061,2026-01-12T01:02:56.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,213.0,0,2
+CMP00091,3003579,2026-01-12T01:41:17.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",21.95,0,2
+CMP00996,3020913,2026-01-12T18:37:45.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,200.0,0,2
+CMP00507,3009865,2026-01-13T20:21:42.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",159.95,0,2
+CMP00159,2999013,2026-01-14T23:42:41.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",193.0,0,2
+CMP00956,2987158,2026-01-15T00:43:17.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",171.0,0,2
+CMP00937,3025795,2026-01-16T23:25:16.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",50.0,0,2
+CMP01079,3033717,2026-01-17T21:20:56.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",25.0,0,2
+CMP00964,3029590,2026-01-17T21:48:38.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00055,3046777,2026-01-18T20:11:56.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",57.95,0,2
+CMP00549,3001894,2026-01-19T19:39:54.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,652.14,0,2
+CMP00788,2998413,2026-01-19T21:34:31.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",108.95,0,2
+CMP00411,2991693,2026-01-20T22:44:33.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,20.0,0,2
+CMP00234,3031505,2026-01-21T08:57:17.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00311,3016618,2026-01-21T17:14:25.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",226.0,0,2
+CMP00274,3060226,2026-01-21T19:51:06.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",54.0,0,2
+CMP00781,3055950,2026-01-21T23:01:21.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",250.0,0,2
+CMP00688,3011675,2026-01-24T04:56:35.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",50.0,0,2
+CMP00172,3033776,2026-01-24T21:30:25.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,20.95,0,2
+CMP00517,3044263,2026-01-25T06:38:57.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",117.0,1,2
+CMP00840,3012220,2026-01-25T14:57:14.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",25.0,0,2
+CMP00590,3070229,2026-01-25T16:49:18.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",75.0,0,2
+CMP01033,3034292,2026-01-25T23:29:41.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",150.0,0,2
+CMP00511,3073767,2026-01-26T02:19:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,100.0,0,2
+CMP01082,3074559,2026-01-26T08:21:23.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",50.0,0,2
+CMP00854,3008652,2026-01-26T15:20:43.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",45.0,0,2
+CMP00671,3050868,2026-01-26T18:53:43.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,25.0,0,2
+CMP00862,3095258,2026-01-26T19:01:47.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,11.427,0,2
+CMP00149,2998170,2026-01-26T20:28:21.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",105.0,0,2
+CMP00887,3062225,2026-01-27T01:06:59.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",50.0,0,2
+CMP00982,3053822,2026-01-27T15:35:00.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,27.284,0,2
+CMP00105,3041396,2026-01-27T18:34:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,100.0,0,2
+CMP01055,3004662,2026-01-28T14:34:04.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00421,3043715,2026-01-29T02:31:57.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",99.95,0,2
+CMP00806,3075731,2026-01-30T16:22:55.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP00215,3081990,2026-01-31T16:40:04.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00013,3051712,2026-02-01T21:26:56.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",200.0,0,2
+CMP00659,3099671,2026-02-02T11:30:31.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,100.0,0,2
+CMP00576,3074940,2026-02-02T13:58:23.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,15.0,0,2
+CMP00785,3060447,2026-02-05T20:28:34.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,113.95,0,2
+CMP00042,3131740,2026-02-06T14:44:26.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",100.0,1,2
+CMP00681,3037046,2026-02-07T18:32:16.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",275.0,0,2
+CMP00808,3043402,2026-02-08T01:18:35.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",83.5,0,2
+CMP00772,3111206,2026-02-09T06:23:19.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",106.106,0,2
+CMP00330,3115509,2026-02-10T16:03:56.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",34.0,0,2
+CMP00413,3108962,2026-02-10T18:32:30.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",65.937,0,2
+CMP00949,3089328,2026-02-11T18:52:40.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,39.0,0,2
+CMP00408,3041723,2026-02-11T19:36:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,75.0,0,2
+CMP00107,3034991,2026-02-12T02:27:25.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",159.95,0,2
+CMP00905,3142606,2026-02-12T05:35:43.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",49.0,0,2
+CMP00620,3131496,2026-02-12T13:26:33.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,29.0,0,2
+CMP00595,3147181,2026-02-13T23:04:01.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,34.0,0,2
+CMP00334,3156168,2026-02-13T23:39:04.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",737.0,0,2
+CMP00742,3054453,2026-02-14T18:04:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,108.5,0,2
+CMP00414,3064177,2026-02-15T15:31:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,35.95,0,2
+CMP00764,3045638,2026-02-15T16:52:54.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",15.683,0,2
+CMP00704,3116815,2026-02-15T20:12:21.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",48.95,0,2
+CMP00631,3084878,2026-02-15T22:21:02.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",1564.95,0,2
+CMP00275,3103848,2026-02-16T03:29:55.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,49.555,0,2
+CMP00536,3056429,2026-02-17T00:42:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,150.0,0,2
+CMP00980,3151786,2026-02-18T16:54:00.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",49.0,0,2
+CMP00148,3104478,2026-02-19T14:58:29.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",59.0,0,2
+CMP01020,3158018,2026-02-19T18:59:27.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",87.95,0,2
+CMP00361,3090246,2026-02-21T20:55:03.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,29.0,0,2
+CMP00464,3087353,2026-02-22T13:03:40.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",6.53,0,2
+CMP01129,3123467,2026-02-22T20:13:20.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,30.0,0,2
+CMP00419,3107323,2026-02-23T02:54:28.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",100.0,0,2
+CMP01199,3089538,2026-02-23T19:20:29.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,57.95,0,2
+CMP00936,3162600,2026-02-23T23:25:38.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,117.0,0,2
+CMP00836,3099465,2026-02-24T07:21:55.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,100.0,0,2
+CMP00612,3172553,2026-02-24T19:22:11.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,58.95,0,2
+CMP00309,3170379,2026-02-24T22:58:14.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",35.95,0,2
+CMP00850,3166271,2026-02-25T14:17:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,57.95,0,2
+CMP01012,3100654,2026-02-25T15:54:51.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",135.95,0,2
+CMP00869,3181206,2026-02-25T16:20:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",161.0,0,2
+CMP00365,3172999,2026-02-25T21:21:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00146,3186736,2026-02-26T15:47:26.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",50.0,0,2
+CMP00222,3170592,2026-02-27T23:55:51.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",53.97,0,2
+CMP00679,3130162,2026-02-28T00:12:49.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",77.0,0,2
+CMP00519,3135056,2026-02-28T02:31:05.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,311.95,0,2
+CMP00006,3154861,2026-02-28T17:09:29.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",348.0,0,2
+CMP00452,3123939,2026-02-28T22:18:08.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",250.0,0,2
+CMP00820,3184154,2026-03-02T15:22:08.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",25.95,0,2
+CMP00385,3195240,2026-03-02T16:43:47.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",100.0,0,2
+CMP00534,3126463,2026-03-02T22:42:07.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",49.0,0,2
+CMP00469,3185794,2026-03-02T23:39:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,151.0,0,2
+CMP00486,3191586,2026-03-03T02:46:37.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,29.0,0,2
+CMP00038,3186043,2026-03-04T01:14:18.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",59.0,0,2
+CMP00841,3166554,2026-03-04T16:56:06.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,54.394,0,2
+CMP00565,3149429,2026-03-04T19:40:34.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",47.95,0,2
+CMP00941,3156198,2026-03-04T23:46:50.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",57.017,0,2
+CMP00950,3150126,2026-03-05T23:01:13.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",23.0,0,2
+CMP00745,3135087,2026-03-06T02:42:10.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",404.0,0,2
+CMP00314,3203454,2026-03-08T04:41:59.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,24.0,0,2
+CMP00915,3161265,2026-03-08T18:39:15.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",604.95,0,2
+CMP00639,3206996,2026-03-08T19:45:49.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",280.0,0,2
+CMP00985,3149941,2026-03-09T22:10:29.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00316,3167982,2026-03-10T01:02:29.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",30.95,0,2
+CMP00646,3188615,2026-03-10T02:49:17.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",209.95,0,2
+CMP00255,3229734,2026-03-13T17:28:59.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",13.172,0,2
+CMP00228,3243740,2026-03-14T02:03:09.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP01048,3159659,2026-03-15T03:12:21.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,41.859,0,2
+CMP00332,3166212,2026-03-15T13:13:14.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",50.0,0,2
+CMP00439,3189209,2026-03-16T14:59:47.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",30.95,0,2
+CMP00615,3168224,2026-03-17T02:38:02.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",57.95,0,2
+CMP00175,3198665,2026-03-17T20:05:35.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",75.0,0,2
+CMP00935,3202621,2026-03-17T23:33:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,130.95,0,2
+CMP00928,3197740,2026-03-18T14:27:38.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",117.0,0,2
+CMP00542,3223550,2026-03-18T18:32:06.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",171.0,0,2
+CMP00394,3191718,2026-03-19T03:43:09.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,445.0,0,2
+CMP00604,3241605,2026-03-19T14:29:46.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",36.433,0,2
+CMP00782,3196346,2026-03-19T22:29:50.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",57.95,0,2
+CMP00952,3193714,2026-03-19T23:08:40.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,16.441,1,2
+CMP01064,3247036,2026-03-20T01:39:09.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",29.0,0,2
+CMP00927,3253704,2026-03-21T18:53:44.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,100.0,0,2
+CMP00104,3225258,2026-03-22T00:11:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,57.95,0,2
+CMP00397,3212124,2026-03-23T15:45:49.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",28.76,0,2
+CMP00352,3247878,2026-03-23T15:55:34.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",97.0,0,2
+CMP00245,3243076,2026-03-24T22:21:15.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,19.788,0,2
+CMP00826,3265100,2026-03-25T05:41:02.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",171.0,0,2
+CMP00371,3241963,2026-03-25T16:34:46.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",49.0,0,2
+CMP00389,3203101,2026-03-26T01:56:53.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",15.709,0,2
+CMP00890,3230320,2026-03-26T20:30:38.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",17.884,0,2
+CMP00961,3274659,2026-03-26T20:51:01.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",117.0,0,2
+CMP00792,3253295,2026-03-27T16:57:38.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00418,3277899,2026-03-28T22:13:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",11.238,0,2
+CMP00990,3238255,2026-03-29T08:35:06.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",59.0,0,2
+CMP00973,3211909,2026-03-29T14:15:51.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",112.0,0,2
+CMP00828,3281426,2026-03-30T01:20:08.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",554.0,0,2
+CMP01133,3281780,2026-03-30T03:37:16.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",134.95,0,2
+CMP00318,3271635,2026-03-30T19:38:29.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",209.95,0,2
+CMP00248,3218293,2026-03-31T14:07:03.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,328.11,0,2
+CMP00800,3286333,2026-03-31T16:54:09.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,15.347,0,2
+CMP00708,3272156,2026-03-31T22:29:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,226.0,0,2
+CMP01182,3271237,2026-04-01T17:21:52.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",50.0,0,2
+CMP00482,3283531,2026-04-01T19:38:09.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",59.0,0,2
+CMP01041,3273221,2026-04-02T06:38:34.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",107.95,0,2
+CMP00398,3223763,2026-04-02T19:14:49.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",77.338,1,2
+CMP01073,3305543,2026-04-03T18:34:43.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,43.382,1,2
+CMP01057,3261611,2026-04-07T01:11:36.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",108.95,0,2
+CMP00409,3238170,2026-04-07T05:11:17.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",161.0,0,2
+CMP01148,3320517,2026-04-07T23:30:23.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",29.0,0,2
+CMP01037,3235578,2026-04-08T15:21:02.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",160.5,0,2
+CMP00600,3272250,2026-04-08T23:02:11.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,54.5,0,2
+CMP00251,3294132,2026-04-09T05:36:15.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",38.729,0,2
+CMP01052,3317190,2026-04-10T22:33:21.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00506,3324815,2026-04-11T01:54:16.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,46.95,0,2
+CMP01097,3289688,2026-04-11T17:36:03.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",57.95,0,2
+CMP01107,3301706,2026-04-11T18:39:37.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",68.5,0,2
+CMP00987,3249333,2026-04-11T23:36:12.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",35.044,0,2
+CMP00696,3302325,2026-04-12T21:18:28.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,34.0,0,2
+CMP00457,3304932,2026-04-13T16:19:29.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,113.0,0,2
+CMP01078,3289763,2026-04-13T17:53:16.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",47.95,0,2
+CMP00157,3289820,2026-04-13T18:13:23.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP00243,3339544,2026-04-13T18:13:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,554.0,0,2
+CMP00664,3337936,2026-04-14T01:13:01.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,54.5,0,2
+CMP00748,3305878,2026-04-14T19:45:17.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,44.47,0,2
+CMP00756,3271862,2026-04-14T20:48:54.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",49.907,0,2
+CMP00373,3271727,2026-04-15T20:02:13.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,57.0,0,2
+CMP00705,3287598,2026-04-15T21:56:34.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP01080,3321308,2026-04-17T03:10:30.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",66.825,0,2
+CMP00603,3309709,2026-04-17T17:28:46.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",117.0,0,2
+CMP00137,3261392,2026-04-18T00:06:23.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,44.0,0,2
+CMP00880,3275960,2026-04-18T04:18:54.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00325,3270697,2026-04-19T04:15:27.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",52.95,0,2
+CMP00207,3356460,2026-04-19T11:22:44.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",107.95,0,2
+CMP01095,3353949,2026-04-19T15:37:38.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",600.0,0,2
+CMP00186,3339563,2026-04-20T18:19:21.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",255.0,0,2
+CMP00547,3296634,2026-04-22T01:04:52.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",47.95,0,2
+CMP00727,3272928,2026-04-22T03:04:16.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",209.95,0,2
+CMP00554,3357437,2026-04-22T17:46:03.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",214.0,0,2
+CMP00010,3361007,2026-04-23T20:32:12.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP01103,3373491,2026-04-24T00:48:39.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",59.0,0,2
+CMP00466,3325125,2026-04-24T03:43:41.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",35.95,0,2
+CMP00875,3288428,2026-04-25T01:22:42.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,117.0,0,2
+CMP01067,3289824,2026-04-25T18:14:17.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP00913,3334857,2026-04-26T02:50:49.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",52.034,0,2
+CMP00553,3298257,2026-04-26T17:29:55.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,29.5,0,2
+CMP01139,3366126,2026-04-27T19:51:01.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,15.468,0,2
+CMP00694,3352068,2026-04-27T21:43:07.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00118,3337357,2026-04-27T22:39:10.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",226.0,0,2
+CMP00906,3340748,2026-04-28T00:12:52.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",255.0,0,2
+CMP01118,3384820,2026-04-28T23:05:28.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",58.366,0,2
+CMP01094,3335911,2026-04-30T16:33:31.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00589,3386633,2026-04-30T17:38:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,39.0,0,2
+CMP00261,3309673,2026-05-01T17:26:11.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",335.0,0,2
+CMP00711,3333169,2026-05-02T20:37:07.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",867.95,0,2
+CMP00324,3381105,2026-05-03T16:39:35.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",100.0,0,2
+CMP00479,3313504,2026-05-04T00:40:53.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00638,3321039,2026-05-04T01:47:27.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,12.93,0,2
+CMP00481,3404623,2026-05-05T00:21:44.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00329,3326725,2026-05-05T19:57:41.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",92.0,0,2
+CMP00647,3406545,2026-05-05T21:09:11.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",50.0,0,2
+CMP00423,3322330,2026-05-06T15:51:01.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",108.95,0,2
+CMP00877,3392778,2026-05-07T16:55:56.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",125.0,0,2
+CMP00670,3403417,2026-05-07T18:27:46.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",30.95,0,2
+CMP00669,3337982,2026-05-08T01:22:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,29.5,0,2
+CMP00663,3357336,2026-05-08T17:23:55.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",54.403,0,2
+CMP00733,3373554,2026-05-09T01:10:16.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,57.95,0,2
+CMP00929,3360001,2026-05-09T15:02:56.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",59.0,0,2
+CMP00484,3349051,2026-05-09T21:56:16.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,35.95,0,2
+CMP00815,3376275,2026-05-10T22:46:05.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",410.373,0,2
+CMP00732,3378548,2026-05-12T18:42:12.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,29.0,0,2
+CMP00180,3423878,2026-05-13T21:11:30.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",29.99,0,2
+CMP00970,3353272,2026-05-14T04:25:07.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,104.47,0,2
+CMP00523,3436540,2026-05-14T17:19:11.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",250.0,0,2
+CMP00235,3357417,2026-05-14T17:41:52.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,67.95,0,2
+CMP00551,3416666,2026-05-15T17:41:46.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,209.95,0,2
+CMP00959,3425697,2026-05-16T16:45:12.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",22.191,0,2
+CMP00185,3361916,2026-05-17T02:22:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",200.0,0,2
+CMP00468,3356321,2026-05-17T05:44:49.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",6.668,0,2
+CMP00143,3368157,2026-05-17T13:29:52.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",49.95,0,2
+CMP00496,3357273,2026-05-17T17:09:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,323.0,0,2
+CMP00975,3383993,2026-05-17T18:34:03.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",210.95,0,2
+CMP00066,3394654,2026-05-18T01:46:30.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,69.483,0,2
+CMP01028,3389564,2026-05-18T16:04:16.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",200.0,0,2
+CMP00220,3397055,2026-05-18T21:29:52.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",445.0,0,2
+CMP00122,3390992,2026-05-18T23:28:45.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,77.95,0,2
+CMP00188,3373669,2026-05-19T01:44:57.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",88.5,0,2
+CMP00053,3391606,2026-05-19T02:43:56.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",32.627,0,2
+CMP00026,3429682,2026-05-20T01:53:44.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",159.95,0,2
+CMP00995,3399132,2026-05-20T15:03:18.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00630,3381357,2026-05-21T17:49:38.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,120.5,0,2
+CMP00126,3372709,2026-05-21T21:15:32.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",840.47,0,2
+CMP00562,3449795,2026-05-22T19:37:45.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,117.0,0,2
+CMP00634,3410164,2026-05-22T22:37:39.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",209.95,0,2
+CMP01089,3444923,2026-05-23T18:41:59.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",107.0,1,2
+CMP00395,3447290,2026-05-23T20:17:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,35.95,0,2
+CMP00526,3394191,2026-05-23T23:22:42.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00989,3419115,2026-05-24T12:59:25.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",40.0,0,2
+CMP00873,3391024,2026-05-24T23:36:56.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,214.0,0,2
+CMP01038,3404947,2026-05-25T02:47:06.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP00270,3425840,2026-05-25T17:27:16.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",250.0,0,2
+CMP00190,3441406,2026-05-26T14:21:32.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",201.0,0,2
+CMP00731,3425402,2026-05-26T14:54:16.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,57.95,0,2
+CMP00909,3407544,2026-05-27T02:39:03.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",107.95,0,2
+CMP00795,3470322,2026-05-27T15:07:55.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,36.95,0,2
+CMP00304,3409247,2026-05-27T18:36:07.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",57.95,0,2
+CMP00073,3465324,2026-05-28T16:31:32.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,30.95,0,2
+CMP01138,3433653,2026-05-28T16:48:08.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,107.95,0,2
+CMP00577,3446757,2026-05-29T16:43:02.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00720,3446260,2026-05-30T05:24:47.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",445.0,0,2
+CMP00552,3400533,2026-05-30T20:00:46.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",261.95,0,2
+CMP00151,3409928,2026-05-31T21:33:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",445.0,0,2
+CMP00195,3454052,2026-06-01T02:54:42.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",8.669,0,2
+CMP00470,3413870,2026-06-01T20:50:02.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",5.779,0,2
+CMP01175,3457317,2026-06-02T14:07:00.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,48.95,0,2
+CMP00035,3408047,2026-06-03T12:36:35.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",49.0,0,2
+CMP00087,3449662,2026-06-05T18:56:46.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,92.835,0,2
+CMP00490,3439717,2026-06-05T19:44:05.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",107.95,0,2
+CMP01106,3437809,2026-06-06T00:18:42.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",31.724,0,2
+CMP00039,3429555,2026-06-06T01:06:22.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,67.95,0,2
+CMP00895,3452086,2026-06-06T15:11:25.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",57.95,0,2
+CMP00300,3483959,2026-06-06T17:06:15.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",30.95,0,2
+CMP00773,3444450,2026-06-08T15:52:08.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",17.5,0,2
+CMP01034,3429705,2026-06-09T02:01:52.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",30.0,0,2
+CMP00598,3492445,2026-06-10T01:48:04.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",250.0,0,2
+CMP00437,3432810,2026-06-10T05:20:06.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,209.95,0,2
+CMP01085,3479399,2026-06-13T17:59:03.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",59.0,0,2
+CMP00656,3461387,2026-06-13T21:07:49.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",39.0,0,2
+CMP00416,3469808,2026-06-14T05:30:17.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",107.95,0,2
+CMP00910,3490677,2026-06-14T17:57:35.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",115.0,0,2
+CMP00997,3472423,2026-06-15T05:24:42.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",25.95,0,2
+CMP00581,3509728,2026-06-15T21:41:19.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",107.95,0,2
+CMP00059,3525325,2026-06-16T03:09:47.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,99.0,0,2
+CMP00548,3486013,2026-06-16T13:03:56.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,226.0,0,2
+CMP00673,3532202,2026-06-17T15:00:17.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,30.95,0,2
+CMP01104,3457253,2026-06-19T13:45:10.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",117.0,0,2
+CMP00687,3536794,2026-06-19T23:23:57.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",67.95,0,2
+CMP00766,3480850,2026-06-21T01:31:50.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",57.95,0,2
+CMP01152,3459938,2026-06-21T13:38:15.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",30.95,0,2
+CMP00760,3470394,2026-06-21T15:34:45.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",49.0,0,2
+CMP00662,3491230,2026-06-21T20:13:52.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,13.28,0,2
+CMP00533,3530702,2026-06-21T22:41:18.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",21.0,0,2
+CMP00444,3477980,2026-06-22T02:43:02.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,17.891,0,2
+CMP01018,3489346,2026-06-22T12:28:04.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",25.95,0,2
+CMP00297,3486128,2026-06-22T13:45:28.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",261.95,0,2
+CMP01000,3465073,2026-06-23T14:15:00.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",49.0,0,2
+CMP00197,3550140,2026-06-23T17:41:06.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",474.95,0,2
+CMP00839,3478124,2026-06-24T04:47:34.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",27.635,0,2
+CMP00807,3472767,2026-06-24T13:31:25.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",87.95,0,2
+CMP00231,3477456,2026-06-24T23:30:48.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,49.0,0,2
+CMP00580,3510278,2026-06-25T00:13:46.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,36.581,0,2
+CMP00355,3502427,2026-06-25T00:26:21.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",117.0,0,2
+CMP00315,3519081,2026-06-25T01:54:18.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,13.71,0,2
+CMP00531,3552091,2026-06-25T05:09:19.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP01062,3552487,2026-06-25T14:18:52.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",150.0,0,2
+CMP01045,3553360,2026-06-25T19:09:33.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",209.95,0,2
+CMP00588,3542269,2026-06-26T20:27:06.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",35.351,0,2
+CMP01194,3494737,2026-06-26T21:45:32.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",49.491,0,2
+CMP00095,3539572,2026-06-26T22:36:54.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",29.0,0,2
+CMP00098,3481620,2026-06-27T15:52:12.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,39.0,0,2
+CMP00322,3479233,2026-06-27T17:18:15.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",36.519,0,2
+CMP00152,3557837,2026-06-28T12:24:21.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,150.0,0,2
+CMP00870,3511140,2026-06-29T12:28:11.000Z,MEDIUM,NON_DELIVERY,shows delivery,Under Review,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP00335,3561274,2026-07-01T16:54:33.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,59.0,0,2
+CMP00718,3508427,2026-07-02T15:09:31.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",35.95,0,2
+CMP00031,3518451,2026-07-02T22:13:57.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,200.0,0,2
+CMP00978,3530921,2026-07-02T23:50:59.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",57.95,0,2
+CMP01070,3567810,2026-07-03T11:55:18.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",34.0,0,2
+CMP01115,3568228,2026-07-03T15:54:33.000Z,MEDIUM,NON_DELIVERY,says delivered,Under Review,"My order says delivered, but I never received the package.",59.0,0,2
+CMP00897,3535891,2026-07-03T18:43:44.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,23.95,0,2
+CMP01112,3547633,2026-07-03T21:22:15.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,24.0,0,2
+CMP00339,3565489,2026-07-04T02:38:54.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,28.773,1,2
+CMP00142,3529802,2026-07-04T18:21:19.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",59.0,0,2
+CMP00171,3512572,2026-07-05T21:17:15.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",213.0,0,2
+CMP00210,3543158,2026-07-07T00:34:36.000Z,MEDIUM,NON_DELIVERY,says delivered,Resolved,"My order says delivered, but I never received the package.",139.95,0,2
+CMP00221,3514142,2026-07-07T13:55:47.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,445.0,0,2
+CMP00113,3532871,2026-07-08T18:46:42.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,65.0,0,2
+CMP00037,3518062,2026-07-09T20:03:45.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,100.99,0,2
+CMP00966,3513489,2026-07-10T02:29:34.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,318.5,0,2
+CMP00240,3543809,2026-07-10T13:35:26.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,117.0,0,2
+CMP00454,3544052,2026-07-11T15:40:04.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Under Review,I have been waiting for my package and it still has not arrived.,29.0,0,2
+CMP00900,3570329,2026-07-12T14:25:12.000Z,MEDIUM,NON_DELIVERY,shows delivery,Resolved,"The tracking information shows delivery, but nothing was delivered.",221.95,0,2
+CMP00227,3577206,2026-07-13T22:01:21.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",141.0,0,2
+CMP00307,3576235,2026-07-19T16:42:54.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",554.0,0,2
+CMP01131,3566405,2026-07-19T18:20:09.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Resolved,I have been waiting for my package and it still has not arrived.,47.95,0,2
+CMP00578,3562454,2026-07-19T22:19:58.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,474.95,0,2
+CMP00557,3557479,2026-07-22T02:57:44.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",335.0,0,2
+CMP00064,3552441,2026-07-22T13:58:41.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",117.0,0,2
+CMP00369,3567000,2026-07-22T22:10:32.000Z,MEDIUM,NON_DELIVERY,shows delivery,Open,"The tracking information shows delivery, but nothing was delivered.",26.129,0,2
+CMP00514,3569954,2026-07-25T06:48:23.000Z,MEDIUM,NON_DELIVERY,still has not arrived,Open,I have been waiting for my package and it still has not arrived.,9.591,1,2
+CMP00065,3577479,2026-07-27T23:39:27.000Z,MEDIUM,NON_DELIVERY,says delivered,Open,"My order says delivered, but I never received the package.",25.95,0,2

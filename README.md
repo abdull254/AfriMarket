@@ -9,7 +9,10 @@ APPROVE / REVIEW / BLOCK decision, built on the IEEE-CIS fraud dataset.
 | `train_fraud_model.py` | Main training job (use this one) |
 | `features.py` | Feature code shared by training and live scoring |
 | `score_snippet.py` | `handle_batch()` for the Structured Streaming job |
+| `complaint_analysis.py` | Complaint keyword tagging + link to transactions (delayed path) |
 | `train_fraud_model_mvp.py` | Original one-model MVP, kept as the baseline |
+| `results/` | Outputs from the real run on `afrimarket_transactions.csv` |
+| `fraud_model/` | Trained model from that run |
 
 ## What makes it solid
 1. **Time-based split.** Trains on the earliest 80% of transactions (by TransactionDT) and
@@ -28,15 +31,40 @@ APPROVE / REVIEW / BLOCK decision, built on the IEEE-CIS fraud dataset.
    BLOCK = the lowest higher cut-off where at least 80% of flagged orders are fraud.
 5. **Explainability.** Prints the top 10 features driving the model.
 
+## Results on our data (afrimarket_transactions.csv, 30K rows, identity columns already merged)
+Time-based test set: 6,003 transactions over the last 42.6 days. Fraud rate 3.5%, so a random guess scores AUC-PR 0.035.
+
+| Model | AUC-PR | AUC-ROC | Precision @0.5 | Recall @0.5 | False positives @0.5 |
+|---|---|---|---|---|---|
+| Logistic regression | 0.121 | 0.792 | 0.098 | 0.678 | 1,276 |
+| Gradient boosted trees | **0.370** | **0.846** | 0.183 | 0.634 | 580 |
+
+Boosted trees are about 10x better than random on AUC-PR. At REVIEW 0.5 they catch 52% of fraud
+dollars for net savings of about $10K in the test period. BLOCK fell back to 0.9 because no
+cut-off reached 80% precision (0.9 gives 60% precision, 34 false positives).
+Why not higher: 30K rows randomly sampled from 590K means few repeat customers, so the
+"last hour" features rarely fire. The full dataset should do noticeably better.
+
+Complaints: 1,200 of 1,200 link to a transaction. Complaints the rules tag HIGH (unauthorized
+charge, suspicious seller) point at actual fraud 19.2% of the time, vs 1.4% for ordinary
+service complaints and 3.5% overall. The rules agree 100% with the labelled categories, but
+only because the complaint text is 18 repeated template sentences.
+
 ## Run
 ```
-pip install pyspark==3.5.3        # or run inside the Spark container
+pip install pyspark==3.5.3 numpy pandas      # or run inside the Spark container
 spark-submit --driver-memory 4g --py-files features.py train_fraud_model.py \
-    --transactions train_transaction.csv \
-    --identity train_identity.csv \
+    --transactions afrimarket_transactions.csv \
     --model-dir /fraud-data/model --results-dir results
 ```
-Use the original Kaggle files (`train_transaction.csv`, optional `train_identity.csv`).
+Our `afrimarket_transactions.csv` already includes identity columns, so `--identity` is not needed.
+For the full Kaggle data pass `--transactions train_transaction.csv --identity train_identity.csv`.
+
+Complaints:
+```
+spark-submit complaint_analysis.py --complaints afrimarket_complaints.csv \
+    --transactions afrimarket_transactions.csv --out complaint_results
+```
 The full 590K rows is the "big data" version; the 30K sample also works.
 On a 100K-row test it took about 7 minutes on a small machine, most of it boosted trees.
 

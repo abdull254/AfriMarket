@@ -1,0 +1,1201 @@
+ComplaintID,TransactionID,ComplaintDate,ComplaintCategory,ComplaintText,ComplaintStatus
+CMP00001,3033552,2026-01-27 20:38:24,Refund Issue,My refund request has not been processed.,Resolved
+CMP00002,3426523,2026-05-12 20:53:38,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00003,3445498,2026-06-09 22:06:29,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00004,3478322,2026-06-10 11:53:29,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00005,3039907,2026-02-09 12:20:47,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00006,3154861,2026-02-28 17:09:29,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00007,3088405,2026-02-12 16:46:37,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00008,3140755,2026-03-08 20:10:05,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00009,3209187,2026-03-08 16:35:34,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00010,3361007,2026-04-23 20:32:12,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00011,3198915,2026-03-28 21:35:45,Refund Issue,My refund request has not been processed.,Open
+CMP00012,3422998,2026-05-23 17:18:35,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00013,3051712,2026-02-01 21:26:56,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00014,3301055,2026-04-15 15:34:02,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00015,3281512,2026-04-05 01:43:04,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00016,3271765,2026-04-03 20:16:02,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00017,3551647,2026-06-28 01:18:12,Refund Issue,My refund request has not been processed.,Open
+CMP00018,3262926,2026-04-12 16:54:10,Unauthorized Charge,"My card was charged, but I never placed this order.",Under Review
+CMP00019,3508655,2026-07-02 16:25:04,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00020,3281521,2026-03-31 01:45:28,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00021,3334030,2026-04-24 23:06:11,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00022,3065049,2026-02-09 17:55:42,Refund Issue,My refund request has not been processed.,Under Review
+CMP00023,3152482,2026-02-20 20:08:06,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00024,3145161,2026-02-15 02:03:28,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00025,3173927,2026-02-26 01:56:52,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00026,3429682,2026-05-20 01:53:44,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00027,3283698,2026-04-19 20:25:28,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00028,3059872,2026-02-13 19:01:36,Wrong Item,The item in my package does not match the product description.,Open
+CMP00029,3406744,2026-05-06 22:18:59,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00030,3104233,2026-02-01 12:14:35,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00031,3518451,2026-07-02 22:13:57,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00032,3563420,2026-07-07 11:39:47,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00033,3416122,2026-05-09 15:07:27,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00034,3116001,2026-02-27 17:35:34,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00035,3408047,2026-06-03 12:36:35,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00036,3381114,2026-05-09 16:43:09,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Open
+CMP00037,3518062,2026-07-09 20:03:45,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00038,3186043,2026-03-04 01:14:18,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00039,3429555,2026-06-06 01:06:22,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00040,3241998,2026-03-25 16:46:13,Refund Issue,My refund request has not been processed.,Under Review
+CMP00041,3062460,2026-02-09 01:45:47,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00042,3131740,2026-02-06 14:44:26,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00043,3466316,2026-05-29 23:01:42,Wrong Item,The item in my package does not match the product description.,Open
+CMP00044,3372013,2026-04-28 18:10:21,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00045,3087819,2026-02-04 15:10:45,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00046,3280155,2026-04-23 19:02:06,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00047,3148929,2026-02-12 17:19:14,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00048,3043939,2026-02-14 03:42:07,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00049,3034203,2026-01-22 23:11:50,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00050,3160841,2026-02-27 17:02:07,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00051,3143251,2026-03-06 16:53:25,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00052,3313069,2026-04-07 23:43:29,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00053,3391606,2026-05-19 02:43:56,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00054,3242180,2026-03-16 17:44:15,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00055,3046777,2026-01-18 20:11:56,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00056,3524339,2026-07-08 20:54:15,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00057,3224871,2026-04-04 22:56:48,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00058,3061407,2026-01-27 22:53:52,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00059,3525325,2026-06-16 03:09:47,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00060,3229278,2026-04-04 14:14:59,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00061,3213804,2026-03-30 23:48:24,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00062,3209982,2026-03-26 20:25:11,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00063,3040082,2026-01-18 13:53:04,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00064,3552441,2026-07-22 13:58:41,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00065,3577479,2026-07-27 23:39:27,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00066,3394654,2026-05-18 01:46:30,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00067,3250634,2026-03-25 17:34:37,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Resolved
+CMP00068,3341281,2026-04-28 04:33:53,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00069,3142304,2026-02-14 02:36:11,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Open
+CMP00070,3249585,2026-03-19 00:47:14,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00071,3176578,2026-03-08 23:43:57,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00072,3112343,2026-02-20 18:30:07,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00073,3465324,2026-05-28 16:31:32,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00074,3343067,2026-04-22 23:22:26,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00075,3089389,2026-02-22 19:01:37,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00076,3002232,2026-01-06 20:51:09,Refund Issue,My refund request has not been processed.,Under Review
+CMP00077,3179655,2026-02-23 23:49:57,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00078,3570341,2026-07-29 14:30:31,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00079,3379461,2026-05-19 22:49:22,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00080,3441534,2026-05-16 15:07:08,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00081,3487142,2026-06-25 18:44:33,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00082,3340810,2026-05-01 00:35:50,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00083,3481989,2026-06-12 18:17:42,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00084,3086998,2026-02-13 05:16:17,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00085,3171439,2026-02-25 09:24:03,Wrong Item,The item in my package does not match the product description.,Open
+CMP00086,3203116,2026-03-25 02:01:34,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00087,3449662,2026-06-05 18:56:46,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00088,3247618,2026-03-24 13:31:59,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00089,3368011,2026-04-26 12:09:53,Refund Issue,My refund request has not been processed.,Open
+CMP00090,3011061,2026-01-12 01:02:56,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00091,3003579,2026-01-12 01:41:17,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00092,3299622,2026-04-22 00:13:14,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00093,3389588,2026-05-14 16:09:52,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00094,3172775,2026-02-19 20:23:07,Refund Issue,My refund request has not been processed.,Open
+CMP00095,3539572,2026-06-26 22:36:54,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00096,3161913,2026-02-15 20:55:23,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00097,3074586,2026-01-26 09:25:21,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00098,3481620,2026-06-27 15:52:12,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00099,3577225,2026-07-30 22:07:16,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00100,3234879,2026-04-03 03:28:49,Refund Issue,My refund request has not been processed.,Under Review
+CMP00101,3496917,2026-06-09 15:17:37,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00102,3362814,2026-05-15 17:46:12,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00103,3276816,2026-04-13 16:55:44,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00104,3225258,2026-03-22 00:11:48,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00105,3041396,2026-01-27 18:34:58,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00106,3186528,2026-03-06 12:29:19,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00107,3034991,2026-02-12 02:27:25,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00108,3167283,2026-02-25 21:07:56,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00109,3015601,2026-01-29 11:33:20,Refund Issue,My refund request has not been processed.,Resolved
+CMP00110,3313107,2026-04-22 23:49:09,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00111,3367854,2026-04-28 05:23:50,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00112,3190459,2026-02-27 21:05:26,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00113,3532871,2026-07-08 18:46:42,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00114,3333561,2026-04-14 21:56:30,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00115,3377942,2026-05-12 15:54:32,Refund Issue,My refund request has not been processed.,Resolved
+CMP00116,3467414,2026-06-23 14:11:14,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00117,3523941,2026-06-16 18:57:10,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00118,3337357,2026-04-27 22:39:10,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00119,3244184,2026-03-29 08:24:49,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00120,3420003,2026-05-22 18:03:15,Refund Issue,My refund request has not been processed.,Under Review
+CMP00121,3549235,2026-06-26 11:59:53,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00122,3390992,2026-05-18 23:28:45,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00123,3339506,2026-05-02 18:02:57,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00124,3318236,2026-04-28 02:44:31,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00125,3116597,2026-02-09 19:31:19,Wrong Item,The item in my package does not match the product description.,Open
+CMP00126,3372709,2026-05-21 21:15:32,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00127,3347041,2026-05-06 04:01:50,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00128,3044098,2026-02-09 04:41:49,Refund Issue,My refund request has not been processed.,Under Review
+CMP00129,3046044,2026-02-15 18:02:10,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00130,3329320,2026-04-12 17:47:32,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00131,3284664,2026-03-31 00:33:09,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00132,3030367,2026-01-14 00:20:25,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00133,3354799,2026-04-25 19:56:47,Refund Issue,My refund request has not been processed.,Under Review
+CMP00134,3138313,2026-02-16 00:29:26,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00135,3286626,2026-03-31 18:07:43,Refund Issue,My refund request has not been processed.,Resolved
+CMP00136,3318697,2026-04-14 13:51:37,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00137,3261392,2026-04-18 00:06:23,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00138,2991695,2026-01-05 22:44:47,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00139,3443474,2026-05-24 00:34:00,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Open
+CMP00140,3031630,2026-01-19 12:50:41,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00141,3117220,2026-02-01 21:25:20,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00142,3529802,2026-07-04 18:21:19,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00143,3368157,2026-05-17 13:29:52,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00144,3135632,2026-03-05 12:58:04,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00145,3281462,2026-04-21 01:30:02,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00146,3186736,2026-02-26 15:47:26,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00147,3099278,2026-02-14 06:05:20,Refund Issue,My refund request has not been processed.,Resolved
+CMP00148,3104478,2026-02-19 14:58:29,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00149,2998170,2026-01-26 20:28:21,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00150,3411726,2026-05-07 12:50:32,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00151,3409928,2026-05-31 21:33:25,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00152,3557837,2026-06-28 12:24:21,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00153,3133526,2026-02-18 21:02:43,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00154,3394261,2026-05-17 23:49:33,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00155,3069323,2026-01-31 14:11:04,Refund Issue,My refund request has not been processed.,Under Review
+CMP00156,3354832,2026-05-06 20:05:48,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00157,3289820,2026-04-13 18:13:23,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00158,3225448,2026-03-11 00:53:23,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00159,2999013,2026-01-14 23:42:41,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00160,3030657,2026-02-02 01:26:02,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00161,3465190,2026-05-31 15:33:00,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00162,2992277,2026-01-05 00:30:28,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00163,3295591,2026-04-06 19:59:45,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00164,3183597,2026-03-15 02:54:48,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00165,3305646,2026-04-12 18:58:43,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00166,3212579,2026-03-16 18:04:53,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00167,3167161,2026-03-03 20:23:49,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00168,3566858,2026-07-26 21:14:55,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00169,3493062,2026-06-27 12:24:26,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00170,3100812,2026-02-10 16:16:48,Refund Issue,My refund request has not been processed.,Open
+CMP00171,3512572,2026-07-05 21:17:15,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00172,3033776,2026-01-24 21:30:25,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00173,3290124,2026-04-20 19:51:23,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00174,2996268,2026-01-30 01:57:17,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00175,3198665,2026-03-17 20:05:35,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00176,3037450,2026-02-12 19:49:44,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00177,3036173,2026-01-24 15:49:26,Refund Issue,My refund request has not been processed.,Under Review
+CMP00178,3364136,2026-05-02 00:58:35,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00179,3522817,2026-06-20 10:48:29,Unauthorized Charge,"My card was charged, but I never placed this order.",Under Review
+CMP00180,3423878,2026-05-13 21:11:30,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00181,3207389,2026-03-18 21:46:34,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Resolved
+CMP00182,2997622,2026-01-09 18:10:11,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00183,3440144,2026-05-17 22:11:06,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00184,3356424,2026-05-02 10:43:11,Wrong Item,The item in my package does not match the product description.,Open
+CMP00185,3361916,2026-05-17 02:22:25,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00186,3339563,2026-04-20 18:19:21,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00187,3360440,2026-05-03 17:39:40,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00188,3373669,2026-05-19 01:44:57,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00189,3519485,2026-07-03 11:17:31,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00190,3441406,2026-05-26 14:21:32,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00191,3235215,2026-04-05 11:25:18,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00192,3062893,2026-02-15 03:17:41,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00193,3014146,2026-01-26 22:03:17,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00194,3408208,2026-05-19 13:44:37,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00195,3454052,2026-06-01 02:54:42,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00196,3037564,2026-01-20 20:13:33,Damaged Product,The product was broken when I opened the package.,Open
+CMP00197,3550140,2026-06-23 17:41:06,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00198,3418267,2026-05-17 00:40:43,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00199,3220990,2026-03-15 00:27:03,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Under Review
+CMP00200,3494596,2026-07-03 21:08:06,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00201,3502391,2026-06-29 00:14:59,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00202,3297965,2026-04-29 16:04:18,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP00203,3175752,2026-02-22 19:55:32,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00204,3136179,2026-02-22 16:18:58,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00205,3056428,2026-02-18 00:42:44,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00206,3160871,2026-03-08 17:08:22,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00207,3356460,2026-04-19 11:22:44,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00208,3574987,2026-08-01 01:16:27,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00209,3449084,2026-05-31 15:01:42,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP00210,3543158,2026-07-07 00:34:36,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00211,3102281,2026-02-20 20:12:14,Refund Issue,My refund request has not been processed.,Open
+CMP00212,3507328,2026-06-10 00:48:04,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00213,3460953,2026-06-13 19:00:46,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00214,3555653,2026-07-17 15:56:13,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00215,3081990,2026-01-31 16:40:04,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00216,3084898,2026-01-24 22:23:01,Refund Issue,My refund request has not been processed.,Under Review
+CMP00217,3445577,2026-05-17 22:34:13,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00218,3488020,2026-06-22 23:01:55,Refund Issue,My refund request has not been processed.,Open
+CMP00219,3384703,2026-05-07 22:19:07,Refund Issue,My refund request has not been processed.,Resolved
+CMP00220,3397055,2026-05-18 21:29:52,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00221,3514142,2026-07-07 13:55:47,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00222,3170592,2026-02-27 23:55:51,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00223,3486566,2026-07-01 16:06:11,Refund Issue,My refund request has not been processed.,Open
+CMP00224,3278923,2026-03-30 04:34:56,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00225,3141551,2026-02-28 23:04:32,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00226,3550731,2026-07-20 20:45:38,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00227,3577206,2026-07-13 22:01:21,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00228,3243740,2026-03-14 02:03:09,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00229,3479202,2026-06-09 17:10:09,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00230,3279099,2026-04-17 11:40:48,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00231,3477456,2026-06-24 23:30:48,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00232,3198208,2026-03-26 17:32:59,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00233,3304134,2026-04-20 12:23:40,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00234,3031505,2026-01-21 08:57:17,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00235,3357417,2026-05-14 17:41:52,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00236,3543268,2026-07-14 01:14:34,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00237,3425777,2026-05-24 17:09:42,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00238,3032654,2026-02-07 17:39:48,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00239,3089958,2026-01-30 20:17:40,Refund Issue,My refund request has not been processed.,Under Review
+CMP00240,3543809,2026-07-10 13:35:26,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00241,3410091,2026-05-17 22:17:56,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00242,3381937,2026-04-29 21:02:31,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Open
+CMP00243,3339544,2026-04-13 18:13:48,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00244,3398587,2026-05-11 12:28:50,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00245,3243076,2026-03-24 22:21:15,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00246,3394445,2026-05-07 00:40:34,Damaged Product,The product was broken when I opened the package.,Open
+CMP00247,3525016,2026-06-27 00:33:06,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00248,3218293,2026-03-31 14:07:03,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00249,3116479,2026-02-14 19:09:46,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00250,3051975,2026-02-10 22:22:35,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00251,3294132,2026-04-09 05:36:15,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00252,3450426,2026-06-08 22:21:23,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00253,3032800,2026-02-10 18:09:48,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00254,3498652,2026-06-26 22:28:14,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00255,3229734,2026-03-13 17:28:59,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00256,3311653,2026-04-09 20:14:08,Unauthorized Charge,"My card was charged, but I never placed this order.",Open
+CMP00257,3371088,2026-05-11 13:29:52,Unauthorized Charge,"My card was charged, but I never placed this order.",Open
+CMP00258,3354239,2026-05-04 17:01:54,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00259,3158125,2026-03-10 19:29:09,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00260,3429524,2026-06-04 00:55:39,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00261,3309673,2026-05-01 17:26:11,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00262,3482592,2026-06-29 22:02:38,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00263,3551423,2026-07-03 00:05:52,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00264,3476970,2026-06-04 20:47:27,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00265,3571352,2026-07-03 19:50:11,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00266,3102129,2026-01-27 19:39:23,Wrong Item,The item in my package does not match the product description.,Open
+CMP00267,3188528,2026-03-17 02:12:21,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00268,3434269,2026-06-08 20:09:17,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00269,2992965,2026-01-08 03:53:15,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00270,3425840,2026-05-25 17:27:16,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00271,3482354,2026-05-31 20:28:28,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00272,3088607,2026-01-28 17:16:12,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00273,3572787,2026-07-18 12:06:45,Refund Issue,My refund request has not been processed.,Under Review
+CMP00274,3060226,2026-01-21 19:51:06,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00275,3103848,2026-02-16 03:29:55,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00276,3214702,2026-03-22 10:53:38,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Open
+CMP00277,3343064,2026-04-20 23:22:17,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00278,3371089,2026-05-04 13:31:12,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00279,3497965,2026-06-22 19:40:08,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00280,3572329,2026-07-14 01:38:17,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00281,3413220,2026-05-29 18:21:55,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00282,3491925,2026-06-05 23:01:57,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00283,3390669,2026-05-19 21:43:10,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00284,3217508,2026-03-11 03:26:53,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00285,3213144,2026-03-31 20:46:53,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00286,3164244,2026-03-09 17:45:15,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00287,3218315,2026-03-21 14:12:56,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00288,3543056,2026-07-14 00:06:18,Refund Issue,My refund request has not been processed.,Under Review
+CMP00289,3311333,2026-05-01 19:46:34,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00290,3256225,2026-03-20 15:45:36,Refund Issue,My refund request has not been processed.,Open
+CMP00291,3382832,2026-04-27 02:33:05,Refund Issue,My refund request has not been processed.,Resolved
+CMP00292,3317270,2026-04-26 22:45:24,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00293,3564461,2026-07-07 19:25:23,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00294,3295623,2026-04-12 20:06:39,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00295,3327739,2026-04-23 00:41:26,Refund Issue,My refund request has not been processed.,Open
+CMP00296,3061049,2026-01-31 21:58:19,Wrong Item,The item in my package does not match the product description.,Open
+CMP00297,3486128,2026-06-22 13:45:28,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00298,3059197,2026-01-27 17:21:43,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Open
+CMP00299,3128944,2026-03-02 19:35:21,Refund Issue,My refund request has not been processed.,Open
+CMP00300,3483959,2026-06-06 17:06:15,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00301,3475978,2026-06-05 15:19:18,Wrong Item,The item in my package does not match the product description.,Open
+CMP00302,3405218,2026-06-01 07:34:59,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00303,3565558,2026-07-02 03:36:05,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00304,3409247,2026-05-27 18:36:07,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00305,3412786,2026-06-04 16:47:59,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00306,3024202,2026-01-14 17:46:48,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00307,3576235,2026-07-19 16:42:54,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00308,3203133,2026-03-19 02:08:58,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00309,3170379,2026-02-24 22:58:14,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00310,3238669,2026-03-29 15:39:24,Refund Issue,My refund request has not been processed.,Under Review
+CMP00311,3016618,2026-01-21 17:14:25,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00312,3008971,2026-01-31 16:41:08,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00313,3068839,2026-01-25 06:53:21,Refund Issue,My refund request has not been processed.,Resolved
+CMP00314,3203454,2026-03-08 04:41:59,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00315,3519081,2026-06-25 01:54:18,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00316,3167982,2026-03-10 01:02:29,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00317,3083670,2026-02-03 19:45:04,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00318,3271635,2026-03-30 19:38:29,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00319,3076471,2026-02-18 18:14:11,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00320,3212506,2026-03-18 17:45:45,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00321,3224066,2026-03-20 20:16:15,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00322,3479233,2026-06-27 17:18:15,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00323,3317522,2026-04-09 23:21:55,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00324,3381105,2026-05-03 16:39:35,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00325,3270697,2026-04-19 04:15:27,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00326,3542829,2026-07-03 23:01:03,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00327,3484300,2026-06-06 19:17:22,Refund Issue,My refund request has not been processed.,Resolved
+CMP00328,3477151,2026-06-20 21:44:33,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00329,3326725,2026-05-05 19:57:41,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00330,3115509,2026-02-10 16:03:56,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00331,3144949,2026-03-03 00:40:08,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00332,3166212,2026-03-15 13:13:14,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00333,3330542,2026-04-09 23:22:24,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00334,3156168,2026-02-13 23:39:04,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00335,3561274,2026-07-01 16:54:33,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00336,3466969,2026-06-22 04:13:47,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00337,3523486,2026-06-27 16:41:40,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00338,3454981,2026-06-04 16:12:43,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00339,3565489,2026-07-04 02:38:54,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00340,3017813,2026-01-11 21:18:04,Refund Issue,My refund request has not been processed.,Under Review
+CMP00341,3182895,2026-03-15 23:24:11,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00342,3202302,2026-03-19 22:19:50,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00343,3385656,2026-05-08 06:00:18,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00344,3065347,2026-02-06 18:37:52,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00345,3114682,2026-02-27 10:06:58,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00346,3255084,2026-03-28 00:58:16,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00347,3268446,2026-03-25 13:41:57,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00348,3420081,2026-05-27 18:22:34,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00349,3301073,2026-04-11 15:38:16,Unauthorized Charge,"My card was charged, but I never placed this order.",Open
+CMP00350,3541736,2026-07-15 18:00:54,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00351,3244070,2026-03-17 05:03:54,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00352,3247878,2026-03-23 15:55:34,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00353,3561358,2026-07-03 17:23:12,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00354,3139830,2026-03-07 16:54:22,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00355,3502427,2026-06-25 00:26:21,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00356,3140148,2026-02-18 18:01:43,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00357,3015703,2026-01-22 13:04:43,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Resolved
+CMP00358,3116259,2026-02-13 18:29:17,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00359,3009549,2026-01-17 19:00:53,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00360,3308775,2026-04-22 15:42:44,Wrong Item,The item in my package does not match the product description.,Open
+CMP00361,3090246,2026-02-21 20:55:03,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00362,3225400,2026-04-06 00:42:48,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00363,3372743,2026-05-15 21:24:05,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00364,3481224,2026-06-07 11:51:14,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00365,3172999,2026-02-25 21:21:25,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00366,3134329,2026-02-11 23:50:57,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00367,3558418,2026-07-01 16:39:39,Refund Issue,My refund request has not been processed.,Open
+CMP00368,3203997,2026-03-24 16:35:47,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00369,3567000,2026-07-22 22:10:32,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00370,3130981,2026-03-06 05:01:26,Wrong Item,The item in my package does not match the product description.,Open
+CMP00371,3241963,2026-03-25 16:34:46,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00372,3092149,2026-02-24 01:57:03,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00373,3271727,2026-04-15 20:02:13,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00374,3554167,2026-07-13 23:24:34,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00375,3301316,2026-04-07 16:57:38,Refund Issue,My refund request has not been processed.,Under Review
+CMP00376,3462362,2026-06-08 02:12:30,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00377,3402714,2026-06-01 15:11:29,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00378,3200654,2026-03-02 15:21:05,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00379,3336645,2026-04-20 19:48:43,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00380,3075059,2026-01-24 14:26:27,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00381,3194428,2026-03-21 03:20:40,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00382,3468291,2026-06-07 19:25:39,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00383,3386229,2026-05-22 15:34:36,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00384,3412779,2026-05-10 16:46:16,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00385,3195240,2026-03-02 16:43:47,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00386,3016041,2026-01-11 15:02:07,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00387,3102677,2026-02-19 21:34:26,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00388,3231313,2026-04-03 01:48:44,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00389,3203101,2026-03-26 01:56:53,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00390,3419054,2026-06-01 12:26:47,Damaged Product,The product was broken when I opened the package.,Open
+CMP00391,3534221,2026-07-10 01:59:37,Wrong Item,The item in my package does not match the product description.,Open
+CMP00392,3439541,2026-05-30 18:47:44,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00393,3505358,2026-06-19 03:57:48,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00394,3191718,2026-03-19 03:43:09,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00395,3447290,2026-05-23 20:17:58,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00396,3371562,2026-05-04 16:05:12,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00397,3212124,2026-03-23 15:45:49,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00398,3223763,2026-04-02 19:14:49,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00399,3162787,2026-02-20 00:12:15,Refund Issue,My refund request has not been processed.,Open
+CMP00400,3202922,2026-03-09 00:58:09,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00401,3532845,2026-07-03 18:38:44,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00402,3514590,2026-06-11 16:38:57,Refund Issue,My refund request has not been processed.,Open
+CMP00403,3019862,2026-01-25 14:25:01,Damaged Product,The product was broken when I opened the package.,Open
+CMP00404,3562825,2026-07-20 00:02:54,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00405,3307146,2026-04-15 00:56:08,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00406,3230680,2026-03-18 22:15:31,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00407,3514430,2026-06-12 15:43:54,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00408,3041723,2026-02-11 19:36:58,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00409,3238170,2026-04-07 05:11:17,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00410,3441339,2026-06-13 13:57:19,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00411,2991693,2026-01-20 22:44:33,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00412,3474617,2026-06-03 23:09:51,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00413,3108962,2026-02-10 18:32:30,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00414,3064177,2026-02-15 15:31:04,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00415,3404082,2026-05-04 21:35:49,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00416,3469808,2026-06-14 05:30:17,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00417,3184087,2026-03-21 14:53:14,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00418,3277899,2026-03-28 22:13:25,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00419,3107323,2026-02-23 02:54:28,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00420,3271547,2026-04-07 19:10:22,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00421,3043715,2026-01-29 02:31:57,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00422,3345589,2026-05-01 20:40:04,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00423,3322330,2026-05-06 15:51:01,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00424,3231054,2026-04-08 00:23:13,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00425,3177898,2026-03-09 15:34:11,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00426,2997731,2026-01-10 18:38:36,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00427,3215590,2026-03-22 17:50:03,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00428,3150061,2026-02-22 22:44:19,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00429,3384534,2026-05-24 21:15:23,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00430,3224120,2026-03-20 20:26:34,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00431,3336331,2026-04-30 18:28:54,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00432,3030440,2026-01-24 00:35:16,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00433,3539078,2026-06-23 20:03:17,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00434,3197876,2026-03-05 15:26:18,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00435,3558783,2026-07-03 18:46:37,Refund Issue,My refund request has not been processed.,Resolved
+CMP00436,3048445,2026-02-04 01:13:53,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00437,3432810,2026-06-10 05:20:06,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00438,3048653,2026-02-04 02:04:10,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00439,3189209,2026-03-16 14:59:47,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00440,3416132,2026-05-29 15:09:59,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Resolved
+CMP00441,3114352,2026-02-13 04:19:38,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00442,3169318,2026-02-26 18:01:39,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00443,3035301,2026-01-31 04:18:57,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00444,3477980,2026-06-22 02:43:02,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00445,3274799,2026-04-21 21:33:32,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00446,3472135,2026-06-02 01:49:17,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00447,3351360,2026-04-27 18:20:20,Refund Issue,My refund request has not been processed.,Open
+CMP00448,3251619,2026-03-30 23:22:46,Refund Issue,My refund request has not been processed.,Under Review
+CMP00449,3054260,2026-02-06 17:19:37,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00450,3162903,2026-02-27 00:42:38,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00451,3521253,2026-07-08 20:38:50,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00452,3123939,2026-02-28 22:18:08,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00453,3524037,2026-06-27 19:22:24,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00454,3544052,2026-07-11 15:40:04,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00455,3533260,2026-06-18 20:51:18,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00456,3180852,2026-02-27 14:39:45,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00457,3304932,2026-04-13 16:19:29,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00458,3172771,2026-03-02 20:21:33,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00459,3228752,2026-03-11 01:59:59,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00460,3037261,2026-02-03 19:14:52,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00461,3572778,2026-07-03 11:58:31,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00462,3313859,2026-05-03 01:31:16,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00463,3333020,2026-04-19 20:00:05,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00464,3087353,2026-02-22 13:03:40,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00465,3181280,2026-02-22 16:44:38,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Resolved
+CMP00466,3325125,2026-04-24 03:43:41,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00467,3130597,2026-02-16 02:11:00,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00468,3356321,2026-05-17 05:44:49,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00469,3185794,2026-03-02 23:39:58,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00470,3413870,2026-06-01 20:50:02,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00471,3506849,2026-07-07 21:59:02,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00472,3182266,2026-02-24 21:01:41,Refund Issue,My refund request has not been processed.,Resolved
+CMP00473,3112285,2026-02-15 18:17:00,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00474,3184988,2026-03-15 19:45:19,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00475,3500189,2026-06-17 14:23:07,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00476,3268885,2026-03-24 17:08:21,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00477,3512755,2026-06-23 22:19:36,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00478,3220030,2026-03-07 20:42:53,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00479,3313504,2026-05-04 00:40:53,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00480,3332183,2026-05-08 16:06:29,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00481,3404623,2026-05-05 00:21:44,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00482,3283531,2026-04-01 19:38:09,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00483,3447141,2026-06-03 19:13:53,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00484,3349051,2026-05-09 21:56:16,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00485,3423537,2026-06-06 19:34:15,Refund Issue,My refund request has not been processed.,Open
+CMP00486,3191586,2026-03-03 02:46:37,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00487,3147805,2026-02-21 02:24:39,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00488,3428167,2026-05-16 17:09:14,Damaged Product,The product was broken when I opened the package.,Open
+CMP00489,3201354,2026-03-20 18:37:11,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00490,3439717,2026-06-05 19:44:05,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00491,3470707,2026-06-01 17:11:48,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00492,3256955,2026-04-02 19:21:08,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00493,3338800,2026-05-11 14:43:06,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00494,3053884,2026-01-31 15:55:11,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00495,3181409,2026-02-27 17:13:01,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00496,3357273,2026-05-17 17:09:48,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00497,3367247,2026-05-06 00:37:23,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00498,3131845,2026-02-24 15:13:12,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00499,3269669,2026-04-10 20:48:49,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00500,3275104,2026-04-03 23:03:11,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00501,2996222,2026-02-02 01:41:43,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00502,3305924,2026-04-27 19:55:11,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00503,3331217,2026-04-23 02:43:31,Refund Issue,My refund request has not been processed.,Open
+CMP00504,2999896,2026-01-09 04:03:36,Refund Issue,My refund request has not been processed.,Open
+CMP00505,3544915,2026-07-13 20:45:19,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00506,3324815,2026-04-11 01:54:16,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00507,3009865,2026-01-13 20:21:42,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00508,3334595,2026-05-07 01:09:34,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00509,3466933,2026-05-31 03:41:02,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00510,3371173,2026-04-27 14:07:16,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00511,3073767,2026-01-26 02:19:04,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00512,3323709,2026-04-09 21:21:52,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00513,3190606,2026-03-18 21:41:34,Refund Issue,My refund request has not been processed.,Resolved
+CMP00514,3569954,2026-07-25 06:48:23,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00515,3173869,2026-02-24 01:36:54,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00516,3189753,2026-03-03 17:54:35,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00517,3044263,2026-01-25 06:38:57,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00518,3349471,2026-04-24 23:55:52,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00519,3135056,2026-02-28 02:31:05,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00520,3040205,2026-02-04 14:36:09,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00521,3447340,2026-06-05 20:55:17,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00522,3324839,2026-05-01 01:58:16,Refund Issue,My refund request has not been processed.,Under Review
+CMP00523,3436540,2026-05-14 17:19:11,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00524,3182343,2026-03-05 21:24:26,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00525,3109798,2026-02-23 21:35:43,Damaged Product,The product was broken when I opened the package.,Open
+CMP00526,3394191,2026-05-23 23:22:42,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00527,3144143,2026-03-06 20:50:52,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Resolved
+CMP00528,3210766,2026-03-16 00:07:52,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00529,3096479,2026-02-23 21:29:59,Damaged Product,The product was broken when I opened the package.,Open
+CMP00530,3002026,2026-01-14 20:10:06,Damaged Product,The product was broken when I opened the package.,Open
+CMP00531,3552091,2026-06-25 05:09:19,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00532,3198307,2026-03-24 18:03:36,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00533,3530702,2026-06-21 22:41:18,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00534,3126463,2026-03-02 22:42:07,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00535,3021788,2026-02-04 21:30:30,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00536,3056429,2026-02-17 00:42:48,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00537,3441087,2026-05-28 11:44:05,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00538,3559166,2026-07-19 20:49:49,Refund Issue,My refund request has not been processed.,Under Review
+CMP00539,3258481,2026-03-25 02:54:14,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00540,3252840,2026-04-15 14:29:43,Refund Issue,My refund request has not been processed.,Open
+CMP00541,3348085,2026-04-30 17:25:36,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00542,3223550,2026-03-18 18:32:06,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00543,3301240,2026-04-07 16:33:34,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00544,3341605,2026-04-27 14:32:36,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00545,3140511,2026-02-27 19:21:18,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00546,3164180,2026-02-27 17:25:59,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00547,3296634,2026-04-22 01:04:52,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00548,3486013,2026-06-16 13:03:56,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00549,3001894,2026-01-19 19:39:54,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00550,3266133,2026-04-17 17:51:38,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00551,3416666,2026-05-15 17:41:46,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00552,3400533,2026-05-30 20:00:46,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00553,3298257,2026-04-26 17:29:55,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00554,3357437,2026-04-22 17:46:03,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00555,3384411,2026-05-03 20:41:06,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00556,3148444,2026-03-07 14:49:26,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00557,3557479,2026-07-22 02:57:44,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00558,3194906,2026-03-20 14:15:18,Damaged Product,The product was broken when I opened the package.,Open
+CMP00559,3371978,2026-05-21 18:01:14,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00560,3383452,2026-05-23 15:17:23,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00561,3358458,2026-05-12 22:17:51,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00562,3449795,2026-05-22 19:37:45,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00563,3084639,2026-02-08 21:47:40,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00564,3235093,2026-04-03 05:52:17,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00565,3149429,2026-03-04 19:40:34,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00566,3464397,2026-05-30 00:00:43,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00567,3044653,2026-02-07 13:48:07,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP00568,3385047,2026-05-08 00:24:09,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00569,3224503,2026-04-05 21:42:28,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00570,3106943,2026-02-24 00:57:33,Wrong Item,The item in my package does not match the product description.,Open
+CMP00571,3225078,2026-03-18 23:36:17,Refund Issue,My refund request has not been processed.,Resolved
+CMP00572,3060355,2026-01-29 20:12:41,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00573,3571511,2026-07-19 20:49:43,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00574,3025610,2026-01-12 22:43:33,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00575,3113930,2026-02-16 01:21:36,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00576,3074940,2026-02-02 13:58:23,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00577,3446757,2026-05-29 16:43:02,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00578,3562454,2026-07-19 22:19:58,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00579,3151284,2026-03-05 12:26:40,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00580,3510278,2026-06-25 00:13:46,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00581,3509728,2026-06-15 21:41:19,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00582,3184913,2026-03-15 19:28:33,Suspicious Seller,I believe this seller may be misleading customers.,Under Review
+CMP00583,3051568,2026-02-02 20:53:05,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00584,3189012,2026-03-15 13:17:27,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00585,3321029,2026-05-01 01:44:48,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00586,3084799,2026-01-28 22:10:14,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00587,3209475,2026-03-30 18:02:42,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00588,3542269,2026-06-26 20:27:06,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00589,3386633,2026-04-30 17:38:04,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00590,3070229,2026-01-25 16:49:18,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00591,3089777,2026-02-17 19:53:26,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00592,3298789,2026-04-20 20:20:38,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00593,3378030,2026-05-08 16:19:58,Refund Issue,My refund request has not been processed.,Open
+CMP00594,3015964,2026-01-15 14:43:15,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00595,3147181,2026-02-13 23:04:01,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00596,3238576,2026-03-21 15:09:50,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00597,3187118,2026-02-25 18:15:09,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00598,3492445,2026-06-10 01:48:04,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00599,3512278,2026-06-18 19:51:43,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00600,3272250,2026-04-08 23:02:11,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00601,3192210,2026-03-15 15:10:55,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00602,3273370,2026-04-13 13:10:50,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00603,3309709,2026-04-17 17:28:46,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00604,3241605,2026-03-19 14:29:46,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00605,3310112,2026-04-11 18:04:24,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00606,3309711,2026-04-26 17:29:23,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00607,3520908,2026-07-01 19:08:11,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00608,3121381,2026-02-17 00:10:56,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00609,3210434,2026-03-05 22:33:02,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00610,3320296,2026-05-03 22:31:02,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00611,3028376,2026-02-10 18:05:50,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00612,3172553,2026-02-24 19:22:11,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00613,3262881,2026-04-01 16:40:52,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Resolved
+CMP00614,3044672,2026-01-17 13:53:13,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00615,3168224,2026-03-17 02:38:02,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00616,3158955,2026-02-22 23:13:46,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00617,3270518,2026-04-14 02:08:03,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00618,3563763,2026-07-13 15:11:15,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00619,3020747,2026-02-09 18:03:51,Refund Issue,My refund request has not been processed.,Open
+CMP00620,3131496,2026-02-12 13:26:33,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00621,3219174,2026-04-04 17:32:00,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00622,3327271,2026-04-27 22:23:40,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00623,3472357,2026-06-03 04:04:33,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00624,3463538,2026-06-02 18:51:32,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00625,3524048,2026-07-13 19:25:23,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00626,3084828,2026-02-01 22:14:27,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00627,3277299,2026-04-10 19:20:02,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00628,3546320,2026-07-04 14:30:34,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00629,3515849,2026-06-20 23:28:32,Wrong Item,The item in my package does not match the product description.,Open
+CMP00630,3381357,2026-05-21 17:49:38,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00631,3084878,2026-02-15 22:21:02,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00632,3287237,2026-04-06 20:41:19,Unauthorized Charge,"My card was charged, but I never placed this order.",Open
+CMP00633,3507601,2026-06-17 02:34:07,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00634,3410164,2026-05-22 22:37:39,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00635,3005023,2026-01-11 16:09:29,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00636,3021156,2026-01-24 19:26:19,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00637,3311856,2026-04-30 20:30:13,Refund Issue,My refund request has not been processed.,Open
+CMP00638,3321039,2026-05-04 01:47:27,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00639,3206996,2026-03-08 19:45:49,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00640,3174832,2026-03-08 15:36:27,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00641,3017318,2026-01-19 19:37:55,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00642,3431528,2026-05-18 20:32:29,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00643,3477907,2026-06-20 01:57:20,Wrong Item,The item in my package does not match the product description.,Open
+CMP00644,3177207,2026-03-11 03:13:12,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00645,3424661,2026-06-03 00:47:25,Refund Issue,My refund request has not been processed.,Under Review
+CMP00646,3188615,2026-03-10 02:49:17,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00647,3406545,2026-05-05 21:09:11,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00648,3296540,2026-04-13 00:41:31,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00649,3490556,2026-06-30 17:29:28,Refund Issue,My refund request has not been processed.,Open
+CMP00650,3151518,2026-02-11 15:06:17,Refund Issue,My refund request has not been processed.,Resolved
+CMP00651,3112770,2026-01-30 20:14:21,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00652,3262100,2026-04-16 05:05:12,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP00653,3222541,2026-03-09 15:08:04,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00654,3093850,2026-02-13 15:47:20,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00655,3335393,2026-04-15 13:30:36,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00656,3461387,2026-06-13 21:07:49,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00657,3097948,2026-02-11 01:06:27,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00658,3236777,2026-04-01 21:12:29,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00659,3099671,2026-02-02 11:30:31,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00660,3422748,2026-05-31 16:16:42,Refund Issue,My refund request has not been processed.,Open
+CMP00661,3232086,2026-03-21 14:38:52,Refund Issue,My refund request has not been processed.,Resolved
+CMP00662,3491230,2026-06-21 20:13:52,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00663,3357336,2026-05-08 17:23:55,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00664,3337936,2026-04-14 01:13:01,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00665,3055981,2026-01-21 23:06:38,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00666,3323153,2026-04-15 19:10:20,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00667,3301695,2026-04-17 18:36:31,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00668,3522362,2026-07-12 01:37:31,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00669,3337982,2026-05-08 01:22:04,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00670,3403417,2026-05-07 18:27:46,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00671,3050868,2026-01-26 18:53:43,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00672,3036547,2026-01-27 16:56:50,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00673,3532202,2026-06-17 15:00:17,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00674,3469602,2026-06-15 02:38:18,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00675,3172939,2026-02-25 21:04:05,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Under Review
+CMP00676,3291680,2026-04-23 13:14:55,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00677,3532880,2026-07-04 18:48:32,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00678,3144566,2026-02-18 22:42:35,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00679,3130162,2026-02-28 00:12:49,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00680,3000219,2026-01-24 11:03:45,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00681,3037046,2026-02-07 18:32:16,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00682,3336303,2026-05-10 18:22:31,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00683,3190689,2026-03-12 22:05:14,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00684,3237455,2026-04-10 00:24:58,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00685,3055806,2026-02-13 22:33:07,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00686,3449246,2026-06-17 16:02:04,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00687,3536794,2026-06-19 23:23:57,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00688,3011675,2026-01-24 04:56:35,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00689,3062248,2026-02-17 01:10:32,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00690,3215540,2026-03-12 17:29:23,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00691,3188011,2026-03-08 22:58:31,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00692,3059507,2026-01-31 18:07:09,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00693,3543730,2026-06-26 12:32:11,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00694,3352068,2026-04-27 21:43:07,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00695,3423125,2026-05-14 17:48:55,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00696,3302325,2026-04-12 21:18:28,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00697,3231110,2026-03-23 00:44:55,Refund Issue,My refund request has not been processed.,Under Review
+CMP00698,3037998,2026-02-01 21:49:26,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00699,3384382,2026-05-07 20:33:29,Refund Issue,My refund request has not been processed.,Open
+CMP00700,3536202,2026-06-21 20:17:54,Wrong Item,The item in my package does not match the product description.,Open
+CMP00701,3342849,2026-04-16 22:06:54,Refund Issue,My refund request has not been processed.,Resolved
+CMP00702,3233821,2026-03-28 22:21:49,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00703,3308865,2026-05-03 15:55:03,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00704,3116815,2026-02-15 20:12:21,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00705,3287598,2026-04-15 21:56:34,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00706,3423167,2026-05-16 18:03:13,Refund Issue,My refund request has not been processed.,Open
+CMP00707,2990652,2026-01-10 19:46:10,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00708,3272156,2026-03-31 22:29:04,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00709,3387412,2026-05-09 21:04:14,Wrong Item,The item in my package does not match the product description.,Open
+CMP00710,3478731,2026-06-01 14:55:38,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00711,3333169,2026-05-02 20:37:07,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00712,3327957,2026-04-24 01:47:29,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00713,3454500,2026-06-13 12:59:21,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00714,3031862,2026-02-09 14:35:20,Refund Issue,My refund request has not been processed.,Under Review
+CMP00715,3379533,2026-05-19 23:12:02,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00716,3038455,2026-01-17 23:28:32,Refund Issue,My refund request has not been processed.,Resolved
+CMP00717,3573293,2026-07-04 15:59:19,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00718,3508427,2026-07-02 15:09:31,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00719,3100182,2026-02-21 14:31:53,Damaged Product,The product was broken when I opened the package.,Open
+CMP00720,3446260,2026-05-30 05:24:47,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00721,3183042,2026-03-01 00:05:32,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00722,3323599,2026-05-03 20:54:32,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00723,3199500,2026-03-12 00:18:24,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00724,3233078,2026-03-22 19:11:12,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00725,3159860,2026-02-18 05:28:44,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00726,3201364,2026-03-12 18:39:19,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00727,3272928,2026-04-22 03:04:16,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00728,3253628,2026-04-11 18:30:51,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00729,3415928,2026-05-12 14:10:15,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00730,3082492,2026-01-31 17:33:36,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00731,3425402,2026-05-26 14:54:16,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00732,3378548,2026-05-12 18:42:12,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00733,3373554,2026-05-09 01:10:16,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00734,3207151,2026-03-05 20:35:25,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00735,3147716,2026-02-15 01:52:43,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00736,3382471,2026-05-17 23:48:16,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00737,3008899,2026-01-11 16:25:22,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00738,3208117,2026-03-29 01:45:53,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00739,3233204,2026-03-12 19:43:49,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00740,3519908,2026-07-11 14:36:43,Refund Issue,My refund request has not been processed.,Open
+CMP00741,3002508,2026-01-19 21:45:17,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00742,3054453,2026-02-14 18:04:58,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00743,3348106,2026-04-17 17:28:50,Damaged Product,The product was broken when I opened the package.,Open
+CMP00744,3110713,2026-02-09 01:59:22,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00745,3135087,2026-03-06 02:42:10,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00746,3221672,2026-03-11 04:08:31,Refund Issue,My refund request has not been processed.,Open
+CMP00747,3530108,2026-07-02 19:43:01,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00748,3305878,2026-04-14 19:45:17,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00749,3134517,2026-02-11 00:26:10,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00750,3335434,2026-04-22 13:53:38,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00751,3044522,2026-02-09 12:59:45,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00752,3019926,2026-02-08 14:46:48,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00753,3430468,2026-06-04 14:55:39,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00754,3384254,2026-05-17 19:54:16,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00755,3405705,2026-05-06 16:06:36,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00756,3271862,2026-04-14 20:48:54,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00757,3525269,2026-07-11 02:31:52,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00758,3404627,2026-05-26 00:22:58,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00759,3184531,2026-02-23 17:35:52,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00760,3470394,2026-06-21 15:34:45,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00761,3155937,2026-02-17 22:20:33,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00762,3409027,2026-05-11 17:43:09,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00763,3151825,2026-03-05 17:07:21,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00764,3045638,2026-02-15 16:52:54,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00765,3503185,2026-06-16 13:52:21,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00766,3480850,2026-06-21 01:31:50,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00767,3537129,2026-07-10 01:22:38,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00768,3412424,2026-05-20 15:33:45,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00769,3501517,2026-06-15 20:24:32,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00770,3537454,2026-07-06 04:11:43,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00771,3179832,2026-02-23 00:38:24,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00772,3111206,2026-02-09 06:23:19,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00773,3444450,2026-06-08 15:52:08,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00774,2987660,2026-01-03 03:26:39,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00775,3160972,2026-02-16 17:33:12,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00776,3460843,2026-05-29 18:30:27,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00777,3199130,2026-03-13 22:32:45,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00778,3358319,2026-05-12 21:43:26,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00779,3425070,2026-05-30 05:21:45,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00780,3285536,2026-04-14 11:25:27,Wrong Item,The item in my package does not match the product description.,Open
+CMP00781,3055950,2026-01-21 23:01:21,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00782,3196346,2026-03-19 22:29:50,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00783,3407964,2026-05-30 11:44:41,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00784,3046374,2026-01-18 19:00:46,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP00785,3060447,2026-02-05 20:28:34,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00786,3100235,2026-02-10 14:41:24,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00787,3573192,2026-07-06 15:23:02,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP00788,2998413,2026-01-19 21:34:31,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00789,3431495,2026-06-01 20:22:40,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00790,3109070,2026-02-08 18:54:21,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00791,3054319,2026-01-28 17:32:40,Wrong Item,The item in my package does not match the product description.,Open
+CMP00792,3253295,2026-03-27 16:57:38,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00793,3304656,2026-04-21 15:18:21,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00794,3085901,2026-02-19 00:43:17,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00795,3470322,2026-05-27 15:07:55,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00796,3402960,2026-06-01 16:27:14,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00797,3387979,2026-04-30 23:36:31,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00798,3285784,2026-04-07 14:04:49,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00799,3107927,2026-02-27 13:31:28,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00800,3286333,2026-03-31 16:54:09,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00801,3023173,2026-02-04 03:31:18,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00802,3098071,2026-02-20 01:32:14,Refund Issue,My refund request has not been processed.,Open
+CMP00803,3187277,2026-03-03 19:02:43,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00804,3142765,2026-02-28 12:58:09,Refund Issue,My refund request has not been processed.,Resolved
+CMP00805,3013017,2026-01-25 18:05:09,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00806,3075731,2026-01-30 16:22:55,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00807,3472767,2026-06-24 13:31:25,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00808,3043402,2026-02-08 01:18:35,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00809,3226648,2026-03-29 15:49:26,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP00810,3055723,2026-02-06 22:17:18,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00811,3098183,2026-02-17 01:55:58,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00812,3535658,2026-07-08 17:39:13,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00813,3538377,2026-07-08 16:44:50,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00814,3546313,2026-07-21 14:29:41,Refund Issue,My refund request has not been processed.,Open
+CMP00815,3376275,2026-05-10 22:46:05,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00816,3471456,2026-05-28 21:36:07,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00817,3273490,2026-04-10 14:26:11,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00818,3449865,2026-06-07 19:56:48,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00819,2996102,2026-01-21 01:10:58,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00820,3184154,2026-03-02 15:22:08,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00821,3280691,2026-04-15 21:44:22,Refund Issue,My refund request has not been processed.,Open
+CMP00822,3346066,2026-04-20 22:41:47,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00823,3229420,2026-03-26 15:34:35,Refund Issue,My refund request has not been processed.,Under Review
+CMP00824,3566438,2026-07-12 18:34:09,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00825,3051190,2026-02-02 19:49:27,Refund Issue,My refund request has not been processed.,Under Review
+CMP00826,3265100,2026-03-25 05:41:02,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00827,3194618,2026-03-26 05:38:25,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00828,3281426,2026-03-30 01:20:08,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00829,3354762,2026-04-28 19:46:07,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00830,3045274,2026-01-20 15:56:41,Refund Issue,My refund request has not been processed.,Under Review
+CMP00831,3396758,2026-05-13 20:11:36,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP00832,3531918,2026-07-13 13:21:25,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00833,3143971,2026-02-14 20:08:50,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00834,3208741,2026-03-04 12:59:24,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00835,3143016,2026-03-04 15:39:49,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00836,3099465,2026-02-24 07:21:55,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00837,3341028,2026-05-02 03:03:51,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00838,3153476,2026-02-15 00:58:44,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00839,3478124,2026-06-24 04:47:34,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00840,3012220,2026-01-25 14:57:14,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00841,3166554,2026-03-04 16:56:06,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00842,3237651,2026-04-08 01:20:09,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00843,3063096,2026-02-17 04:07:26,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00844,3101041,2026-02-14 16:53:39,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00845,2994476,2026-01-04 18:36:09,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00846,3338330,2026-05-05 03:28:53,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00847,3388942,2026-05-14 07:01:21,Unauthorized Charge,"My card was charged, but I never placed this order.",Under Review
+CMP00848,3132952,2026-02-15 19:05:00,Wrong Item,The item in my package does not match the product description.,Open
+CMP00849,3150820,2026-02-22 02:16:23,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00850,3166271,2026-02-25 14:17:48,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00851,3221438,2026-03-21 02:29:48,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00852,3236613,2026-03-19 20:30:40,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00853,3070379,2026-01-29 17:10:32,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP00854,3008652,2026-01-26 15:20:43,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00855,3325933,2026-04-23 16:06:21,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00856,3438677,2026-05-16 13:31:58,Wrong Item,The item in my package does not match the product description.,Open
+CMP00857,3035118,2026-02-13 02:58:48,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00858,3235072,2026-04-02 05:27:39,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00859,3514289,2026-06-29 14:51:49,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00860,3485160,2026-06-05 00:24:11,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00861,3021075,2026-02-05 19:10:29,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Open
+CMP00862,3095258,2026-01-26 19:01:47,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00863,3397712,2026-05-06 00:37:21,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00864,3142458,2026-03-03 03:43:57,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00865,3152990,2026-02-14 22:40:30,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00866,3057680,2026-01-22 06:41:14,Refund Issue,My refund request has not been processed.,Under Review
+CMP00867,3194797,2026-03-26 13:18:07,Refund Issue,My refund request has not been processed.,Under Review
+CMP00868,3197487,2026-03-12 08:41:35,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00869,3181206,2026-02-25 16:20:25,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00870,3511140,2026-06-29 12:28:11,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00871,3039605,2026-02-09 04:38:33,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00872,3455273,2026-05-29 17:49:46,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP00873,3391024,2026-05-24 23:36:56,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00874,3282687,2026-04-22 15:46:21,Refund Issue,My refund request has not been processed.,Resolved
+CMP00875,3288428,2026-04-25 01:22:42,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00876,3523255,2026-06-30 15:24:41,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00877,3392778,2026-05-07 16:55:56,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00878,3065557,2026-02-16 19:13:47,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00879,3023526,2026-01-24 13:25:24,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00880,3275960,2026-04-18 04:18:54,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00881,3418619,2026-05-30 02:37:51,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00882,3457092,2026-05-30 12:22:01,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00883,3409326,2026-05-28 18:59:20,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00884,3406365,2026-06-02 19:58:46,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00885,3439398,2026-06-06 17:54:51,Refund Issue,My refund request has not been processed.,Under Review
+CMP00886,3362936,2026-05-01 18:28:26,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00887,3062225,2026-01-27 01:06:59,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00888,3281377,2026-04-07 01:01:23,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00889,3121660,2026-02-26 01:32:38,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00890,3230320,2026-03-26 20:30:38,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00891,3048630,2026-01-31 01:59:49,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00892,3146584,2026-02-26 20:11:52,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00893,3514169,2026-07-05 14:07:58,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00894,3277152,2026-04-18 18:36:53,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00895,3452086,2026-06-06 15:11:25,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00896,3539508,2026-06-26 22:15:18,Refund Issue,My refund request has not been processed.,Under Review
+CMP00897,3535891,2026-07-03 18:43:44,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00898,3194568,2026-03-24 04:48:47,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00899,3460305,2026-05-27 15:44:12,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00900,3570329,2026-07-12 14:25:12,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00901,3371408,2026-05-08 15:22:21,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00902,3281931,2026-04-17 05:00:02,Refund Issue,My refund request has not been processed.,Under Review
+CMP00903,3014265,2026-01-15 22:31:47,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00904,3282891,2026-04-25 16:47:30,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00905,3142606,2026-02-12 05:35:43,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00906,3340748,2026-04-28 00:12:52,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00907,3166046,2026-03-04 04:23:41,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Under Review
+CMP00908,3068776,2026-02-01 06:00:42,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00909,3407544,2026-05-27 02:39:03,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00910,3490677,2026-06-14 17:57:35,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00911,3239596,2026-03-20 19:50:10,Unauthorized Charge,"My card was charged, but I never placed this order.",Under Review
+CMP00912,3262111,2026-03-28 05:12:19,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00913,3334857,2026-04-26 02:50:49,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00914,3512243,2026-06-12 19:39:37,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP00915,3161265,2026-03-08 18:39:15,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00916,3178896,2026-02-26 20:25:47,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00917,3533563,2026-06-17 22:11:57,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00918,3027125,2026-02-07 12:21:22,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP00919,3130047,2026-02-27 23:45:00,Refund Issue,My refund request has not been processed.,Resolved
+CMP00920,3359172,2026-05-09 01:33:03,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00921,3189838,2026-03-23 18:15:48,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00922,3089320,2026-01-27 18:51:53,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00923,3437166,2026-06-03 20:46:23,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00924,3371945,2026-04-27 17:52:13,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP00925,3119078,2026-02-02 13:11:18,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00926,3166885,2026-03-07 18:54:48,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00927,3253704,2026-03-21 18:53:44,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00928,3197740,2026-03-18 14:27:38,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00929,3360001,2026-05-09 15:02:56,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00930,3446121,2026-06-15 02:52:05,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00931,3067508,2026-01-24 00:32:41,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00932,3506862,2026-07-03 22:02:40,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00933,3268904,2026-04-01 17:13:12,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00934,3495801,2026-07-04 03:26:53,Refund Issue,My refund request has not been processed.,Under Review
+CMP00935,3202621,2026-03-17 23:33:58,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00936,3162600,2026-02-23 23:25:38,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00937,3025795,2026-01-16 23:25:16,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00938,3050498,2026-02-07 17:44:01,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00939,3495080,2026-06-20 23:21:21,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Open
+CMP00940,3566839,2026-07-12 21:08:08,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP00941,3156198,2026-03-04 23:46:50,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00942,3245118,2026-04-12 17:37:16,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00943,3061237,2026-01-26 22:29:24,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00944,3328177,2026-04-15 03:21:39,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00945,3255082,2026-04-11 00:57:57,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP00946,3257815,2026-04-06 23:36:01,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00947,3275065,2026-03-25 22:52:02,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00948,2997468,2026-01-18 17:28:07,Wrong Item,The item in my package does not match the product description.,Open
+CMP00949,3089328,2026-02-11 18:52:40,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00950,3150126,2026-03-05 23:01:13,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00951,3546146,2026-07-04 13:45:22,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP00952,3193714,2026-03-19 23:08:40,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP00953,3453432,2026-06-01 23:05:10,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP00954,3375885,2026-05-06 21:12:48,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP00955,3255494,2026-03-21 03:09:07,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00956,2987158,2026-01-15 00:43:17,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP00957,3425710,2026-05-11 16:51:00,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00958,2988854,2026-01-03 14:51:12,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00959,3425697,2026-05-16 16:45:12,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00960,3212710,2026-03-19 18:45:45,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00961,3274659,2026-03-26 20:51:01,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP00962,3414296,2026-05-22 22:24:20,Wrong Item,The item in my package does not match the product description.,Open
+CMP00963,3057707,2026-02-17 07:13:46,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Open
+CMP00964,3029590,2026-01-17 21:48:38,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00965,3302051,2026-04-20 20:13:01,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP00966,3513489,2026-07-10 02:29:34,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP00967,3060282,2026-02-01 19:59:21,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP00968,3540012,2026-06-24 00:51:45,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP00969,3414704,2026-05-26 00:09:32,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP00970,3353272,2026-05-14 04:25:07,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00971,3422055,2026-05-13 12:09:29,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00972,3442905,2026-05-29 21:45:25,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP00973,3211909,2026-03-29 14:15:51,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00974,3175224,2026-03-20 17:32:29,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00975,3383993,2026-05-17 18:34:03,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00976,3274913,2026-04-13 22:10:00,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP00977,3532709,2026-07-07 17:54:43,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP00978,3530921,2026-07-02 23:50:59,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00979,3322694,2026-04-21 17:24:11,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP00980,3151786,2026-02-18 16:54:00,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00981,3184684,2026-02-28 18:22:15,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Resolved
+CMP00982,3053822,2026-01-27 15:35:00,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00983,3504786,2026-06-30 23:12:28,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP00984,3400304,2026-05-06 19:11:26,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00985,3149941,2026-03-09 22:10:29,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00986,3213627,2026-03-08 23:01:09,Wrong Item,I ordered one item but received something completely different.,Open
+CMP00987,3249333,2026-04-11 23:36:12,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP00988,3387489,2026-05-01 21:24:25,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP00989,3419115,2026-05-24 12:59:25,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00990,3238255,2026-03-29 08:35:06,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP00991,3358667,2026-05-07 23:11:24,Wrong Item,I received a different product from the one I ordered.,Open
+CMP00992,3315957,2026-04-20 18:14:12,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP00993,3449155,2026-06-09 15:29:12,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP00994,3276548,2026-04-12 15:25:50,Refund Issue,I returned my order but have not received my refund.,Open
+CMP00995,3399132,2026-05-20 15:03:18,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP00996,3020913,2026-01-12 18:37:45,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP00997,3472423,2026-06-15 05:24:42,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP00998,3072600,2026-01-31 22:40:49,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP00999,3292428,2026-04-13 19:18:41,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP01000,3465073,2026-06-23 14:15:00,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01001,3203206,2026-03-18 02:29:05,Refund Issue,My refund request has not been processed.,Open
+CMP01002,3225703,2026-03-10 02:07:21,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01003,3073774,2026-01-26 02:21:54,Damaged Product,The product was broken when I opened the package.,Open
+CMP01004,3043765,2026-01-25 02:43:18,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01005,3194652,2026-03-18 07:30:54,Refund Issue,My refund request has not been processed.,Open
+CMP01006,3492823,2026-07-02 05:19:12,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01007,2996736,2026-01-12 09:49:46,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP01008,3109916,2026-02-12 22:09:38,Refund Issue,My refund request has not been processed.,Under Review
+CMP01009,3176136,2026-02-23 21:34:19,Wrong Item,The item in my package does not match the product description.,Open
+CMP01010,3281550,2026-04-14 01:52:55,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01011,3349121,2026-04-16 22:16:35,Refund Issue,My refund request has not been processed.,Open
+CMP01012,3100654,2026-02-25 15:54:51,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01013,3352957,2026-04-17 01:52:56,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01014,3198710,2026-03-10 20:19:46,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP01015,3155124,2026-02-25 18:28:48,Refund Issue,My refund request has not been processed.,Under Review
+CMP01016,3406475,2026-05-17 20:39:07,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP01017,3467631,2026-06-02 15:39:27,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP01018,3489346,2026-06-22 12:28:04,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP01019,3575970,2026-07-17 15:08:23,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP01020,3158018,2026-02-19 18:59:27,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01021,3071283,2026-02-04 19:11:42,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01022,3434617,2026-05-24 21:59:24,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01023,3311509,2026-04-09 20:00:58,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP01024,3332901,2026-04-10 19:23:34,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP01025,3139594,2026-02-28 15:51:29,Refund Issue,My refund request has not been processed.,Resolved
+CMP01026,3333132,2026-04-20 20:27:20,Refund Issue,My refund request has not been processed.,Under Review
+CMP01027,3497801,2026-06-13 18:59:20,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01028,3389564,2026-05-18 16:04:16,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP01029,3133092,2026-02-14 19:30:24,Refund Issue,My refund request has not been processed.,Open
+CMP01030,3220849,2026-03-22 23:47:32,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP01031,3381580,2026-05-23 19:04:45,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01032,3332114,2026-04-23 15:38:55,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP01033,3034292,2026-01-25 23:29:41,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01034,3429705,2026-06-09 02:01:52,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01035,3534824,2026-07-10 13:04:36,Suspicious Seller,The seller's information appears suspicious and I need assistance.,Under Review
+CMP01036,3400421,2026-05-11 19:36:02,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01037,3235578,2026-04-08 15:21:02,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01038,3404947,2026-05-25 02:47:06,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP01039,3315576,2026-04-23 16:44:26,Wrong Item,The item in my package does not match the product description.,Open
+CMP01040,3524707,2026-06-22 22:45:49,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01041,3273221,2026-04-02 06:38:34,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01042,3094019,2026-01-31 16:13:25,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01043,3489137,2026-06-06 10:32:01,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP01044,3304064,2026-04-15 10:59:07,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01045,3553360,2026-06-25 19:09:33,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP01046,3193834,2026-03-22 23:41:49,Refund Issue,My refund request has not been processed.,Open
+CMP01047,3292430,2026-04-10 19:19:14,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01048,3159659,2026-03-15 03:12:21,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP01049,3343450,2026-05-03 00:51:14,Refund Issue,My refund request has not been processed.,Under Review
+CMP01050,3114338,2026-02-25 04:14:15,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01051,3384242,2026-05-14 19:49:35,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Under Review
+CMP01052,3317190,2026-04-10 22:33:21,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP01053,3483689,2026-06-02 14:46:46,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP01054,3045959,2026-02-15 17:46:39,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP01055,3004662,2026-01-28 14:34:04,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01056,3080290,2026-01-26 07:39:59,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01057,3261611,2026-04-07 01:11:36,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Resolved
+CMP01058,3096525,2026-02-16 21:37:26,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP01059,3013271,2026-01-10 18:58:19,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP01060,3451510,2026-05-20 06:25:16,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP01061,3102976,2026-02-03 22:39:05,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP01062,3552487,2026-06-25 14:18:52,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01063,3119585,2026-02-26 16:47:21,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01064,3247036,2026-03-20 01:39:09,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01065,3170579,2026-03-09 23:52:07,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01066,3456267,2026-06-06 23:23:50,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01067,3289824,2026-04-25 18:14:17,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP01068,2994566,2026-01-31 18:58:24,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP01069,3195494,2026-03-10 18:11:14,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP01070,3567810,2026-07-03 11:55:18,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01071,3447559,2026-06-08 22:40:06,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP01072,3256780,2026-03-22 18:30:14,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP01073,3305543,2026-04-03 18:34:43,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP01074,3514990,2026-06-19 18:52:37,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP01075,3183122,2026-03-14 00:29:30,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01076,3222241,2026-03-27 13:49:44,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP01077,3189602,2026-03-10 17:11:06,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01078,3289763,2026-04-13 17:53:16,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01079,3033717,2026-01-17 21:20:56,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP01080,3321308,2026-04-17 03:10:30,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01081,3238047,2026-03-28 03:50:43,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP01082,3074559,2026-01-26 08:21:23,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01083,3415121,2026-05-31 02:25:19,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP01084,3524643,2026-07-13 22:27:19,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP01085,3479399,2026-06-13 17:59:03,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01086,3531534,2026-06-20 04:11:52,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01087,3191583,2026-02-26 02:45:57,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01088,3566825,2026-07-01 21:02:57,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP01089,3444923,2026-05-23 18:41:59,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01090,2998939,2026-02-02 23:26:42,Refund Issue,My refund request has not been processed.,Open
+CMP01091,3476009,2026-06-15 15:30:50,Suspicious Seller,The seller stopped responding after I made the payment.,Under Review
+CMP01092,3128486,2026-02-25 17:44:43,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP01093,3361395,2026-05-05 22:28:07,Wrong Item,The item in my package does not match the product description.,Open
+CMP01094,3335911,2026-04-30 16:33:31,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP01095,3353949,2026-04-19 15:37:38,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01096,3308037,2026-04-22 11:52:20,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP01097,3289688,2026-04-11 17:36:03,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01098,3401204,2026-05-19 22:30:31,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP01099,3519713,2026-07-11 13:25:59,Wrong Item,I received a different product from the one I ordered.,Resolved
+CMP01100,3205842,2026-03-16 03:21:10,Wrong Item,I ordered one item but received something completely different.,Open
+CMP01101,3038711,2026-01-25 00:18:52,Refund Issue,My refund request has not been processed.,Open
+CMP01102,3069293,2026-02-12 14:03:03,Suspicious Seller,The seller stopped responding after I made the payment.,Open
+CMP01103,3373491,2026-04-24 00:48:39,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01104,3457253,2026-06-19 13:45:10,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP01105,3363583,2026-05-08 22:14:13,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01106,3437809,2026-06-06 00:18:42,Missing Package,"My order says delivered, but I never received the package.",Open
+CMP01107,3301706,2026-04-11 18:39:37,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01108,3469608,2026-06-17 02:40:06,Wrong Item,I ordered one item but received something completely different.,Resolved
+CMP01109,3358095,2026-05-13 20:46:09,Damaged Product,My order arrived damaged and I would like a replacement.,Under Review
+CMP01110,3175445,2026-03-06 18:33:11,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP01111,3042852,2026-01-24 23:17:22,Refund Issue,My refund request has not been processed.,Open
+CMP01112,3547633,2026-07-03 21:22:15,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP01113,3139449,2026-03-05 15:11:07,Damaged Product,The product was broken when I opened the package.,Open
+CMP01114,3466871,2026-06-05 03:02:32,Damaged Product,My order arrived damaged and I would like a replacement.,Resolved
+CMP01115,3568228,2026-07-03 15:54:33,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01116,3016446,2026-02-02 16:37:36,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP01117,3229401,2026-03-20 15:20:28,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01118,3384820,2026-04-28 23:05:28,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Open
+CMP01119,2995624,2026-01-14 22:59:47,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP01120,3082423,2026-02-13 17:27:35,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP01121,3079934,2026-02-03 04:14:17,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP01122,3032222,2026-01-23 16:05:57,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01123,3157793,2026-03-04 17:52:38,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01124,3182230,2026-03-19 20:54:16,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01125,3169110,2026-02-21 16:57:08,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01126,3305025,2026-04-03 16:38:39,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP01127,3560440,2026-07-25 09:53:31,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01128,3133902,2026-03-04 22:15:50,Refund Issue,My refund request has not been processed.,Under Review
+CMP01129,3123467,2026-02-22 20:13:20,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP01130,3116195,2026-02-13 18:16:30,Refund Issue,My refund request has not been processed.,Open
+CMP01131,3566405,2026-07-19 18:20:09,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP01132,3314025,2026-04-27 01:55:53,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Resolved
+CMP01133,3281780,2026-03-30 03:37:16,Missing Package,"The tracking information shows delivery, but nothing was delivered.",Under Review
+CMP01134,3463966,2026-05-26 21:22:29,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP01135,3375450,2026-05-21 19:16:52,Damaged Product,The product was broken when I opened the package.,Resolved
+CMP01136,3234279,2026-03-26 00:14:24,Refund Issue,My refund request has not been processed.,Open
+CMP01137,3410669,2026-05-09 00:49:48,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP01138,3433653,2026-05-28 16:48:08,Missing Package,I have been waiting for my package and it still has not arrived.,Open
+CMP01139,3366126,2026-04-27 19:51:01,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP01140,3151426,2026-02-12 14:22:01,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP01141,2988810,2026-01-13 14:43:15,Refund Issue,My refund request has not been processed.,Under Review
+CMP01142,3243486,2026-03-18 00:28:03,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP01143,3220653,2026-04-01 23:01:48,Unauthorized Charge,"My card was charged, but I never placed this order.",Resolved
+CMP01144,3328798,2026-04-25 15:12:16,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP01145,3218185,2026-03-13 13:30:27,Suspicious Seller,I believe this seller may be misleading customers.,Open
+CMP01146,3463029,2026-06-02 15:41:03,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01147,3450900,2026-06-06 00:39:43,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Open
+CMP01148,3320517,2026-04-07 23:30:23,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01149,3041156,2026-01-26 17:50:23,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01150,3207602,2026-03-11 22:57:10,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01151,3017162,2026-01-26 19:05:33,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01152,3459938,2026-06-21 13:38:15,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP01153,3523153,2026-07-11 14:46:07,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01154,3508739,2026-06-22 16:49:48,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP01155,3105028,2026-02-05 17:21:30,Unauthorized Charge,I do not recognize this purchase and need someone to investigate.,Resolved
+CMP01156,3244766,2026-04-01 15:57:25,Refund Issue,I returned my order but have not received my refund.,Open
+CMP01157,3401860,2026-06-01 01:49:46,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP01158,3432690,2026-05-29 03:21:59,Wrong Item,I ordered one item but received something completely different.,Under Review
+CMP01159,3170047,2026-03-01 21:30:43,Damaged Product,The item arrived in poor condition and cannot be used.,Resolved
+CMP01160,3123527,2026-03-01 20:29:39,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01161,3523474,2026-07-05 16:36:53,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP01162,3125945,2026-02-23 20:12:23,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01163,3117926,2026-02-22 23:49:02,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01164,3529637,2026-07-03 17:34:21,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01165,3348604,2026-05-03 19:47:41,Refund Issue,My refund request has not been processed.,Open
+CMP01166,3389375,2026-05-20 15:02:25,Refund Issue,I returned my order but have not received my refund.,Resolved
+CMP01167,3571655,2026-07-26 21:46:05,Wrong Item,The item in my package does not match the product description.,Under Review
+CMP01168,3209048,2026-03-03 15:44:21,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01169,3460551,2026-06-09 16:54:27,Refund Issue,I returned my order but have not received my refund.,Under Review
+CMP01170,3132276,2026-02-25 16:44:49,Refund Issue,My refund request has not been processed.,Open
+CMP01171,3551713,2026-07-15 01:35:24,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP01172,3511600,2026-07-07 16:00:47,Suspicious Seller,I believe this seller may be misleading customers.,Resolved
+CMP01173,3301248,2026-04-07 16:35:27,Damaged Product,The item arrived in poor condition and cannot be used.,Under Review
+CMP01174,3343638,2026-04-29 01:41:17,Refund Issue,My refund request has not been processed.,Resolved
+CMP01175,3457317,2026-06-02 14:07:00,Missing Package,I have been waiting for my package and it still has not arrived.,Under Review
+CMP01176,2994655,2026-01-07 19:19:50,Wrong Item,I ordered one item but received something completely different.,Open
+CMP01177,3150397,2026-02-25 00:10:32,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP01178,3063782,2026-02-04 13:51:48,Unauthorized Charge,I noticed a charge on my account that I did not authorize.,Open
+CMP01179,3206136,2026-03-25 14:08:00,Damaged Product,My order arrived damaged and I would like a replacement.,Open
+CMP01180,3189754,2026-02-28 17:54:45,Damaged Product,The item arrived in poor condition and cannot be used.,Open
+CMP01181,3412743,2026-05-22 16:37:36,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP01182,3271237,2026-04-01 17:21:52,Missing Package,"My order says delivered, but I never received the package.",Under Review
+CMP01183,3316996,2026-05-04 22:06:00,Wrong Item,I ordered one item but received something completely different.,Open
+CMP01184,3516530,2026-07-07 05:25:10,Refund Issue,My refund request has not been processed.,Under Review
+CMP01185,3406103,2026-05-19 18:32:22,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01186,3002115,2026-01-20 20:28:21,Refund Issue,"I was promised a refund, but the money has not been returned.",Resolved
+CMP01187,3209918,2026-03-18 20:10:17,Damaged Product,The product was broken when I opened the package.,Under Review
+CMP01188,3047889,2026-02-13 23:17:35,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01189,3527594,2026-07-09 22:16:24,Suspicious Seller,The seller stopped responding after I made the payment.,Resolved
+CMP01190,3452198,2026-06-14 15:53:16,Wrong Item,The item in my package does not match the product description.,Open
+CMP01191,3272491,2026-03-28 00:17:11,Refund Issue,"I was promised a refund, but the money has not been returned.",Open
+CMP01192,3157305,2026-02-22 15:12:53,Wrong Item,I received a different product from the one I ordered.,Under Review
+CMP01193,3535884,2026-06-25 18:41:35,Refund Issue,My refund request has not been processed.,Under Review
+CMP01194,3494737,2026-06-26 21:45:32,Missing Package,"My order says delivered, but I never received the package.",Resolved
+CMP01195,3292593,2026-04-20 20:17:26,Wrong Item,The item in my package does not match the product description.,Resolved
+CMP01196,3571802,2026-07-12 22:37:27,Refund Issue,"I was promised a refund, but the money has not been returned.",Under Review
+CMP01197,3482257,2026-06-08 19:47:08,Refund Issue,My refund request has not been processed.,Resolved
+CMP01198,3351983,2026-05-10 21:23:21,Wrong Item,I received a different product from the one I ordered.,Open
+CMP01199,3089538,2026-02-23 19:20:29,Missing Package,I have been waiting for my package and it still has not arrived.,Resolved
+CMP01200,3300492,2026-04-30 06:48:56,Refund Issue,I returned my order but have not received my refund.,Under Review

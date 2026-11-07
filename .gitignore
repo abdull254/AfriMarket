@@ -1,0 +1,15 @@
+# Python / virtual env
+venv/
+__pycache__/
+*.pyc
+
+# Spark outputs (re-created by running the scripts)
+fraud_model/
+fraud_model_thresholds/
+complaint_results/
+spark-warehouse/
+metastore_db/
+derby.log
+
+# Mac
+.DS_Store
