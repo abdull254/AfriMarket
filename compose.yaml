@@ -40,6 +40,19 @@ services:
       start_period: 120s
       retries: 10
 
+  cassandra-init:
+    image: cassandra:4.1
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    volumes:
+      - ./cassandra/init:/scripts:ro
+    entrypoint: ["/bin/sh", "-c"]
+    command:
+      - "cqlsh cassandra 9042 -f /scripts/01_schema.cql"
+    restart: "no"
+
+
 volumes:
   afrimarket_mysql_data:
     name: afrimarket_mysql_data
