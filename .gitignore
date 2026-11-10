@@ -13,3 +13,18 @@ derby.log
 
 # Mac
 .DS_Store
+# Private environment files
+.env
+.env.*
+!.env.example
+
+# Python temporary files
+__pycache__/
+*.pyc
+.venv/
+
+# Logs
+*.log
+
+# Editor settings
+.vscode/
