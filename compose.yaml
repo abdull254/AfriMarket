@@ -52,6 +52,27 @@ services:
       - "cqlsh cassandra 9042 -f /scripts/01_schema.cql"
     restart: "no"
 
+  dashboard:
+    build:
+      context: ./dashboard
+    container_name: afrimarket-dashboard
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8501:8501"
+    environment:
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MYSQL_DATABASE: fraud
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      CASSANDRA_HOST: cassandra
+      CASSANDRA_PORT: "9042"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      cassandra-init:
+        condition: service_completed_successfully
+    mem_limit: 512m
 
 volumes:
   afrimarket_mysql_data:
