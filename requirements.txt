@@ -1,3 +1,7 @@
 pyspark==3.5.3
-numpy
-pandas
+numpy==1.26.4
+pandas==2.2.2
+redis==5.2.1
+# for tests only
+pytest==8.3.3
+fakeredis==2.26.2

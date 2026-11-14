@@ -76,8 +76,14 @@ The system is designed to:
 - `mysql/init/` – MySQL database schema.
 - `cassandra/init/` – Cassandra keyspace and table definitions.
 - `dashboard/` – Streamlit application and dependencies.
+- `train_fraud_model.py`, `features.py` – model training and shared feature engineering.
+- `online_features.py`, `score_snippet.py` – live customer features from Redis and the scoring step.
+- `complaint_analysis.py` – complaint keyword tagging and link to transactions.
+- `tests/`, `parity_test.py` – feature tests and the training-vs-live feature check.
+- `results/` – outputs from the latest training run.
+- `README_ML.md` – full details of the model, results, and live features.
 
-Model artifacts, historical data, and shared feature modules are maintained separately in the project environment.
+Trained model files are not stored in Git. Running `train_fraud_model.py` creates them.
 
 ## 5. Datasets
 
@@ -93,16 +99,21 @@ Model artifacts, historical data, and shared feature modules are maintained sepa
 
 ## 6. Fraud Detection Model
 
-Member 4 developed the Spark MLlib fraud model using Gradient Boosted Trees (GBT), with Logistic Regression as a baseline.
+Member 4 developed the Spark MLlib fraud model using Gradient Boosted Trees (GBT), with Logistic Regression as a baseline. Full details are in `README_ML.md`.
 
-Reported model evaluation:
+The data is split by time: oldest 70% for training, next 15% for validation, newest 15% for test. The model and the decision thresholds are chosen on validation, and the test set is only used to report results.
+
+Results on the test set (4,502 transactions over 31.4 days, 3.4% fraud, so random guessing scores AUC-PR 0.035):
 
 | Model | AUC-PR | AUC-ROC |
 |---|---:|---:|
-| Logistic Regression | 0.121 | 0.792 |
-| Gradient Boosted Trees | 0.370 | 0.846 |
+| Logistic Regression | 0.105 | 0.793 |
+| Gradient Boosted Trees (used) | 0.346 | 0.798 |
+| Gradient Boosted Trees, no ID columns | 0.399 | 0.808 |
 
-The reported evaluation used the 30,000-row dataset. These are model-development results, not a guarantee of live production performance.
+Thresholds: REVIEW at 0.55, BLOCK at 0.9. On test, REVIEW catches 33% of fraud dollars with 360 honest orders flagged, for net savings of about $2,760 in 31 days (assuming $15 per false alarm).
+
+These are model-development results, not a guarantee of live production performance.
 
 Transactions receive one of three decisions:
 
@@ -310,6 +321,8 @@ The dashboard depends on MySQL and Cassandra being available and populated.
 
 ## 15. Known Limitations and Next Steps
 
+- Switch `stream_transactions.py` to the Redis live features (`online_features.py`) and add a `redis` service to `compose.yaml`. The features and scoring step are tested; the streaming job does not use them yet.
+- Key transaction messages by `card1` instead of TransactionID, so each card's purchases arrive in time order (needed by the Redis features).
 - Complete and test the Kafka complaint consumer that writes events to Cassandra.
 - Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
 - Verify model and historical-data provisioning on a fresh environment.

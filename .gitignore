@@ -21,3 +21,6 @@ kafka-recovery/
 # Local training extract and editor backups
 data/member2_training_transactions.csv
 *.bak
+
+# Test cache
+.pytest_cache/
