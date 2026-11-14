@@ -10,7 +10,7 @@
     },
     {
       "model": "GradientBoostedTrees",
-      "auc_pr": 0.3958,
+      "auc_pr": 0.3957,
       "auc_roc": 0.8539,
       "precision@0.5": 0.2415,
       "recall@0.5": 0.5668,
@@ -29,7 +29,7 @@
     {
       "model": "LogisticRegression",
       "auc_pr": 0.1054,
-      "auc_roc": 0.7929,
+      "auc_roc": 0.7928,
       "precision@0.5": 0.0888,
       "recall@0.5": 0.6761,
       "false_positives@0.5": 985
@@ -37,7 +37,7 @@
     {
       "model": "GradientBoostedTrees",
       "auc_pr": 0.3458,
-      "auc_roc": 0.798,
+      "auc_roc": 0.7981,
       "precision@0.5": 0.1693,
       "recall@0.5": 0.5986,
       "false_positives@0.5": 417

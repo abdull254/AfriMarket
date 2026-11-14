@@ -51,3 +51,9 @@ def test_counts_and_gaps(spark):
     assert f[3].txns_last_1h == 2
     assert f[3].amt_vs_uid_mean == pytest.approx(99.5 / 15.0)
     assert f[4].uid_prev_txns == 0                                      # other customer
+
+
+def test_same_second_purchases_do_not_count_each_other(spark):
+    f = feats(spark, ROWS + [(7, 2000, 40.0, 111, 200)])               # same card, same second as txn 3
+    assert f[3].uid_prev_txns == 2 and f[7].uid_prev_txns == 2
+    assert f[3].txns_last_1h == f[7].txns_last_1h == 2

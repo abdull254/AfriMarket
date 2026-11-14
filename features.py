@@ -41,26 +41,37 @@ def add_uid(df):
                                             F.col("addr1").cast("long")))
 
 
+def add_row_features(df):
+    """Features that need only the purchase itself. Used by training and live scoring."""
+    return (df
+            # TransactionDT counts seconds from an unknown start point, so this is
+            # "hour of a 24-hour cycle", shifted by an unknown offset, not clock time.
+            .withColumn("hour_of_day", F.floor(F.col(TIME) / 3600) % 24)
+            # Cents part of the amount hints at currency conversion, a known IEEE-CIS signal.
+            .withColumn("amt_cents", F.col("TransactionAmt") - F.floor("TransactionAmt")))
+
+
+def fill_missing(df):
+    return df.fillna(-1, subset=NUMERIC).fillna("missing", subset=CATEGORICAL)
+
+
 def add_features(df):
-    """Adds ENGINEERED columns, then fills missing values. Expects add_uid first."""
-    # TransactionID breaks ties when two purchases share the same second, so
-    # results are the same on every run.
-    by_uid = Window.partitionBy("uid").orderBy(TIME, "TransactionID")
-    prior = by_uid.rowsBetween(Window.unboundedPreceding, -1)
+    """Adds ENGINEERED columns, then fills missing values. Expects add_uid first.
+
+    Point-in-time rule: every customer feature uses only purchases from the same
+    customer with a STRICTLY EARLIER TransactionDT. The current purchase, and any
+    other purchase in the same second, is never counted. online_features.py
+    implements exactly the same rule for live scoring (checked by parity_test.py).
+    """
     t = F.col(TIME).cast("long")
     by_uid_time = Window.partitionBy("uid").orderBy(t)
+    earlier = by_uid_time.rangeBetween(Window.unboundedPreceding, -1)
 
-    df = (df
-          # TransactionDT counts seconds from an unknown start point, so this is
-          # "hour of a 24-hour cycle", shifted by an unknown offset, not clock time.
-          .withColumn("hour_of_day", F.floor(F.col(TIME) / 3600) % 24)
-          # Cents part of the amount hints at currency conversion, a known IEEE-CIS signal.
-          .withColumn("amt_cents", F.col("TransactionAmt") - F.floor("TransactionAmt"))
-          .withColumn("uid_prev_txns", F.count("*").over(prior))
+    df = (add_row_features(df)
+          .withColumn("uid_prev_txns", F.count("*").over(earlier))
           .withColumn("txns_last_1h", F.count("*").over(by_uid_time.rangeBetween(-3600, -1)))
           .withColumn("txns_last_24h", F.count("*").over(by_uid_time.rangeBetween(-86400, -1)))
-          .withColumn("secs_since_last_txn", F.col(TIME) - F.lag(TIME).over(by_uid))
+          .withColumn("secs_since_last_txn", F.col(TIME) - F.max(TIME).over(earlier))
           .withColumn("amt_vs_uid_mean",
-                      F.col("TransactionAmt") / F.avg("TransactionAmt").over(prior)))
-    df = df.fillna(-1, subset=NUMERIC).fillna("missing", subset=CATEGORICAL)
-    return df
+                      F.col("TransactionAmt") / F.avg("TransactionAmt").over(earlier)))
+    return fill_missing(df)

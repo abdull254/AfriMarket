@@ -7,8 +7,8 @@
   "fp_cost": 15.0,
   "rows": {
     "train": 20997,
-    "validation": 4500,
-    "test": 4503
+    "validation": 4501,
+    "test": 4502
   },
   "days": {
     "validation": 30.9,
@@ -31,15 +31,15 @@
     "precision": 0.7347,
     "net_savings": 2420.44
   },
-  "test_net_savings_per_30_days": 2640.32,
+  "test_net_savings_per_30_days": 2640.44,
   "fp_cost_sensitivity": [
     {
       "fp_cost": 5.0,
       "review_at": 0.1,
       "block_at": 0.9,
       "test_pct_fraud_dollars_caught": 0.7051,
-      "test_false_positives": 2467,
-      "test_net_savings": 5119.25
+      "test_false_positives": 2466,
+      "test_net_savings": 5124.25
     },
     {
       "fp_cost": 15.0,
