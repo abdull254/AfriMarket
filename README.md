@@ -213,7 +213,7 @@ The Compose configuration references existing Docker volumes and the `myNetwork`
 - Volume: afrimarket_mysql_data
 - Volume: afrimarket_cassandra_data
 
-The Spark services require the locally built `afrimarket-spark-python311` image. A fresh environment must obtain or build the matching image before starting those services.
+The Spark image is built from `spark_processing/Dockerfile`, which installs Python 3.11 and PySpark 3.5.0 on Apache Spark 3.5.0. Docker Compose builds this image for the Spark master and reuses it for both workers.
 
 
 ## 10. Starting the Platform
@@ -224,7 +224,7 @@ Validate the Compose configuration:
 
 Build the producer and dashboard images:
 
-    docker compose build producer dashboard
+    docker compose build spark-master producer dashboard
 
 Start the services:
 
