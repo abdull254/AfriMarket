@@ -13,3 +13,4 @@ derby.log
 
 # Mac
 .DS_Store
+.pytest_cache/
