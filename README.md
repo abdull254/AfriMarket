@@ -1,85 +1,329 @@
-# AfriMarket fraud model (CIS641 Group 6)
+# AfriMarket – Real-Time E-Commerce Fraud Intelligence Platform
 
-A Spark MLlib model that gives every transaction a 0-1 fraud risk score and an
-APPROVE / REVIEW / BLOCK decision, built on the IEEE-CIS fraud dataset.
+**CIS 641 – Big Data Systems | Group 6**
 
-## Files
-| File | What it is |
+## 1. Project Overview
+
+AfriMarket is a containerized big-data platform for identifying potentially fraudulent e-commerce transactions and supporting complaint investigations.
+
+The platform combines Kafka event ingestion, Hadoop distributed storage, Apache Spark processing, Spark MLlib fraud scoring, MySQL score persistence, Cassandra complaint storage, and a Streamlit dashboard.
+
+The system is designed to:
+- Ingest transaction and customer complaint events.
+- Process historical and incoming transaction data.
+- Assign each transaction a fraud risk score between 0 and 1.
+- Classify transactions as APPROVE, REVIEW, or BLOCK.
+- Store scored transactions for investigation and reporting.
+- Support complaint lookup and investigation through the database layer.
+
+## 2. System Architecture
+
+```text
+                  AfriMarket CSV Datasets
+                    /                 \
+                   /                   \
+          Transaction CSV          Complaint CSV
+                 |                       |
+                 +------ Python Producer-+
+                             |
+                          Apache Kafka
+                       /       |       \
+                      /        |        \
+             transactions  complaints  invalid_records
+                  |             |
+                  |             +---- Complaint consumer/
+                  |                    Cassandra loader
+                  |                    (integration pending)
+                  |
+             Spark Structured Streaming
+                  |
+          Feature Engineering + MLlib
+                  |
+           Fraud Risk Classification
+                  |
+              +---+---+
+              |       |
+             HDFS    MySQL
+              |       |
+              +---+---+
+                  |
+             Streamlit Dashboard
+
+          Cassandra stores complaint records
+          for complaint investigation and lookup.
+
+## 3. Technology Stack
+
+| Technology | Purpose |
 |---|---|
-| `train_fraud_model.py` | Main training job (use this one) |
-| `features.py` | Feature code shared by training and live scoring |
-| `score_snippet.py` | `handle_batch()` for the Structured Streaming job |
-| `complaint_analysis.py` | Complaint keyword tagging + link to transactions (delayed path) |
-| `train_fraud_model_mvp.py` | Original one-model MVP, kept as the baseline |
-| `results/` | Outputs from the real run on `afrimarket_transactions.csv` |
-| `fraud_model/` | Trained model from that run |
+| Apache Kafka | Transaction and complaint event ingestion |
+| Apache Hadoop HDFS | Distributed storage |
+| Apache Spark 3.5.0 | Distributed and streaming processing |
+| PySpark / Spark MLlib | Feature engineering and fraud scoring |
+| MySQL 8.0 | Transaction scores and investigation cases |
+| Cassandra 4.1 | Complaint storage and lookup |
+| Python 3.11 | Producers and application code |
+| Streamlit | Interactive dashboard |
+| Docker Compose | Container orchestration |
 
-## What makes it solid
-1. **Time-based split.** Trains on the earliest 80% of transactions (by TransactionDT) and
-   tests on the latest 20%, the way it would run in production. A random split lets the
-   model peek at the future.
-2. **Customer features, with no leakage.** A rough customer ID (card1 + addr1), then
-   transactions in the last hour and 24 hours, seconds since that card's last purchase,
-   amount compared with that card's past average, hour of day, and the cents part of the
-   amount. Each one uses only earlier transactions.
-3. **Model comparison.** Logistic regression (baseline) vs gradient boosted trees, both
-   weighted for the rare fraud class. Judged on AUC-PR, since accuracy is meaningless
-   at ~3.5% fraud. The best model is saved.
-4. **Thresholds picked by dollars.** Tries cut-offs from 0.05 to 0.95. For each one it
-   adds up fraud dollars caught, minus a cost for every legit order flagged
-   (`--fp-cost`, default $15). REVIEW = the cut-off with the highest net savings.
-   BLOCK = the lowest higher cut-off where at least 80% of flagged orders are fraud.
-5. **Explainability.** Prints the top 10 features driving the model.
+## 4. Repository Structure
 
-## Results on our data (afrimarket_transactions.csv, 30K rows, identity columns already merged)
-Time-based test set: 6,003 transactions over the last 42.6 days. Fraud rate 3.5%, so a random guess scores AUC-PR 0.035.
+- `compose.yaml` – integrated service configuration.
+- `data/` – transaction and complaint datasets.
+- `kafka/config/` – Kafka broker configuration.
+- `ingestion/` – Python producers and Kafka topic utilities.
+- `spark_processing/` – Spark batch and streaming jobs.
+- `mysql/init/` – MySQL database schema.
+- `cassandra/init/` – Cassandra keyspace and table definitions.
+- `dashboard/` – Streamlit application and dependencies.
 
-| Model | AUC-PR | AUC-ROC | Precision @0.5 | Recall @0.5 | False positives @0.5 |
-|---|---|---|---|---|---|
-| Logistic regression | 0.121 | 0.792 | 0.098 | 0.678 | 1,276 |
-| Gradient boosted trees | **0.370** | **0.846** | 0.183 | 0.634 | 580 |
+Model artifacts, historical data, and shared feature modules are maintained separately in the project environment.
 
-Boosted trees are about 10x better than random on AUC-PR. At REVIEW 0.5 they catch 52% of fraud
-dollars for net savings of about $10K in the test period. BLOCK fell back to 0.9 because no
-cut-off reached 80% precision (0.9 gives 60% precision, 34 false positives).
-Why not higher: 30K rows randomly sampled from 590K means few repeat customers, so the
-"last hour" features rarely fire. The full dataset should do noticeably better.
+## 5. Datasets
 
-Complaints: 1,200 of 1,200 link to a transaction. Complaints the rules tag HIGH (unauthorized
-charge, suspicious seller) point at actual fraud 19.2% of the time, vs 1.4% for ordinary
-service complaints and 3.5% overall. The rules agree 100% with the labelled categories, but
-only because the complaint text is 18 repeated template sentences.
+**Transactions:** `data/afrimarket_transactions.csv`
+- 30,000 IEEE-CIS transaction records.
+- Includes transaction identifiers, amounts, timestamps, device and transaction features.
+- `isFraud` is retained for evaluation and must not be used as a model input.
 
-## Run
-```
-pip install pyspark==3.5.3 numpy pandas      # or run inside the Spark container
-spark-submit --driver-memory 4g --py-files features.py train_fraud_model.py \
-    --transactions afrimarket_transactions.csv \
-    --model-dir /fraud-data/model --results-dir results
-```
-Our `afrimarket_transactions.csv` already includes identity columns, so `--identity` is not needed.
-For the full Kaggle data pass `--transactions train_transaction.csv --identity train_identity.csv`.
+**Complaints:** `data/afrimarket_complaints.csv`
+- 1,200 synthetic complaint records.
+- Includes ComplaintID, TransactionID, date, category, text, and status.
+- TransactionID links complaints to transactions.
 
-Complaints:
-```
-spark-submit complaint_analysis.py --complaints afrimarket_complaints.csv \
-    --transactions afrimarket_transactions.csv --out complaint_results
-```
-The full 590K rows is the "big data" version; the 30K sample also works.
-On a 100K-row test it took about 7 minutes on a small machine, most of it boosted trees.
+## 6. Fraud Detection Model
 
-Outputs:
-- `results/model_comparison.json`: the comparison table for your slides or report
-- `results/threshold_sweep.json`: dollars caught vs false positives at each cut-off (good chart)
-- `results/summary.json`: best model, thresholds, projected net savings per 30 days, top features
-- `<model-dir>` and `<model-dir>_thresholds`: loaded by the streaming job
+Member 4 developed the Spark MLlib fraud model using Gradient Boosted Trees (GBT), with Logistic Regression as a baseline.
 
-## Live scoring
-`score_snippet.py`: each micro-batch from Kafka is joined with those cards' past
-transactions from the HDFS data lake, so the "last hour" features match training.
-Then it writes TransactionID, risk_score, decision (to MySQL in our architecture).
-Nightly retraining is cron running `train_fraud_model.py` on the data lake.
+Reported model evaluation:
 
-## Ideas for later
-- Measure scoring latency and throughput against the 50-250 tx/sec target.
-- Tune GBT depth/iterations with `CrossValidator`.
+| Model | AUC-PR | AUC-ROC |
+|---|---:|---:|
+| Logistic Regression | 0.121 | 0.792 |
+| Gradient Boosted Trees | 0.370 | 0.846 |
+
+The reported evaluation used the 30,000-row dataset. These are model-development results, not a guarantee of live production performance.
+
+Transactions receive one of three decisions:
+
+| Decision | Meaning |
+|---|---|
+| APPROVE | Lower predicted fraud risk |
+| REVIEW | Requires investigation |
+| BLOCK | Higher predicted fraud risk |
+
+The streaming job loads its decision thresholds from the saved model artifacts.
+
+
+## 7. Data Processing Workflows
+
+### 7.1 Transaction ingestion
+
+The Python producer reads the transaction CSV and publishes records to Kafka's `transactions` topic. Records are keyed by TransactionID. Invalid records are sent to `invalid_records`.
+
+### 7.2 Complaint ingestion
+
+The Python producer reads the complaint CSV and publishes records to Kafka's `complaints` topic.
+
+A Kafka consumer that loads these events into both Cassandra complaint tables is still required for a complete automated complaint-ingestion workflow.
+
+### 7.3 Spark batch processing
+
+The batch-scoring component:
+1. Reads transaction events from Kafka.
+2. Retrieves historical transaction data.
+3. Filters transactions already represented in the historical dataset.
+4. Prepares model features.
+5. Loads the trained model and decision thresholds.
+6. Scores transactions and assigns decisions.
+7. Saves scored records to HDFS in Parquet format.
+
+See `spark_processing/README.md` for the batch-scoring implementation and its test results.
+
+### 7.4 Continuous transaction scoring
+
+`spark_processing/stream_transactions.py` implements the continuous Structured Streaming workflow.
+
+It:
+1. Reads events from Kafka's `transactions` topic.
+2. Uses the historical transaction baseline and previously processed stream batches.
+3. Filters previously processed TransactionIDs.
+4. Builds features using the shared `features.py` module.
+5. Loads the trained MLlib model and decision thresholds.
+6. Calculates risk scores and assigns APPROVE, REVIEW, or BLOCK.
+7. Writes scored batches to HDFS in Parquet format.
+8. Persists transaction scores and decisions to MySQL.
+9. Uses a persistent HDFS checkpoint to support recovery.
+
+Required model, threshold, historical-data, and feature artifacts must be available before starting the streaming job.
+
+Checkpoint location:
+
+`/fraud/checkpoints/member2_transaction_scoring`
+
+**Important:** Preserve this checkpoint when restarting the stream. Do not delete it during routine troubleshooting.
+
+### 7.5 Database integration
+
+**MySQL – `fraud` database**
+- `scores`: transaction risk scores and decisions.
+- `investigation_cases`: investigation cases linked to scored transactions.
+
+**Cassandra – `afrimarket` keyspace**
+- `complaints_by_id`: complaint lookup by complaint ID.
+- `complaints_by_transaction`: complaint lookup by transaction ID.
+
+The Cassandra schema is initialized from `cassandra/init/01_schema.cql`.
+
+
+## 8. Environment Configuration
+
+Create a local `.env` file in the project root. Never commit this file.
+
+Required variables: `MYSQL_USER`, `MYSQL_PASSWORD`, and `MYSQL_ROOT_PASSWORD`.
+
+Set secure credentials before initializing a fresh MySQL volume. Existing MySQL volumes retain their initialized credentials.
+
+Internal service addresses:
+- Kafka: `kafka-recovery:9092`
+- Hadoop HDFS: `hadoop-container:8020`
+- Spark master: `spark://afrimarket-spark-master:7077`
+- MySQL: `afrimarket-mysql:3306`
+- Cassandra: `afrimarket-cassandra:9042`
+
+## 9. Docker Services and Ports
+
+| Component | Container | Host port |
+|---|---|---:|
+| Kafka | kafka-recovery | 9099 |
+| Hadoop NameNode UI | hadoop-container | 9870 |
+| Hadoop YARN UI | hadoop-container | 8088 |
+| Spark master | afrimarket-spark-master | 7077, 8080 |
+| Spark worker 1 | afrimarket-spark-worker-1 | 8081 |
+| Spark worker 2 | afrimarket-spark-worker-2 | 8082 |
+| MySQL | afrimarket-mysql | 3307 |
+| Cassandra | afrimarket-cassandra | 9042 |
+| Streamlit | afrimarket-dashboard | 8501 |
+
+The Compose configuration references existing Docker volumes and the `myNetwork` network. Create these resources in a fresh environment before starting the stack:
+
+- Network: myNetwork
+- Volume: kafka_recovery_data
+- Volume: my_shared_volume
+- Volume: afrimarket_mysql_data
+- Volume: afrimarket_cassandra_data
+
+The Spark services require the locally built `afrimarket-spark-python311` image. A fresh environment must obtain or build the matching image before starting those services.
+
+
+## 10. Starting the Platform
+
+Validate the Compose configuration:
+
+    docker compose config --quiet
+
+Build the producer and dashboard images:
+
+    docker compose build producer dashboard
+
+Start the services:
+
+    docker compose up -d
+
+Check service status:
+
+    docker compose ps
+
+For an existing environment with running containers, avoid recreating services unnecessarily. Preserve named volumes and the Spark streaming checkpoint.
+
+## 11. Kafka Topics and Data Publishing
+
+Create the Kafka topics:
+
+    docker compose exec producer python create_topics.py
+
+Publish transaction events:
+
+    docker compose exec producer python producer.py transactions --start 0 --limit 30000 --delay 0.0
+
+Publish complaint events:
+
+    docker compose exec producer python producer.py complaints --start 0 --limit 1200 --delay 0.0
+
+For a slower live demonstration, publish 100 transactions with a half-second delay:
+
+    docker compose exec producer python producer.py transactions --start 0 --limit 100 --delay 0.5
+
+The producer reports confirmed, failed, and invalid records.
+
+
+## 12. Running Continuous Spark Scoring
+
+Before starting the stream, verify that these artifacts are available:
+
+- Historical transactions: `/fraud/processed/member2_transaction_history`
+- Trained model: `/shared_data/member2_fraud_model`
+- Model thresholds: `/shared_data/member2_fraud_model_thresholds`
+- Shared `features.py` module in the Spark shared volume.
+- Streaming script: `/shared_data/stream_transactions.py`
+
+Submit the streaming job using Spark 3.5.0 and its Kafka connector:
+
+    docker exec afrimarket-spark-master spark-submit --master spark://afrimarket-spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 /shared_data/stream_transactions.py
+
+The default maximum Kafka offsets per trigger is 500.
+
+Do not launch a second copy of the same streaming job against the existing checkpoint.
+
+## 13. Verifying Results
+
+List Kafka topics:
+
+    docker exec kafka-recovery /opt/kafka/bin/kafka-topics.sh --bootstrap-server kafka-recovery:9092 --list
+
+List HDFS streaming output:
+
+    docker exec hadoop-container hdfs dfs -ls /fraud/stream/member2_scored_transactions
+
+Check the streaming checkpoint:
+
+    docker exec hadoop-container hdfs dfs -ls /fraud/checkpoints/member2_transaction_scoring
+
+Check the number of MySQL scores:
+
+    docker exec afrimarket-mysql sh -c 'mysql -u"$MYSQL_USER" -p"$MYSQL_PASSWORD" -D fraud -e "SELECT COUNT(*) FROM scores;"'
+
+Open the dashboard at:
+
+    http://localhost:8501
+
+The dashboard depends on MySQL and Cassandra being available and populated.
+
+## 14. Team Responsibilities
+
+| Member | Responsibility |
+|---|---|
+| Member 1 – Marienne | Kafka ingestion, producers, topic creation, and Hadoop integration |
+| Member 2 – Muhammed | Spark processing, Structured Streaming, and ML model integration |
+| Member 3 – Bintou | MySQL, Cassandra, and dashboard integration |
+| Member 4 – Abdullahi | Fraud model development, training, and shared feature engineering |
+
+## 15. Known Limitations and Next Steps
+
+- Complete and test the Kafka complaint consumer that writes events to Cassandra.
+- Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
+- Verify model and historical-data provisioning on a fresh environment.
+- Measure continuous-stream throughput and end-to-end scoring latency.
+- Test recovery using the persistent Structured Streaming checkpoint.
+- Evaluate scoring with larger data volumes.
+- Improve complaint-to-transaction investigation integration.
+
+## 16. Data and Security Notes
+
+- Never commit `.env` or real credentials.
+- Keep local Kafka recovery data and backups out of Git.
+- Do not remove persistent Docker volumes during routine troubleshooting.
+- Do not delete the Spark streaming checkpoint unless intentionally resetting the stream.
+- Configure secure passwords for shared environments.
+- This project is an academic prototype, not a production payment authorization system.
+

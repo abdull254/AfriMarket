@@ -1,0 +1,194 @@
+services:
+  kafka-recovery:
+    image: apache/kafka:latest
+    container_name: kafka-recovery
+    restart: unless-stopped
+    environment:
+      CLUSTER_ID: rLe0DO6aQfqNmsAGfMWVIQ
+    ports:
+      - "9099:9092"
+    volumes:
+      - ./kafka/config/server.properties:/opt/kafka/config/server.properties:ro
+      - kafka_recovery_data:/var/lib/kafka/data
+    networks:
+      - myNetwork
+
+  hadoop-container:
+    image: harisekhon/hadoop:latest
+    container_name: hadoop-container
+    restart: unless-stopped
+    ports:
+      - "9870:50070"
+      - "8088:8088"
+    volumes:
+      - my_shared_volume:/data
+    networks:
+      - myNetwork
+
+  spark-master:
+    image: afrimarket-spark-python311
+    container_name: afrimarket-spark-master
+    restart: unless-stopped
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.master.Master", "--host", "afrimarket-spark-master", "--port", "7077", "--webui-port", "8080"]
+    ports:
+      - "7077:7077"
+      - "8080:8080"
+    volumes:
+      - my_shared_volume:/shared_data
+    environment:
+      PYSPARK_PYTHON: /opt/conda/bin/python
+      PYSPARK_DRIVER_PYTHON: /opt/conda/bin/python
+    networks:
+      - myNetwork
+
+  spark-worker-1:
+    image: afrimarket-spark-python311
+    container_name: afrimarket-spark-worker-1
+    restart: unless-stopped
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://afrimarket-spark-master:7077", "--webui-port", "8081"]
+    ports:
+      - "8081:8081"
+    volumes:
+      - my_shared_volume:/shared_data
+    environment:
+      PYSPARK_PYTHON: /opt/conda/bin/python
+    depends_on:
+      - spark-master
+    networks:
+      - myNetwork
+
+  spark-worker-2:
+    image: afrimarket-spark-python311
+    container_name: afrimarket-spark-worker-2
+    restart: unless-stopped
+    command: ["/opt/spark/bin/spark-class", "org.apache.spark.deploy.worker.Worker", "spark://afrimarket-spark-master:7077", "--webui-port", "8082"]
+    ports:
+      - "8082:8082"
+    volumes:
+      - my_shared_volume:/shared_data
+    environment:
+      PYSPARK_PYTHON: /opt/conda/bin/python
+    depends_on:
+      - spark-master
+    networks:
+      - myNetwork
+
+  mysql:
+    image: mysql:8.0
+    container_name: afrimarket-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-local-root-password}
+      MYSQL_DATABASE: fraud
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - afrimarket_mysql_data:/var/lib/mysql
+      - ./mysql/init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 --silent"]
+      interval: 10s
+      timeout: 5s
+      retries: 10
+    networks:
+      - myNetwork
+
+  cassandra:
+    image: cassandra:4.1
+    container_name: afrimarket-cassandra
+    restart: unless-stopped
+    environment:
+      CASSANDRA_CLUSTER_NAME: AfriMarketCluster
+      MAX_HEAP_SIZE: 512M
+      HEAP_NEWSIZE: 100M
+    ports:
+      - "9042:9042"
+    volumes:
+      - afrimarket_cassandra_data:/var/lib/cassandra
+    healthcheck:
+      test: ["CMD-SHELL", "cqlsh 127.0.0.1 9042 -e 'DESCRIBE KEYSPACES' >/dev/null 2>&1"]
+      interval: 30s
+      timeout: 15s
+      start_period: 120s
+      retries: 10
+    networks:
+      - myNetwork
+
+  cassandra-init:
+    image: cassandra:4.1
+    depends_on:
+      cassandra:
+        condition: service_healthy
+    volumes:
+      - ./cassandra/init:/scripts:ro
+    entrypoint: ["/bin/sh", "-c"]
+    command: ["cqlsh cassandra 9042 -f /scripts/01_schema.cql"]
+    restart: "no"
+    networks:
+      - myNetwork
+
+  producer:
+    build:
+      context: ./ingestion/python
+    container_name: afrimarket-producer
+    restart: unless-stopped
+    working_dir: /scripts
+    command: ["sh", "-c", "sleep infinity"]
+    environment:
+      KAFKA_BOOTSTRAP: kafka-recovery:9092
+      HDFS_URL: http://hadoop-container:50070
+      DATA_DIR: /data
+      TRANSACTIONS_FILE: /data/afrimarket_transactions.csv
+      COMPLAINTS_FILE: /data/afrimarket_complaints.csv
+    volumes:
+      - ./ingestion/scripts:/scripts:ro
+      - ./data:/data:ro
+    depends_on:
+      - kafka-recovery
+      - hadoop-container
+    networks:
+      - myNetwork
+
+  dashboard:
+    build:
+      context: ./dashboard
+    container_name: afrimarket-dashboard
+    restart: unless-stopped
+    ports:
+      - "8501:8501"
+    environment:
+      MYSQL_HOST: afrimarket-mysql
+      MYSQL_PORT: "3306"
+      MYSQL_DATABASE: fraud
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      CASSANDRA_HOST: afrimarket-cassandra
+      CASSANDRA_PORT: "9042"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      cassandra-init:
+        condition: service_completed_successfully
+    networks:
+      - myNetwork
+
+volumes:
+  kafka_recovery_data:
+    external: true
+    name: kafka_recovery_data
+  my_shared_volume:
+    external: true
+    name: my_shared_volume
+  afrimarket_mysql_data:
+    external: true
+    name: afrimarket_mysql_data
+  afrimarket_cassandra_data:
+    external: true
+    name: afrimarket_cassandra_data
+
+networks:
+  myNetwork:
+    external: true
+    name: myNetwork
