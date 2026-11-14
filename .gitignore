@@ -13,3 +13,11 @@ derby.log
 
 # Mac
 .DS_Store
+
+# Local credentials and recovery data
+.env
+kafka-recovery/
+
+# Local training extract and editor backups
+data/member2_training_transactions.csv
+*.bak
