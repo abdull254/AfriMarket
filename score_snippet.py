@@ -25,9 +25,13 @@ REVIEW_AT, BLOCK_AT = th["review_at"], th["block_at"]
 
 def score_batch(batch_df):
     """batch_df: new transactions with IEEE-CIS columns. Returns id, score, decision."""
-    new = add_uid(clean(batch_df)).withColumn("_new", F.lit(True))
+    new = add_uid(clean(batch_df)).dropDuplicates(["TransactionID"]).withColumn("_new", F.lit(True))
     history = (add_uid(clean(spark.read.parquet(HISTORY_PATH)))
                .join(new.select("uid").distinct(), "uid")       # only these customers
+               # If a new transaction already landed in the lake (retry, replay),
+               # drop it from history so it is not counted twice in the features.
+               .join(new.select("TransactionID"), "TransactionID", "left_anti")
+               .filter(F.col(TIME) <= new.agg(F.max(TIME)).first()[0])  # no future rows
                .withColumn("_new", F.lit(False)))
     both = history.unionByName(new, allowMissingColumns=True)
     feats = add_features(both).filter("_new")

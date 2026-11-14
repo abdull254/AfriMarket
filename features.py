@@ -18,6 +18,10 @@ ENGINEERED = ["hour_of_day", "amt_cents", "uid_prev_txns", "txns_last_1h", "txns
               "secs_since_last_txn", "amt_vs_uid_mean"]
 NUMERIC = BASE_NUMERIC + ENGINEERED
 
+# Raw card / address numbers are identifiers, not quantities. The no-IDs model
+# drops these and relies on the per-customer features built from them instead.
+ID_COLUMNS = ["card1", "card2", "card3", "card5", "addr1"]
+
 
 def clean(df):
     """Make sure every expected column exists with the right type and no nulls."""
@@ -39,12 +43,16 @@ def add_uid(df):
 
 def add_features(df):
     """Adds ENGINEERED columns, then fills missing values. Expects add_uid first."""
-    by_uid = Window.partitionBy("uid").orderBy(TIME)
+    # TransactionID breaks ties when two purchases share the same second, so
+    # results are the same on every run.
+    by_uid = Window.partitionBy("uid").orderBy(TIME, "TransactionID")
     prior = by_uid.rowsBetween(Window.unboundedPreceding, -1)
     t = F.col(TIME).cast("long")
     by_uid_time = Window.partitionBy("uid").orderBy(t)
 
     df = (df
+          # TransactionDT counts seconds from an unknown start point, so this is
+          # "hour of a 24-hour cycle", shifted by an unknown offset, not clock time.
           .withColumn("hour_of_day", F.floor(F.col(TIME) / 3600) % 24)
           # Cents part of the amount hints at currency conversion, a known IEEE-CIS signal.
           .withColumn("amt_cents", F.col("TransactionAmt") - F.floor("TransactionAmt"))

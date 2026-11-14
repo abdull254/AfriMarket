@@ -3,83 +3,131 @@
 A Spark MLlib model that gives every transaction a 0-1 fraud risk score and an
 APPROVE / REVIEW / BLOCK decision, built on the IEEE-CIS fraud dataset.
 
+This branch is the **ML part** of the project. The rest of the platform lives on
+the other branches: Kafka ingestion (`Marienne`), MySQL/Cassandra + dashboard
+(`Bintou`), and the integrated streaming platform (`Muhammed`).
+
 ## Files
 | File | What it is |
 |---|---|
-| `train_fraud_model.py` | Main training job (use this one) |
+| `train_fraud_model.py` | Training job: split, compare models, pick thresholds, save model |
 | `features.py` | Feature code shared by training and live scoring |
 | `score_snippet.py` | `handle_batch()` for the Structured Streaming job |
 | `complaint_analysis.py` | Complaint keyword tagging + link to transactions (delayed path) |
-| `train_fraud_model_mvp.py` | Original one-model MVP, kept as the baseline |
-| `results/` | Outputs from the real run on `afrimarket_transactions.csv` |
-| `fraud_model/` | Trained model from that run |
+| `tests/test_features.py` | Proves the customer features never look at future rows |
+| `data/` | `afrimarket_transactions.csv` (30K rows) and `afrimarket_complaints.csv` (1,200 rows) |
+| `results/` | Outputs from one run of the code in this branch |
 
-## What makes it solid
-1. **Time-based split.** Trains on the earliest 80% of transactions (by TransactionDT) and
-   tests on the latest 20%, the way it would run in production. A random split lets the
-   model peek at the future.
+The trained model is not stored in git. Running the training job creates it
+(`fraud_model/` and `fraud_model_thresholds/`).
+
+## How it works
+1. **Three-way time split.** Transactions are sorted by `TransactionDT`:
+   oldest 70% for training, next 15% for validation, newest 15% for test.
+   The model and the thresholds are chosen on validation. The test set is only
+   used at the end to report results, so nothing is tuned on the numbers we report.
 2. **Customer features, with no leakage.** A rough customer ID (card1 + addr1), then
    transactions in the last hour and 24 hours, seconds since that card's last purchase,
    amount compared with that card's past average, hour of day, and the cents part of the
-   amount. Each one uses only earlier transactions.
-3. **Model comparison.** Logistic regression (baseline) vs gradient boosted trees, both
-   weighted for the rare fraud class. Judged on AUC-PR, since accuracy is meaningless
-   at ~3.5% fraud. The best model is saved.
-4. **Thresholds picked by dollars.** Tries cut-offs from 0.05 to 0.95. For each one it
-   adds up fraud dollars caught, minus a cost for every legit order flagged
-   (`--fp-cost`, default $15). REVIEW = the cut-off with the highest net savings.
-   BLOCK = the lowest higher cut-off where at least 80% of flagged orders are fraud.
-5. **Explainability.** Prints the top 10 features driving the model.
+   amount. Each one uses only earlier transactions (`tests/` checks this).
+3. **Model comparison.** Logistic regression (baseline), gradient boosted trees, and
+   boosted trees without the raw card/address ID columns. All are weighted for the rare
+   fraud class and judged on AUC-PR, since accuracy is meaningless at ~3.5% fraud.
+4. **Thresholds picked by dollars.** Tries cut-offs from 0.05 to 0.95 on validation.
+   For each one it adds up fraud dollars caught, minus a cost for every legit order
+   flagged (`--fp-cost`, default $15). REVIEW = the cut-off with the highest net savings.
+   BLOCK = the lowest higher cut-off where at least 80% of flagged orders are fraud
+   (falls back to 0.9 if none reaches 80%).
+5. **Cost check.** Repeats the threshold choice at $5, $15 and $30 per false alarm,
+   because the $15 figure is an assumption.
+6. **Explainability.** Prints the top 10 features driving the model.
 
-## Results on our data (afrimarket_transactions.csv, 30K rows, identity columns already merged)
-Time-based test set: 6,003 transactions over the last 42.6 days. Fraud rate 3.5%, so a random guess scores AUC-PR 0.035.
+## Results (from `results/`, one run)
+Train 20,997 rows | validation 4,500 rows (30.9 days) | test 4,503 rows (31.4 days) |
+fraud rate 3.4%, so a random guess scores AUC-PR about 0.035.
+
+**Test set** (never used for choosing anything):
 
 | Model | AUC-PR | AUC-ROC | Precision @0.5 | Recall @0.5 | False positives @0.5 |
 |---|---|---|---|---|---|
-| Logistic regression | 0.121 | 0.792 | 0.098 | 0.678 | 1,276 |
-| Gradient boosted trees | **0.370** | **0.846** | 0.183 | 0.634 | 580 |
+| Logistic regression | 0.105 | 0.793 | 0.089 | 0.676 | 985 |
+| Gradient boosted trees (picked) | 0.346 | 0.798 | 0.169 | 0.599 | 417 |
+| Boosted trees, no ID columns | 0.399 | 0.808 | 0.164 | 0.585 | 422 |
 
-Boosted trees are about 10x better than random on AUC-PR. At REVIEW 0.5 they catch 52% of fraud
-dollars for net savings of about $10K in the test period. BLOCK fell back to 0.9 because no
-cut-off reached 80% precision (0.9 gives 60% precision, 34 false positives).
-Why not higher: 30K rows randomly sampled from 590K means few repeat customers, so the
-"last hour" features rarely fire. The full dataset should do noticeably better.
+- Boosted trees won on **validation** (AUC-PR 0.396 vs 0.386 without IDs), so they were picked.
+  On test, the no-ID version did better (0.399 vs 0.346). That suggests the raw card numbers
+  partly memorise customers and don't carry over to new periods. We kept the rule
+  "pick on validation" rather than switch after seeing test, but the no-ID model is the safer
+  choice for the next version.
+- Thresholds chosen on validation: **REVIEW at 0.55, BLOCK at 0.9**.
+- On test at REVIEW: catches **33% of fraud dollars**, 360 false positives, net savings
+  **about $2,760** in 31 days.
+- On test at BLOCK: 73% of blocked orders are fraud, 13 false positives.
+- Validation showed $12,400 savings at the same cut-off. The drop on test is real: fraud
+  patterns shift over time, and this is why the old version (tuned on test, about $10K)
+  looked better than it was.
 
-Complaints: 1,200 of 1,200 link to a transaction. Complaints the rules tag HIGH (unauthorized
-charge, suspicious seller) point at actual fraud 19.2% of the time, vs 1.4% for ordinary
-service complaints and 3.5% overall. The rules agree 100% with the labelled categories, but
-only because the complaint text is 18 repeated template sentences.
+Cost check on test:
+
+| Cost per false alarm | REVIEW at | Fraud $ caught | False positives | Net savings |
+|---|---|---|---|---|
+| $5 | 0.10 | 70.5% | 2,467 | $5,119 |
+| $15 | 0.55 | 33.0% | 360 | $2,761 |
+| $30 | 0.55 | 33.0% | 360 | -$2,639 |
+
+So the business case depends on how cheap a manual review is. If a review costs
+around $30, the model only pays off at a stricter cut-off than validation suggested.
+
+Why the scores are modest: 30K rows randomly sampled from 590K means few repeat
+customers, so the "last hour" features rarely fire. The full dataset should do better.
+
+**Complaints:** 1,200 of 1,200 link to a transaction. Complaints the rules tag HIGH
+(unauthorized charge, suspicious seller) point at actual fraud 19.2% of the time, vs
+1.4% for ordinary service complaints and 3.5% overall. The rules agree 100% with the
+labelled categories, but only because the complaint text is 18 repeated template sentences.
 
 ## Run
 ```
-pip install pyspark==3.5.3 numpy pandas      # or run inside the Spark container
+pip install -r requirements.txt      # or run inside the Spark container
 spark-submit --driver-memory 4g --py-files features.py train_fraud_model.py \
-    --transactions afrimarket_transactions.csv \
+    --transactions data/afrimarket_transactions.csv \
     --model-dir /fraud-data/model --results-dir results
 ```
-Our `afrimarket_transactions.csv` already includes identity columns, so `--identity` is not needed.
+Our transactions file already includes identity columns, so `--identity` is not needed.
 For the full Kaggle data pass `--transactions train_transaction.csv --identity train_identity.csv`.
+Other options: `--fp-cost 15`, `--fp-cost-grid 5,15,30`, `--val-fraction 0.15`,
+`--test-fraction 0.15`, `--block-precision 0.8`.
+
+On the 30K file this took about 20 minutes on 4 CPU cores, most of it the two boosted-tree models.
 
 Complaints:
 ```
-spark-submit complaint_analysis.py --complaints afrimarket_complaints.csv \
-    --transactions afrimarket_transactions.csv --out complaint_results
+spark-submit complaint_analysis.py --complaints data/afrimarket_complaints.csv \
+    --transactions data/afrimarket_transactions.csv --out complaint_results
 ```
-The full 590K rows is the "big data" version; the 30K sample also works.
-On a 100K-row test it took about 7 minutes on a small machine, most of it boosted trees.
+
+Tests:
+```
+pytest tests/
+```
 
 Outputs:
-- `results/model_comparison.json`: the comparison table for your slides or report
-- `results/threshold_sweep.json`: dollars caught vs false positives at each cut-off (good chart)
-- `results/summary.json`: best model, thresholds, projected net savings per 30 days, top features
+- `results/model_comparison.json`: validation and test tables
+- `results/threshold_sweep.json`: dollars caught vs false positives at each cut-off, for validation and test (good chart)
+- `results/summary.json`: chosen model and thresholds, test results, cost check, top features
+- `results/complaint_analyst_cases.csv`: HIGH and MEDIUM complaints for analysts
 - `<model-dir>` and `<model-dir>_thresholds`: loaded by the streaming job
 
 ## Live scoring
 `score_snippet.py`: each micro-batch from Kafka is joined with those cards' past
 transactions from the HDFS data lake, so the "last hour" features match training.
-Then it writes TransactionID, risk_score, decision (to MySQL in our architecture).
-Nightly retraining is cron running `train_fraud_model.py` on the data lake.
+Transactions already in the lake are skipped so they are not counted twice. It then
+writes TransactionID, risk_score, decision (to MySQL in our architecture).
 
-## Ideas for later
-- Measure scoring latency and throughput against the 50-250 tx/sec target.
-- Tune GBT depth/iterations with `CrossValidator`.
+## Known limits
+- `hour_of_day` comes from `TransactionDT`, which counts seconds from an unknown start
+  point. It's a 24-hour cycle shifted by an unknown amount, not real clock time.
+- Live scoring rereads card history from HDFS every batch. That's fine for the demo, but
+  at scale, per-card running totals should be kept in Cassandra.
+- The 36 MB transactions file is stored directly in git. For the full 590K rows, use
+  Git LFS or a download script instead.

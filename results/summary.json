@@ -1,51 +1,103 @@
 {
   "best_model": "GradientBoostedTrees",
-  "review_at": 0.5,
+  "chosen_on": "validation",
+  "review_at": 0.55,
   "block_at": 0.9,
+  "block_reached_target_precision": false,
   "fp_cost": 15.0,
-  "net_savings_test_period": 10105.46,
-  "net_savings_per_30_days": 7120.84,
-  "test_days": 42.57,
+  "rows": {
+    "train": 20997,
+    "validation": 4500,
+    "test": 4503
+  },
+  "days": {
+    "validation": 30.9,
+    "test": 31.37
+  },
+  "train_fraud_rate": 0.0343,
+  "test_at_review": {
+    "threshold": 0.55,
+    "fraud_dollars_caught": 8160.71,
+    "pct_fraud_dollars_caught": 0.3297,
+    "false_positives": 360,
+    "precision": 0.1762,
+    "net_savings": 2760.71
+  },
+  "test_at_block": {
+    "threshold": 0.9,
+    "fraud_dollars_caught": 2615.44,
+    "pct_fraud_dollars_caught": 0.1057,
+    "false_positives": 13,
+    "precision": 0.7347,
+    "net_savings": 2420.44
+  },
+  "test_net_savings_per_30_days": 2640.32,
+  "fp_cost_sensitivity": [
+    {
+      "fp_cost": 5.0,
+      "review_at": 0.1,
+      "block_at": 0.9,
+      "test_pct_fraud_dollars_caught": 0.7051,
+      "test_false_positives": 2467,
+      "test_net_savings": 5119.25
+    },
+    {
+      "fp_cost": 15.0,
+      "review_at": 0.55,
+      "block_at": 0.9,
+      "test_pct_fraud_dollars_caught": 0.3297,
+      "test_false_positives": 360,
+      "test_net_savings": 2760.71
+    },
+    {
+      "fp_cost": 30.0,
+      "review_at": 0.55,
+      "block_at": 0.9,
+      "test_pct_fraud_dollars_caught": 0.3297,
+      "test_false_positives": 360,
+      "test_net_savings": -2639.29
+    }
+  ],
   "top_features": [
     [
       "P_emaildomain_idx",
-      0.12143999031727534
+      0.1106
     ],
     [
       "R_emaildomain_idx",
-      0.07524603184188669
-    ],
-    [
-      "TransactionAmt",
-      0.060652899584218135
+      0.0733
     ],
     [
       "card1",
-      0.060171904195348236
+      0.0697
     ],
     [
-      "D1",
-      0.042656659520904354
-    ],
-    [
-      "C1",
-      0.041493936847636734
+      "TransactionAmt",
+      0.0494
     ],
     [
       "card2",
-      0.03995871245048735
+      0.049
     ],
     [
-      "D10",
-      0.036855109004583025
+      "D1",
+      0.047
+    ],
+    [
+      "D15",
+      0.0408
+    ],
+    [
+      "C1",
+      0.0403
+    ],
+    [
+      "uid_prev_txns",
+      0.0372
     ],
     [
       "C14",
-      0.034241700863377925
-    ],
-    [
-      "C13",
-      0.03139743923318014
+      0.036
     ]
   ]
 }
