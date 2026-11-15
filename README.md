@@ -207,11 +207,39 @@ Internal service addresses:
 
 The Compose configuration references existing Docker volumes and the `myNetwork` network. Create these resources in a fresh environment before starting the stack:
 
-- Network: myNetwork
-- Volume: kafka_recovery_data
-- Volume: my_shared_volume
-- Volume: afrimarket_mysql_data
-- Volume: afrimarket_cassandra_data
+- Network: `myNetwork`
+- Volume: `kafka_recovery_data`
+- Volume: `my_shared_volume`
+- Volume: `afrimarket_mysql_data`
+- Volume: `afrimarket_cassandra_data`
+- Volume: `afrimarket_hdfs_data`
+
+Create the network and volumes with:
+
+    docker network create myNetwork
+    docker volume create kafka_recovery_data
+    docker volume create my_shared_volume
+    docker volume create afrimarket_mysql_data
+    docker volume create afrimarket_cassandra_data
+    docker volume create afrimarket_hdfs_data
+
+### Hadoop and persistent HDFS storage
+
+The custom Hadoop image is built from `hadoop/Dockerfile`. It includes:
+
+- `hadoop/conf/core-site.xml`: sets the HDFS endpoint to `hdfs://hadoop-container:8020`.
+- `hadoop/conf/hdfs-site.xml`: sets the replication factor to 1 for this single-DataNode development environment.
+
+The `afrimarket_hdfs_data` volume is mounted at `/tmp/hadoop-root/dfs` and stores the NameNode and DataNode directories. The separate `my_shared_volume` is mounted at `/data` for shared files.
+
+**Fresh environment only:** after creating the empty HDFS volume and building the Hadoop image, initialize its NameNode exactly once before starting the Hadoop service:
+
+    docker compose build hadoop-container
+    docker compose run --rm --no-deps --entrypoint /hadoop/bin/hdfs hadoop-container namenode -format
+
+Then start the platform as described below. Never run the format command against an existing initialized HDFS volume. Formatting creates a new namespace and can make existing HDFS data inaccessible.
+
+For an existing environment, reuse its initialized `afrimarket_hdfs_data` volume. Do not format it, delete it, or run `docker compose down -v` when its data must be preserved. This includes the Spark streaming checkpoint at `/fraud/checkpoints/member2_transaction_scoring`.
 
 The Spark image is built from `spark_processing/Dockerfile`, which installs Python 3.11 and PySpark 3.5.0 on Apache Spark 3.5.0. Docker Compose builds this image for the Spark master and reuses it for both workers.
 
@@ -224,7 +252,7 @@ Validate the Compose configuration:
 
 Build the producer and dashboard images:
 
-    docker compose build spark-master producer dashboard
+    docker compose build hadoop-container spark-master producer dashboard
 
 Start the services:
 
@@ -276,6 +304,17 @@ The default maximum Kafka offsets per trigger is 500.
 Do not launch a second copy of the same streaming job against the existing checkpoint.
 
 ## 13. Verifying Results
+
+Check HDFS safe mode and DataNode status:
+
+    docker exec hadoop-container hdfs dfsadmin -safemode get
+    docker exec hadoop-container hdfs dfsadmin -report
+
+Check HDFS filesystem integrity:
+
+    docker exec hadoop-container hdfs fsck /
+
+For this single-DataNode development setup, expect one live DataNode, replication factor 1, and no missing or corrupt blocks.
 
 List Kafka topics:
 

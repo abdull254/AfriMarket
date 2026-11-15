@@ -14,14 +14,19 @@ services:
       - myNetwork
 
   hadoop-container:
-    image: harisekhon/hadoop:latest
+    image: afrimarket-hadoop:latest
+    build:
+      context: ./hadoop
+      dockerfile: Dockerfile
     container_name: hadoop-container
+    hostname: hadoop-container
     restart: unless-stopped
     ports:
       - "9870:50070"
       - "8088:8088"
     volumes:
       - my_shared_volume:/data
+      - afrimarket_hdfs_data:/tmp/hadoop-root/dfs
     networks:
       - myNetwork
 
@@ -196,6 +201,9 @@ volumes:
   afrimarket_cassandra_data:
     external: true
     name: afrimarket_cassandra_data
+  afrimarket_hdfs_data:
+    external: true
+    name: afrimarket_hdfs_data
 
 networks:
   myNetwork:

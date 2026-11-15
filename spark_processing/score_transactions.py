@@ -9,7 +9,7 @@ from pyspark.ml.functions import vector_to_array
 sys.path.insert(0, "/shared_data")
 import features
 
-HDFS = "hdfs://6eea8ba9e649:8020"
+HDFS = "hdfs://hadoop-container:8020"
 MODEL_PATH = HDFS + "/shared_data/member2_fraud_model"
 THRESHOLD_PATH = HDFS + "/shared_data/member2_fraud_model_thresholds"
 HISTORY_PATH = HDFS + "/fraud/processed/member2_transaction_history"
