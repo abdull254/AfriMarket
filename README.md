@@ -244,6 +244,85 @@ For an existing environment, reuse its initialized `afrimarket_hdfs_data` volume
 The Spark image is built from `spark_processing/Dockerfile`, which installs Python 3.11 and PySpark 3.5.0 on Apache Spark 3.5.0. Docker Compose builds this image for the Spark master and reuses it for both workers.
 
 
+
+### 9.1 Preparing Member 2 streaming artifacts
+
+On a fresh environment, initialize HDFS as described above and start the Hadoop and Spark services before preparing these artifacts. The following steps reproduce the Member 2 setup.
+
+**Important distinction:** `my_shared_volume` is a Docker shared filesystem mounted at `/shared_data` in the Spark containers. HDFS is a separate filesystem accessed through `hdfs://hadoop-container:8020`. Copying a file into the Docker volume does not automatically put it into HDFS.
+
+#### Step 1: Copy the source files and transaction data into the Spark shared volume
+
+Run these commands from the repository directory:
+
+    docker cp ~/AfriMarket/features.py afrimarket-spark-master:/shared_data/features.py
+    docker cp ~/AfriMarket/train_fraud_model.py afrimarket-spark-master:/shared_data/train_fraud_model.py
+    docker cp ~/AfriMarket/spark_processing/stream_transactions.py afrimarket-spark-master:/shared_data/stream_transactions.py
+    docker cp ~/AfriMarket/data/afrimarket_transactions.csv afrimarket-spark-master:/shared_data/afrimarket_transactions.csv
+
+The Spark master and both workers mount the same `my_shared_volume` at `/shared_data`. These copies therefore make the files available through that shared volume. The Compose volume mount alone does not copy repository files into it.
+
+#### Step 2: Create the historical transaction baseline
+
+The historical baseline is a Parquet dataset created from the first 24,000 transactions after ordering by `TransactionDT`:
+
+    docker exec afrimarket-spark-master python -c "from pyspark.sql import SparkSession; s=SparkSession.builder.appName('AfriMarketHistoricalData').config('spark.hadoop.fs.defaultFS','hdfs://hadoop-container:8020').getOrCreate(); s.sparkContext.setLogLevel('ERROR'); df=s.read.option('header',True).option('inferSchema',True).csv('file:///shared_data/afrimarket_transactions.csv'); history=df.orderBy('TransactionDT').limit(24000); history.write.mode('overwrite').parquet('hdfs://hadoop-container:8020/fraud/processed/member2_transaction_history'); print('Historical records saved:',history.count()); s.stop()"
+
+This creates:
+
+`/fraud/processed/member2_transaction_history`
+
+#### Step 3: Prepare the model-training input
+
+Create a separate CSV containing the header and first 24,000 data rows:
+
+    head -n 24001 ~/AfriMarket/data/afrimarket_transactions.csv > ~/AfriMarket/data/member2_training_transactions.csv
+
+Copy it into the shared volume:
+
+    docker cp ~/AfriMarket/data/member2_training_transactions.csv afrimarket-spark-master:/shared_data/member2_training_transactions.csv
+
+Stage this CSV in HDFS for the training script:
+
+    docker exec afrimarket-spark-master python -c "from pyspark.sql import SparkSession; s=SparkSession.builder.appName('AfriMarketTrainingDataStaging').config('spark.hadoop.fs.defaultFS','hdfs://hadoop-container:8020').getOrCreate(); s.sparkContext.setLogLevel('ERROR'); df=s.read.option('header',True).option('inferSchema',True).csv('file:///shared_data/member2_training_transactions.csv'); df.write.mode('overwrite').option('header',True).csv('hdfs://hadoop-container:8020/fraud/processed/member2_training_csv'); print('Training records staged:',df.count()); s.stop()"
+
+#### Step 4: Train and save the model and thresholds
+
+Submit the training script:
+
+    docker exec afrimarket-spark-master spark-submit --master spark://afrimarket-spark-master:7077 --conf spark.hadoop.fs.defaultFS=hdfs://hadoop-container:8020 --py-files /shared_data/features.py /shared_data/train_fraud_model.py --transactions hdfs://hadoop-container:8020/fraud/processed/member2_training_csv --model-dir /shared_data/member2_fraud_model --results-dir /shared_data/member2_training_results
+
+The training script saves the fitted Spark MLlib pipeline to:
+
+`/shared_data/member2_fraud_model`
+
+It also generates the threshold directory automatically by appending `_thresholds` to the model directory:
+
+`/shared_data/member2_fraud_model_thresholds`
+
+Because the Spark session's default filesystem is configured as HDFS, these two artifact paths are HDFS paths, not directories in the Docker shared volume. The `review_at` and `block_at` values are calculated during training and may change when the data or training run changes.
+
+#### Step 5: Verify the artifacts
+
+Check that the source files are available in the Spark shared volume:
+
+    docker exec afrimarket-spark-master ls -lh /shared_data/features.py /shared_data/train_fraud_model.py /shared_data/stream_transactions.py
+
+Check the historical dataset:
+
+    docker exec hadoop-container hdfs dfs -ls /fraud/processed/member2_transaction_history
+
+Check the model:
+
+    docker exec hadoop-container hdfs dfs -ls /shared_data/member2_fraud_model
+
+Check the thresholds:
+
+    docker exec hadoop-container hdfs dfs -ls /shared_data/member2_fraud_model_thresholds
+
+**Before rerunning:** the history and training-data staging commands overwrite their target HDFS paths. Model training also overwrites the model and threshold directories. Coordinate before regenerating artifacts in an active environment, and preserve the streaming checkpoint at `/fraud/checkpoints/member2_transaction_scoring`.
+
+
 ## 10. Starting the Platform
 
 Validate the Compose configuration:
