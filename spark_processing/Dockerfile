@@ -16,7 +16,10 @@ RUN curl -fL \
 
 ENV PATH="/opt/conda/bin:${PATH}"
 
-RUN pip install --no-cache-dir pyspark==3.5.0
+# numpy and pandas are needed by pyspark.ml; pymysql writes scores to MySQL;
+# redis reads and updates the live customer features.
+RUN pip install --no-cache-dir pyspark==3.5.0 numpy==1.26.4 pandas==2.2.2 \
+    pyarrow==15.0.2 pymysql==1.1.1 redis==5.2.1
 
 ENV PYSPARK_PYTHON=/opt/conda/bin/python
 ENV PYSPARK_DRIVER_PYTHON=/opt/conda/bin/python

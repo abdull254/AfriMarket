@@ -1,6 +1,6 @@
 services:
   kafka-recovery:
-    image: apache/kafka:latest
+    image: apache/kafka:4.3.1
     container_name: kafka-recovery
     restart: unless-stopped
     environment:
@@ -8,7 +8,9 @@ services:
     ports:
       - "9099:9092"
     volumes:
-      - ./kafka/config/server.properties:/opt/kafka/config/server.properties:ro
+      # The image builds its own server.properties at startup from files in
+      # /mnt/shared/config, so mount ours there rather than over the generated file.
+      - ./kafka/config/server.properties:/mnt/shared/config/server.properties:ro
       - kafka_recovery_data:/var/lib/kafka/data
     networks:
       - myNetwork
@@ -46,6 +48,32 @@ services:
     environment:
       PYSPARK_PYTHON: /opt/conda/bin/python
       PYSPARK_DRIVER_PYTHON: /opt/conda/bin/python
+      # Used by stream_transactions.py, which runs its driver in this container.
+      MYSQL_HOST: mysql
+      MYSQL_PORT: "3306"
+      MYSQL_DATABASE: fraud
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      REDIS_HOST: redis
+      REDIS_PORT: "6379"
+    depends_on:
+      - redis
+    networks:
+      - myNetwork
+
+  redis:
+    image: redis:7.2.5-alpine
+    container_name: afrimarket-redis
+    restart: unless-stopped
+    # Live per-card feature state. Append-only file so the state survives a restart.
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - afrimarket_redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     networks:
       - myNetwork
 
@@ -225,6 +253,9 @@ volumes:
   afrimarket_hdfs_data:
     external: true
     name: afrimarket_hdfs_data
+  afrimarket_redis_data:
+    external: true
+    name: afrimarket_redis_data
 
 networks:
   myNetwork:

@@ -37,7 +37,8 @@ The system is designed to:
                   |
              Spark Structured Streaming
                   |
-          Feature Engineering + MLlib
+          Feature Engineering + MLlib <---> Redis
+                  |                        (live per-card features)
                   |
            Fraud Risk Classification
                   |
@@ -58,6 +59,7 @@ The system is designed to:
 |---|---|
 | Apache Kafka | Transaction and complaint event ingestion |
 | Apache Hadoop HDFS | Distributed storage |
+| Redis 7.2 | Live per-card feature state for real-time scoring |
 | Apache Spark 3.5.0 | Distributed and streaming processing |
 | PySpark / Spark MLlib | Feature engineering and fraud scoring |
 | MySQL 8.0 | Transaction scores and investigation cases |
@@ -130,7 +132,7 @@ The streaming job loads its decision thresholds from the saved model artifacts.
 
 ### 7.1 Transaction ingestion
 
-The Python producer reads the transaction CSV and publishes records to Kafka's `transactions` topic. Records are keyed by TransactionID. Invalid records are sent to `invalid_records`.
+The Python producer reads the transaction CSV and publishes records to Kafka's `transactions` topic. Records are keyed by `card1`, so each card's purchases land in one Kafka partition and reach Spark in time order, which the Redis live features need. Invalid records are sent to `invalid_records`.
 
 ### 7.2 Complaint ingestion
 
@@ -164,14 +166,16 @@ See `spark_processing/README.md` for the batch-scoring implementation and its te
 
 It:
 1. Reads events from Kafka's `transactions` topic.
-2. Uses the historical transaction baseline and previously processed stream batches.
-3. Filters previously processed TransactionIDs.
-4. Builds features using the shared `features.py` module.
+2. Skips TransactionIDs that are already in the historical baseline.
+3. Gets each card's live customer features from Redis (`online_features.py`): it reads the card's running totals first, then adds the new purchase, so a purchase never counts itself. A re-sent message gets the same cached features and is not counted twice.
+4. Adds the per-purchase features (hour of day, cents) with the shared `features.py` code used in training.
 5. Loads the trained MLlib model and decision thresholds.
-6. Calculates risk scores and assigns APPROVE, REVIEW, or BLOCK.
+6. Calculates risk scores and assigns APPROVE, REVIEW, or BLOCK. If Redis is unavailable, the purchase is scored as a first-time customer and never auto-blocked: BLOCK becomes REVIEW.
 7. Writes scored batches to HDFS in Parquet format.
 8. Persists transaction scores and decisions to MySQL.
-9. Uses a persistent HDFS checkpoint to support recovery.
+9. Archives the raw events in HDFS for retraining, and uses a persistent HDFS checkpoint to support recovery.
+
+Live scoring never rebuilds features from HDFS history. HDFS is read once at startup: the stream loads the historical baseline into Redis the first time it runs (and records that it did, so restarts skip this step), so returning customers are not treated as new.
 
 Required model, threshold, historical-data, and feature artifacts must be available before starting the streaming job.
 
@@ -208,6 +212,7 @@ Internal service addresses:
 - Spark master: `spark://afrimarket-spark-master:7077`
 - MySQL: `mysql:3306`
 - Cassandra: `cassandra:9042`
+- Redis: `redis:6379`
 
 ## 9. Docker Services and Ports
 
@@ -221,6 +226,7 @@ Internal service addresses:
 | Spark worker 2 | afrimarket-spark-worker-2 | 8082 |
 | MySQL | afrimarket-mysql | 3307 |
 | Cassandra | afrimarket-cassandra | 9042 |
+| Redis | afrimarket-redis | (internal only) |
 | Streamlit | afrimarket-dashboard | 8501 |
 
 The Compose configuration references existing Docker volumes and the `myNetwork` network. Create these resources in a fresh environment before starting the stack:
@@ -231,6 +237,7 @@ The Compose configuration references existing Docker volumes and the `myNetwork`
 - Volume: `afrimarket_mysql_data`
 - Volume: `afrimarket_cassandra_data`
 - Volume: `afrimarket_hdfs_data`
+- Volume: `afrimarket_redis_data`
 
 Create the network and volumes with:
 
@@ -240,6 +247,7 @@ Create the network and volumes with:
     docker volume create afrimarket_mysql_data
     docker volume create afrimarket_cassandra_data
     docker volume create afrimarket_hdfs_data
+    docker volume create afrimarket_redis_data
 
 ### Hadoop and persistent HDFS storage
 
@@ -274,6 +282,7 @@ On a fresh environment, initialize HDFS as described above and start the Hadoop 
 Run these commands from the repository directory:
 
     docker cp ~/AfriMarket/features.py afrimarket-spark-master:/shared_data/features.py
+    docker cp ~/AfriMarket/online_features.py afrimarket-spark-master:/shared_data/online_features.py
     docker cp ~/AfriMarket/train_fraud_model.py afrimarket-spark-master:/shared_data/train_fraud_model.py
     docker cp ~/AfriMarket/spark_processing/stream_transactions.py afrimarket-spark-master:/shared_data/stream_transactions.py
     docker cp ~/AfriMarket/data/afrimarket_transactions.csv afrimarket-spark-master:/shared_data/afrimarket_transactions.csv
@@ -403,14 +412,17 @@ Before starting the stream, verify that these artifacts are available:
 - Historical transactions: `/fraud/processed/member2_transaction_history`
 - Trained model: `/shared_data/member2_fraud_model`
 - Model thresholds: `/shared_data/member2_fraud_model_thresholds`
-- Shared `features.py` module in the Spark shared volume.
+- Shared `features.py` and `online_features.py` modules in the Spark shared volume.
+- The `redis` service running (`docker compose ps redis`).
 - Streaming script: `/shared_data/stream_transactions.py`
 
 Submit the streaming job using Spark 3.5.0 and its Kafka connector:
 
     docker exec afrimarket-spark-master spark-submit --master spark://afrimarket-spark-master:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0 /shared_data/stream_transactions.py
 
-The default maximum Kafka offsets per trigger is 500.
+The default maximum Kafka offsets per trigger is 500. The Spark master container passes the MySQL login from `.env` and the Redis address to the job (see `compose.yaml`).
+
+On its first run the job prints `Seeded Redis with 24,000 historical transactions`. Later runs print `Redis already seeded`.
 
 Do not launch a second copy of the same streaming job against the existing checkpoint.
 
@@ -460,8 +472,7 @@ The dashboard depends on MySQL and Cassandra being available and populated.
 
 ## 15. Known Limitations and Next Steps
 
-- Switch `stream_transactions.py` to the Redis live features (`online_features.py`) and add a `redis` service to `compose.yaml`. The features and scoring step are tested; the streaming job does not use them yet.
-- Key transaction messages by `card1` instead of TransactionID, so each card's purchases arrive in time order (needed by the Redis features).
+- Add `features_degraded` and `scored_at` columns to the MySQL `scores` table, so degraded scoring and end-to-end latency can be seen in the dashboard.
 - Complete end-to-end validation of complaint-to-transaction investigation in the dashboard.
 - Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
 - Verify model and historical-data provisioning on a fresh environment.

@@ -10,6 +10,9 @@ COMPLAINTS_FILE = os.getenv("COMPLAINTS_FILE", os.path.join(DATA_DIR, "complaint
 
 # Column names in your AfriMarket files
 TXN_ID_COL = "TransactionID"
+# Kafka message key for transactions: one card's purchases go to one partition,
+# so they reach Spark in time order (needed by the Redis live features).
+TXN_KEY_COL = "card1"
 TXN_TIME_COL = "TransactionDT"
 FRAUD_COL = "isFraud"
 # Columns the producer sends for each transaction (the model needs them).
