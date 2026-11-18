@@ -8,9 +8,7 @@ services:
     ports:
       - "9099:9092"
     volumes:
-      # The image builds its own server.properties at startup from files in
-      # /mnt/shared/config, so mount ours there rather than over the generated file.
-      - ./kafka/config/server.properties:/mnt/shared/config/server.properties:ro
+      - ./kafka/config:/mnt/shared/config:ro
       - kafka_recovery_data:/var/lib/kafka/data
     networks:
       - myNetwork
