@@ -33,7 +33,7 @@ The system is designed to:
                   |             |
                   |             +---- Complaint consumer/
                   |                    Cassandra loader
-                  |                    (integration pending)
+                  |                    (implemented; runtime integration tested successfully)
                   |
              Spark Structured Streaming
                   |
@@ -136,7 +136,14 @@ The Python producer reads the transaction CSV and publishes records to Kafka's `
 
 The Python producer reads the complaint CSV and publishes records to Kafka's `complaints` topic.
 
-A Kafka consumer that loads these events into both Cassandra complaint tables is still required for a complete automated complaint-ingestion workflow.
+The `complaint-consumer` service reads the `complaints` topic and writes each valid event to both Cassandra lookup tables: `complaints_by_id` and `complaints_by_transaction`. It commits the Kafka offset only after both writes succeed. The consumer connects to the existing Kafka and Cassandra containers on `myNetwork`.
+
+**Verified runtime integration test (November 18, 2026):**
+- Processed all 1,200 complaint messages from Kafka.
+- Confirmed 1,200 records in `complaints_by_id`.
+- Confirmed 1,200 records in `complaints_by_transaction`.
+- Verified that all three Kafka partitions reached zero consumer lag.
+- Inspected sample Cassandra records and confirmed the expected complaint fields.
 
 ### 7.3 Spark batch processing
 
@@ -184,7 +191,7 @@ Checkpoint location:
 - `complaints_by_id`: complaint lookup by complaint ID.
 - `complaints_by_transaction`: complaint lookup by transaction ID.
 
-The Cassandra schema is initialized from `cassandra/init/01_schema.cql`.
+The Cassandra schema is initialized from `cassandra/init/01_schema.cql`. Both tables use Bintou's schema: `complaint_id` is text, `transaction_id` is bigint, and the remaining complaint fields are text. `complaints_by_id` is keyed by `complaint_id`; `complaints_by_transaction` uses `(transaction_id, complaint_id)` as its composite primary key.
 
 
 ## 8. Environment Configuration
@@ -199,8 +206,8 @@ Internal service addresses:
 - Kafka: `kafka-recovery:9092`
 - Hadoop HDFS: `hadoop-container:8020`
 - Spark master: `spark://afrimarket-spark-master:7077`
-- MySQL: `afrimarket-mysql:3306`
-- Cassandra: `afrimarket-cassandra:9042`
+- MySQL: `mysql:3306`
+- Cassandra: `cassandra:9042`
 
 ## 9. Docker Services and Ports
 
@@ -218,13 +225,120 @@ Internal service addresses:
 
 The Compose configuration references existing Docker volumes and the `myNetwork` network. Create these resources in a fresh environment before starting the stack:
 
-- Network: myNetwork
-- Volume: kafka_recovery_data
-- Volume: my_shared_volume
-- Volume: afrimarket_mysql_data
-- Volume: afrimarket_cassandra_data
+- Network: `myNetwork`
+- Volume: `kafka_recovery_data`
+- Volume: `my_shared_volume`
+- Volume: `afrimarket_mysql_data`
+- Volume: `afrimarket_cassandra_data`
+- Volume: `afrimarket_hdfs_data`
+
+Create the network and volumes with:
+
+    docker network create myNetwork
+    docker volume create kafka_recovery_data
+    docker volume create my_shared_volume
+    docker volume create afrimarket_mysql_data
+    docker volume create afrimarket_cassandra_data
+    docker volume create afrimarket_hdfs_data
+
+### Hadoop and persistent HDFS storage
+
+The custom Hadoop image is built from `hadoop/Dockerfile`. It includes:
+
+- `hadoop/conf/core-site.xml`: sets the HDFS endpoint to `hdfs://hadoop-container:8020`.
+- `hadoop/conf/hdfs-site.xml`: sets the replication factor to 1 for this single-DataNode development environment.
+
+The `afrimarket_hdfs_data` volume is mounted at `/tmp/hadoop-root/dfs` and stores the NameNode and DataNode directories. The separate `my_shared_volume` is mounted at `/data` for shared files.
+
+**Fresh environment only:** after creating the empty HDFS volume and building the Hadoop image, initialize its NameNode exactly once before starting the Hadoop service:
+
+    docker compose build hadoop-container
+    docker compose run --rm --no-deps --entrypoint /hadoop/bin/hdfs hadoop-container namenode -format
+
+Then start the platform as described below. Never run the format command against an existing initialized HDFS volume. Formatting creates a new namespace and can make existing HDFS data inaccessible.
+
+For an existing environment, reuse its initialized `afrimarket_hdfs_data` volume. Do not format it, delete it, or run `docker compose down -v` when its data must be preserved. This includes the Spark streaming checkpoint at `/fraud/checkpoints/member2_transaction_scoring`.
 
 The Spark image is built from `spark_processing/Dockerfile`, which installs Python 3.11 and PySpark 3.5.0 on Apache Spark 3.5.0. Docker Compose builds this image for the Spark master and reuses it for both workers.
+
+
+
+### 9.1 Preparing Member 2 streaming artifacts
+
+On a fresh environment, initialize HDFS as described above and start the Hadoop and Spark services before preparing these artifacts. The following steps reproduce the Member 2 setup.
+
+**Important distinction:** `my_shared_volume` is a Docker shared filesystem mounted at `/shared_data` in the Spark containers. HDFS is a separate filesystem accessed through `hdfs://hadoop-container:8020`. Copying a file into the Docker volume does not automatically put it into HDFS.
+
+#### Step 1: Copy the source files and transaction data into the Spark shared volume
+
+Run these commands from the repository directory:
+
+    docker cp ~/AfriMarket/features.py afrimarket-spark-master:/shared_data/features.py
+    docker cp ~/AfriMarket/train_fraud_model.py afrimarket-spark-master:/shared_data/train_fraud_model.py
+    docker cp ~/AfriMarket/spark_processing/stream_transactions.py afrimarket-spark-master:/shared_data/stream_transactions.py
+    docker cp ~/AfriMarket/data/afrimarket_transactions.csv afrimarket-spark-master:/shared_data/afrimarket_transactions.csv
+
+The Spark master and both workers mount the same `my_shared_volume` at `/shared_data`. These copies therefore make the files available through that shared volume. The Compose volume mount alone does not copy repository files into it.
+
+#### Step 2: Create the historical transaction baseline
+
+The historical baseline is a Parquet dataset created from the first 24,000 transactions after ordering by `TransactionDT`:
+
+    docker exec afrimarket-spark-master python -c "from pyspark.sql import SparkSession; s=SparkSession.builder.appName('AfriMarketHistoricalData').config('spark.hadoop.fs.defaultFS','hdfs://hadoop-container:8020').getOrCreate(); s.sparkContext.setLogLevel('ERROR'); df=s.read.option('header',True).option('inferSchema',True).csv('file:///shared_data/afrimarket_transactions.csv'); history=df.orderBy('TransactionDT').limit(24000); history.write.mode('overwrite').parquet('hdfs://hadoop-container:8020/fraud/processed/member2_transaction_history'); print('Historical records saved:',history.count()); s.stop()"
+
+This creates:
+
+`/fraud/processed/member2_transaction_history`
+
+#### Step 3: Prepare the model-training input
+
+Create a separate CSV containing the header and first 24,000 data rows:
+
+    head -n 24001 ~/AfriMarket/data/afrimarket_transactions.csv > ~/AfriMarket/data/member2_training_transactions.csv
+
+Copy it into the shared volume:
+
+    docker cp ~/AfriMarket/data/member2_training_transactions.csv afrimarket-spark-master:/shared_data/member2_training_transactions.csv
+
+Stage this CSV in HDFS for the training script:
+
+    docker exec afrimarket-spark-master python -c "from pyspark.sql import SparkSession; s=SparkSession.builder.appName('AfriMarketTrainingDataStaging').config('spark.hadoop.fs.defaultFS','hdfs://hadoop-container:8020').getOrCreate(); s.sparkContext.setLogLevel('ERROR'); df=s.read.option('header',True).option('inferSchema',True).csv('file:///shared_data/member2_training_transactions.csv'); df.write.mode('overwrite').option('header',True).csv('hdfs://hadoop-container:8020/fraud/processed/member2_training_csv'); print('Training records staged:',df.count()); s.stop()"
+
+#### Step 4: Train and save the model and thresholds
+
+Submit the training script:
+
+    docker exec afrimarket-spark-master spark-submit --master spark://afrimarket-spark-master:7077 --conf spark.hadoop.fs.defaultFS=hdfs://hadoop-container:8020 --py-files /shared_data/features.py /shared_data/train_fraud_model.py --transactions hdfs://hadoop-container:8020/fraud/processed/member2_training_csv --model-dir /shared_data/member2_fraud_model --results-dir /shared_data/member2_training_results
+
+The training script saves the fitted Spark MLlib pipeline to:
+
+`/shared_data/member2_fraud_model`
+
+It also generates the threshold directory automatically by appending `_thresholds` to the model directory:
+
+`/shared_data/member2_fraud_model_thresholds`
+
+Because the Spark session's default filesystem is configured as HDFS, these two artifact paths are HDFS paths, not directories in the Docker shared volume. The `review_at` and `block_at` values are calculated during training and may change when the data or training run changes.
+
+#### Step 5: Verify the artifacts
+
+Check that the source files are available in the Spark shared volume:
+
+    docker exec afrimarket-spark-master ls -lh /shared_data/features.py /shared_data/train_fraud_model.py /shared_data/stream_transactions.py
+
+Check the historical dataset:
+
+    docker exec hadoop-container hdfs dfs -ls /fraud/processed/member2_transaction_history
+
+Check the model:
+
+    docker exec hadoop-container hdfs dfs -ls /shared_data/member2_fraud_model
+
+Check the thresholds:
+
+    docker exec hadoop-container hdfs dfs -ls /shared_data/member2_fraud_model_thresholds
+
+**Before rerunning:** the history and training-data staging commands overwrite their target HDFS paths. Model training also overwrites the model and threshold directories. Coordinate before regenerating artifacts in an active environment, and preserve the streaming checkpoint at `/fraud/checkpoints/member2_transaction_scoring`.
 
 
 ## 10. Starting the Platform
@@ -233,9 +347,9 @@ Validate the Compose configuration:
 
     docker compose config --quiet
 
-Build the producer and dashboard images:
+Build the application images:
 
-    docker compose build spark-master producer dashboard
+    docker compose build hadoop-container spark-master producer complaint-consumer dashboard
 
 Start the services:
 
@@ -267,6 +381,20 @@ For a slower live demonstration, publish 100 transactions with a half-second del
 
 The producer reports confirmed, failed, and invalid records.
 
+The complaint consumer uses the independently managed Kafka (`kafka-recovery`) and Cassandra (`afrimarket-cassandra`) containers on `myNetwork`. Build it with:
+
+    docker compose build complaint-consumer
+
+After confirming both existing containers are running, start the consumer without asking Compose to create or manage its dependencies:
+
+    docker compose up -d --no-deps complaint-consumer
+
+Inspect its logs with:
+
+    docker compose logs -f complaint-consumer
+
+Verify that the consumer is ready before publishing complaint events. The `--no-deps` option is important in this environment because Kafka and Cassandra already exist as standalone containers.
+
 
 ## 12. Running Continuous Spark Scoring
 
@@ -287,6 +415,17 @@ The default maximum Kafka offsets per trigger is 500.
 Do not launch a second copy of the same streaming job against the existing checkpoint.
 
 ## 13. Verifying Results
+
+Check HDFS safe mode and DataNode status:
+
+    docker exec hadoop-container hdfs dfsadmin -safemode get
+    docker exec hadoop-container hdfs dfsadmin -report
+
+Check HDFS filesystem integrity:
+
+    docker exec hadoop-container hdfs fsck /
+
+For this single-DataNode development setup, expect one live DataNode, replication factor 1, and no missing or corrupt blocks.
 
 List Kafka topics:
 
@@ -323,7 +462,7 @@ The dashboard depends on MySQL and Cassandra being available and populated.
 
 - Switch `stream_transactions.py` to the Redis live features (`online_features.py`) and add a `redis` service to `compose.yaml`. The features and scoring step are tested; the streaming job does not use them yet.
 - Key transaction messages by `card1` instead of TransactionID, so each card's purchases arrive in time order (needed by the Redis features).
-- Complete and test the Kafka complaint consumer that writes events to Cassandra.
+- Complete end-to-end validation of complaint-to-transaction investigation in the dashboard.
 - Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
 - Verify model and historical-data provisioning on a fresh environment.
 - Measure continuous-stream throughput and end-to-end scoring latency.
