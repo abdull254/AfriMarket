@@ -42,6 +42,7 @@ producer = KafkaProducer(
     retries=10,                                 # if sending fails, try again up to 10 times
     retry_backoff_ms=1000,                      # wait 1 second between retries
     request_timeout_ms=120_000,                 # give a slow VM up to 2 minutes to answer
+    delivery_timeout_ms=180_000,                # must be more than linger_ms + request_timeout_ms (kafka-python 3.x checks this)
     max_in_flight_requests_per_connection=1,    # keep messages in order when retrying
 )
 
