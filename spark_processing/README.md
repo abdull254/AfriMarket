@@ -130,7 +130,7 @@ Run `docker exec hadoop-container hdfs dfs -ls -h /fraud/processed/member2_score
 
 ### 4. Read the Scored Data
 
-The output can be read using PySpark. The HDFS output path is `hdfs://6eea8ba9e649:8020/fraud/processed/member2_scored_transactions`. The output was verified to contain 6,000 records.
+The output can be read using PySpark. The HDFS output path is `hdfs://hadoop-container:8020/fraud/processed/member2_scored_transactions`. The output was verified to contain 6,000 records.
 
 ## Future Improvements
 
