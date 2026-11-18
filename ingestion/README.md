@@ -55,19 +55,19 @@ The Compose service accepts these environment variables:
 | `KAFKA_BOOTSTRAP` | `kafka-recovery:9092` | Kafka bootstrap address |
 | `KAFKA_TOPIC` | `complaints` | Input topic |
 | `KAFKA_GROUP_ID` | `afrimarket-complaint-cassandra` | Consumer group |
-| `CASSANDRA_HOST` | `afrimarket-cassandra` | Cassandra host when run outside the Compose overrides |
+| `CASSANDRA_HOST` | `afrimarket-cassandra` | Existing Cassandra container hostname |
 | `CASSANDRA_PORT` | `9042` | Cassandra native transport port |
 | `CASSANDRA_KEYSPACE` | `afrimarket` | Cassandra keyspace |
 | `LOG_LEVEL` | `INFO` | Logging level |
 
-The root Compose configuration overrides `CASSANDRA_HOST` with the Docker service name `cassandra`.
+The root Compose configuration sets `CASSANDRA_HOST` to `afrimarket-cassandra`, the hostname of the existing standalone Cassandra container on `myNetwork`.
 
 ## Build and run
 
 From the repository root:
 
     docker compose build complaint-consumer
-    docker compose up -d complaint-consumer
+    docker compose up -d --no-deps complaint-consumer
 
 Inspect consumer logs:
 
@@ -93,4 +93,13 @@ Invalid events are logged and left uncommitted for investigation. A persistently
 
 ## Validation status
 
-The local Cassandra schema has been aligned with the two table definitions above, and the existing 1,200 complaint records have been restored into both tables. The consumer implementation and Compose service are present. End-to-end Kafka-to-Cassandra runtime testing is still pending.
+The local Cassandra schema is aligned with the two table definitions above. The complaint consumer has been tested successfully against the existing Kafka and Cassandra containers.
+
+**Verified runtime integration test (November 18, 2026):**
+- Processed all 1,200 complaint messages from the Kafka `complaints` topic.
+- Confirmed 1,200 records in `afrimarket.complaints_by_id`.
+- Confirmed 1,200 records in `afrimarket.complaints_by_transaction`.
+- Verified zero consumer lag across all three Kafka partitions.
+- Inspected sample records and confirmed the expected complaint fields.
+
+The consumer writes to both Cassandra lookup tables before committing each Kafka offset. The consumer must be started with `--no-deps` because Kafka and Cassandra are independently managed containers already attached to `myNetwork`.

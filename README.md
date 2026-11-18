@@ -33,7 +33,7 @@ The system is designed to:
                   |             |
                   |             +---- Complaint consumer/
                   |                    Cassandra loader
-                  |                    (implemented; testing pending)
+                  |                    (implemented; runtime integration tested successfully)
                   |
              Spark Structured Streaming
                   |
@@ -125,7 +125,14 @@ The Python producer reads the transaction CSV and publishes records to Kafka's `
 
 The Python producer reads the complaint CSV and publishes records to Kafka's `complaints` topic.
 
-The `complaint-consumer` service reads the `complaints` topic and writes each valid event to both Cassandra lookup tables: `complaints_by_id` and `complaints_by_transaction`. It commits the Kafka offset only after both writes succeed. Runtime integration testing is pending.
+The `complaint-consumer` service reads the `complaints` topic and writes each valid event to both Cassandra lookup tables: `complaints_by_id` and `complaints_by_transaction`. It commits the Kafka offset only after both writes succeed. The consumer connects to the existing Kafka and Cassandra containers on `myNetwork`.
+
+**Verified runtime integration test (November 18, 2026):**
+- Processed all 1,200 complaint messages from Kafka.
+- Confirmed 1,200 records in `complaints_by_id`.
+- Confirmed 1,200 records in `complaints_by_transaction`.
+- Verified that all three Kafka partitions reached zero consumer lag.
+- Inspected sample Cassandra records and confirmed the expected complaint fields.
 
 ### 7.3 Spark batch processing
 
@@ -363,7 +370,19 @@ For a slower live demonstration, publish 100 transactions with a half-second del
 
 The producer reports confirmed, failed, and invalid records.
 
-The complaint consumer starts as a Compose service when its dependencies are ready. Build it with `docker compose build complaint-consumer`. After Kafka and Cassandra are available, start it with `docker compose up -d complaint-consumer` and inspect its logs with `docker compose logs -f complaint-consumer`. Do not publish test complaints until the consumer is ready.
+The complaint consumer uses the independently managed Kafka (`kafka-recovery`) and Cassandra (`afrimarket-cassandra`) containers on `myNetwork`. Build it with:
+
+    docker compose build complaint-consumer
+
+After confirming both existing containers are running, start the consumer without asking Compose to create or manage its dependencies:
+
+    docker compose up -d --no-deps complaint-consumer
+
+Inspect its logs with:
+
+    docker compose logs -f complaint-consumer
+
+Verify that the consumer is ready before publishing complaint events. The `--no-deps` option is important in this environment because Kafka and Cassandra already exist as standalone containers.
 
 
 ## 12. Running Continuous Spark Scoring
@@ -430,8 +449,7 @@ The dashboard depends on MySQL and Cassandra being available and populated.
 
 ## 15. Known Limitations and Next Steps
 
-- Complete runtime testing of the Kafka complaint consumer and verify both Cassandra lookup paths.
-- Verify end-to-end complaint-to-transaction investigation integration in the dashboard.
+- Complete end-to-end validation of complaint-to-transaction investigation in the dashboard.
 - Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
 - Verify model and historical-data provisioning on a fresh environment.
 - Measure continuous-stream throughput and end-to-end scoring latency.

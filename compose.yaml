@@ -178,16 +178,11 @@ services:
       KAFKA_BOOTSTRAP: kafka-recovery:9092
       KAFKA_TOPIC: complaints
       KAFKA_GROUP_ID: afrimarket-complaint-cassandra
-      CASSANDRA_HOST: cassandra
+      CASSANDRA_HOST: afrimarket-cassandra
       CASSANDRA_PORT: "9042"
       CASSANDRA_KEYSPACE: afrimarket
     volumes:
       - ./ingestion/scripts:/scripts:ro
-    depends_on:
-      kafka-recovery:
-        condition: service_started
-      cassandra-init:
-        condition: service_completed_successfully
     networks:
       - myNetwork
 
