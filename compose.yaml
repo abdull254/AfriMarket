@@ -118,9 +118,9 @@ services:
       MAX_HEAP_SIZE: 512M
       HEAP_NEWSIZE: 100M
     ports:
-      - "9042:9042"
+      - "127.0.0.1:9042:9042"
     volumes:
-      - afrimarket_cassandra_data:/var/lib/cassandra
+      - cassandra_data:/var/lib/cassandra
     healthcheck:
       test: ["CMD-SHELL", "cqlsh 127.0.0.1 9042 -e 'DESCRIBE KEYSPACES' >/dev/null 2>&1"]
       interval: 30s
@@ -165,6 +165,32 @@ services:
     networks:
       - myNetwork
 
+
+  complaint-consumer:
+    build:
+      context: ./ingestion/python
+      dockerfile: Dockerfile
+    container_name: afrimarket-complaint-consumer
+    restart: unless-stopped
+    working_dir: /scripts
+    command: ["python", "-u", "complaint_consumer.py"]
+    environment:
+      KAFKA_BOOTSTRAP: kafka-recovery:9092
+      KAFKA_TOPIC: complaints
+      KAFKA_GROUP_ID: afrimarket-complaint-cassandra
+      CASSANDRA_HOST: cassandra
+      CASSANDRA_PORT: "9042"
+      CASSANDRA_KEYSPACE: afrimarket
+    volumes:
+      - ./ingestion/scripts:/scripts:ro
+    depends_on:
+      kafka-recovery:
+        condition: service_started
+      cassandra-init:
+        condition: service_completed_successfully
+    networks:
+      - myNetwork
+
   dashboard:
     build:
       context: ./dashboard
@@ -173,12 +199,12 @@ services:
     ports:
       - "8501:8501"
     environment:
-      MYSQL_HOST: afrimarket-mysql
+      MYSQL_HOST: mysql
       MYSQL_PORT: "3306"
       MYSQL_DATABASE: fraud
       MYSQL_USER: ${MYSQL_USER}
       MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      CASSANDRA_HOST: afrimarket-cassandra
+      CASSANDRA_HOST: cassandra
       CASSANDRA_PORT: "9042"
     depends_on:
       mysql:
@@ -198,7 +224,7 @@ volumes:
   afrimarket_mysql_data:
     external: true
     name: afrimarket_mysql_data
-  afrimarket_cassandra_data:
+  cassandra_data:
     external: true
     name: afrimarket_cassandra_data
   afrimarket_hdfs_data:

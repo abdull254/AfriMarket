@@ -33,7 +33,7 @@ The system is designed to:
                   |             |
                   |             +---- Complaint consumer/
                   |                    Cassandra loader
-                  |                    (integration pending)
+                  |                    (implemented; testing pending)
                   |
              Spark Structured Streaming
                   |
@@ -125,7 +125,7 @@ The Python producer reads the transaction CSV and publishes records to Kafka's `
 
 The Python producer reads the complaint CSV and publishes records to Kafka's `complaints` topic.
 
-A Kafka consumer that loads these events into both Cassandra complaint tables is still required for a complete automated complaint-ingestion workflow.
+The `complaint-consumer` service reads the `complaints` topic and writes each valid event to both Cassandra lookup tables: `complaints_by_id` and `complaints_by_transaction`. It commits the Kafka offset only after both writes succeed. Runtime integration testing is pending.
 
 ### 7.3 Spark batch processing
 
@@ -173,7 +173,7 @@ Checkpoint location:
 - `complaints_by_id`: complaint lookup by complaint ID.
 - `complaints_by_transaction`: complaint lookup by transaction ID.
 
-The Cassandra schema is initialized from `cassandra/init/01_schema.cql`.
+The Cassandra schema is initialized from `cassandra/init/01_schema.cql`. Both tables use Bintou's schema: `complaint_id` is text, `transaction_id` is bigint, and the remaining complaint fields are text. `complaints_by_id` is keyed by `complaint_id`; `complaints_by_transaction` uses `(transaction_id, complaint_id)` as its composite primary key.
 
 
 ## 8. Environment Configuration
@@ -188,8 +188,8 @@ Internal service addresses:
 - Kafka: `kafka-recovery:9092`
 - Hadoop HDFS: `hadoop-container:8020`
 - Spark master: `spark://afrimarket-spark-master:7077`
-- MySQL: `afrimarket-mysql:3306`
-- Cassandra: `afrimarket-cassandra:9042`
+- MySQL: `mysql:3306`
+- Cassandra: `cassandra:9042`
 
 ## 9. Docker Services and Ports
 
@@ -329,9 +329,9 @@ Validate the Compose configuration:
 
     docker compose config --quiet
 
-Build the producer and dashboard images:
+Build the application images:
 
-    docker compose build hadoop-container spark-master producer dashboard
+    docker compose build hadoop-container spark-master producer complaint-consumer dashboard
 
 Start the services:
 
@@ -362,6 +362,8 @@ For a slower live demonstration, publish 100 transactions with a half-second del
     docker compose exec producer python producer.py transactions --start 0 --limit 100 --delay 0.5
 
 The producer reports confirmed, failed, and invalid records.
+
+The complaint consumer starts as a Compose service when its dependencies are ready. Build it with `docker compose build complaint-consumer`. After Kafka and Cassandra are available, start it with `docker compose up -d complaint-consumer` and inspect its logs with `docker compose logs -f complaint-consumer`. Do not publish test complaints until the consumer is ready.
 
 
 ## 12. Running Continuous Spark Scoring
@@ -428,7 +430,8 @@ The dashboard depends on MySQL and Cassandra being available and populated.
 
 ## 15. Known Limitations and Next Steps
 
-- Complete and test the Kafka complaint consumer that writes events to Cassandra.
+- Complete runtime testing of the Kafka complaint consumer and verify both Cassandra lookup paths.
+- Verify end-to-end complaint-to-transaction investigation integration in the dashboard.
 - Ensure all teammates can build or obtain the same Spark 3.5.0/Python image.
 - Verify model and historical-data provisioning on a fresh environment.
 - Measure continuous-stream throughput and end-to-end scoring latency.
