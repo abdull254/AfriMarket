@@ -251,14 +251,15 @@ Create the network and volumes with:
 
 ### Hadoop and persistent HDFS storage
 
-The custom Hadoop image is built from `hadoop/Dockerfile`. It includes:
+The custom Hadoop image is built from `hadoop/Dockerfile`: Hadoop 2.8.2 (the version the team's HDFS volume was created with) on the `eclipse-temurin:8-jre-jammy` Java base, which has both x86_64 and ARM64 builds. It runs natively on Intel/AMD machines, Apple Silicon and ARM Linux VMs, with no emulation. It includes:
 
 - `hadoop/conf/core-site.xml`: sets the HDFS endpoint to `hdfs://hadoop-container:8020`.
 - `hadoop/conf/hdfs-site.xml`: sets the replication factor to 1 for this single-DataNode development environment.
+- `hadoop/start-hadoop.sh`: starts the NameNode, DataNode and YARN ResourceManager directly (no SSH to localhost, which used to fail silently and leave HDFS with no DataNode). If the NameNode or DataNode stops, the container exits and prints the last log lines, and Docker restarts it.
 
 The `afrimarket_hdfs_data` volume is mounted at `/tmp/hadoop-root/dfs` and stores the NameNode and DataNode directories. The separate `my_shared_volume` is mounted at `/data` for shared files.
 
-**Fresh environment only:** after creating the empty HDFS volume and building the Hadoop image, initialize its NameNode exactly once before starting the Hadoop service:
+**Fresh environment:** on first start with an empty `afrimarket_hdfs_data` volume, the container formats a new NameNode by itself. A volume that already has NameNode metadata is never formatted. You can still format by hand before the first start if you prefer:
 
     docker compose build hadoop-container
     docker compose run --rm --no-deps --entrypoint /hadoop/bin/hdfs hadoop-container namenode -format
