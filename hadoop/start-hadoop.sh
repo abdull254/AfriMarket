@@ -5,6 +5,9 @@
 set -euo pipefail
 
 mkdir -p "$HADOOP_LOG_DIR"
+# PID files left by a previous run of this container would make the start
+# scripts think the daemons are already running.
+rm -f /tmp/hadoop-*.pid /tmp/yarn-*.pid
 
 # A brand-new, empty HDFS volume is formatted once. An existing volume is never touched.
 if [ ! -d /tmp/hadoop-root/dfs/name/current ]; then
