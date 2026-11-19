@@ -1,12 +1,14 @@
 import os
 import sys
 
+import redis
 from pyspark.sql import SparkSession, functions as F
 from pyspark.ml import PipelineModel
 from pyspark.ml.functions import vector_to_array
 
 sys.path.insert(0, "/shared_data")
 import features
+from online_features import ONLINE, RedisStore, compute_online_features
 
 HDFS = os.getenv("HDFS_URI", "hdfs://hadoop-container:8020")
 KAFKA = os.getenv("KAFKA_BOOTSTRAP", "kafka-recovery:9092")
@@ -21,6 +23,11 @@ RAW_HISTORY_PATH = HDFS + "/fraud/stream/member2_raw_history"
 CHECKPOINT_PATH = HDFS + "/fraud/checkpoints/member2_transaction_scoring"
 
 MAX_OFFSETS = os.getenv("MAX_OFFSETS_PER_TRIGGER", "500")
+
+REDIS_HOST = os.getenv("REDIS_HOST", "redis")
+REDIS_PORT = int(os.getenv("REDIS_PORT", "6379"))
+# Set once the HDFS history has been loaded into Redis, so restarts skip it.
+SEEDED_KEY = "afrimarket:seeded:" + HISTORY_PATH
 
 COLUMNS = [
     "TransactionID", "TransactionDT", "TransactionAmt",
@@ -41,18 +48,36 @@ spark = (
 )
 spark.sparkContext.setLogLevel("WARN")
 
-# Use the existing 24,000-row HDFS history as the baseline.
+# Live customer features come from Redis (online_features.py), not from HDFS.
+# HDFS is read once at startup: to seed Redis with the purchase history and to
+# know which transactions are already part of that history.
+store = RedisStore(redis.Redis(host=REDIS_HOST, port=REDIS_PORT, socket_timeout=0.2))
+
 baseline_raw = spark.read.parquet(HISTORY_PATH).select(*COLUMNS)
 event_schema = baseline_raw.schema
 
-baseline = (
-    features.add_uid(features.clean(baseline_raw))
-    .withColumn("_is_new", F.lit(False))
-)
-
-baseline_ids = baseline.select(
+baseline_ids = baseline_raw.select(
     F.col("TransactionID").cast("long").alias("baseline_id")
-).distinct()
+).distinct().cache()
+
+FEATURE_KEYS = ["TransactionID", "TransactionDT", "TransactionAmt", "card1", "addr1"]
+
+
+def seed_redis():
+    """Replay the HDFS history through the feature store once, in time order,
+    so returning customers are not scored as first-time customers."""
+    if store.r.get(SEEDED_KEY):
+        print("Redis already seeded from", HISTORY_PATH)
+        return
+    rows = [r.asDict() for r in baseline_raw.select(*FEATURE_KEYS).collect()]
+    feats = compute_online_features(rows, store)
+    if any(f["features_degraded"] for f in feats):
+        raise RuntimeError("Redis failed while seeding the history; not marking it as seeded.")
+    store.r.set(SEEDED_KEY, len(rows))
+    print(f"Seeded Redis with {len(rows):,} historical transactions")
+
+
+seed_redis()
 
 model = PipelineModel.load(MODEL_PATH)
 threshold = spark.read.json(THRESHOLD_PATH).first()
@@ -62,30 +87,6 @@ if threshold is None:
 
 REVIEW_AT = float(threshold["review_at"])
 BLOCK_AT = float(threshold["block_at"])
-
-
-def read_prior_stream_batches(current_batch_id):
-    """Read previous raw batches, excluding the current batch for retry safety."""
-    root = spark._jvm.org.apache.hadoop.fs.Path(RAW_HISTORY_PATH)
-    fs = root.getFileSystem(spark._jsc.hadoopConfiguration())
-
-    if not fs.exists(root):
-        return None
-
-    statuses = fs.listStatus(root)
-    current_name = f"batch_id={current_batch_id}"
-
-    paths = [
-        str(status.getPath())
-        for status in statuses
-        if status.isDirectory()
-        and status.getPath().getName() != current_name
-    ]
-
-    if not paths:
-        return None
-
-    return spark.read.parquet(*paths).select(*COLUMNS)
 
 
 def save_mysql(rows):
@@ -139,59 +140,46 @@ def handle_batch(kafka_batch, batch_id):
         print(f"Batch {batch_id}: no valid events")
         return
 
-    prior_raw = read_prior_stream_batches(batch_id)
-
-    if prior_raw is not None:
-        prior_stream = (
-            features.add_uid(features.clean(prior_raw))
-            .withColumn("_is_new", F.lit(False))
-        )
-        prior_ids = prior_stream.select(
-            F.col("TransactionID").cast("long").alias("baseline_id")
-        ).distinct()
-        seen_ids = baseline_ids.unionByName(prior_ids).distinct()
-    else:
-        prior_stream = None
-        seen_ids = baseline_ids
-
-    new_rows = (
-        features.add_uid(features.clean(parsed.select(*COLUMNS)))
-        .join(
-            seen_ids,
-            F.col("TransactionID").cast("long") == F.col("baseline_id"),
-            "left_anti"
-        )
-        .withColumn("_is_new", F.lit(True))
+    # Skip transactions that are already part of the training history.
+    new_raw = parsed.select(*COLUMNS).join(
+        baseline_ids,
+        F.col("TransactionID").cast("long") == F.col("baseline_id"),
+        "left_anti"
     )
 
-    if new_rows.isEmpty():
+    # A micro-batch is small (at most MAX_OFFSETS_PER_TRIGGER rows), so the
+    # feature lookup runs on the driver: read each card's totals from Redis,
+    # then add the purchase. Re-sent transactions get their cached features.
+    rows = [r.asDict() for r in new_raw.select(*FEATURE_KEYS).collect()]
+    if not rows:
         print(f"Batch {batch_id}: all transactions already processed")
         return
 
-    customer_uids = new_rows.select("uid").distinct()
-
-    customer_history = baseline.join(customer_uids, "uid", "inner")
-
-    if prior_stream is not None:
-        previous_customer_history = prior_stream.join(
-            customer_uids, "uid", "inner"
-        )
-        customer_history = customer_history.unionByName(
-            previous_customer_history, allowMissingColumns=True
-        )
-
-    combined = customer_history.unionByName(
-        new_rows, allowMissingColumns=True
+    feats = compute_online_features(rows, store)
+    feat_df = spark.createDataFrame(
+        [(int(r["TransactionID"]), *[float(f[c]) for c in ONLINE], f["features_degraded"])
+         for r, f in zip(rows, feats)],
+        "TransactionID long, " + ", ".join(f"{c} double" for c in ONLINE)
+        + ", features_degraded boolean"
     )
 
-    prepared = features.add_features(combined).filter(F.col("_is_new"))
+    # Same row features and missing-value rules as training (features.py).
+    prepared = features.fill_missing(
+        features.add_row_features(features.clean(new_raw))
+        .withColumn("TransactionID", F.col("TransactionID").cast("long"))
+        .join(feat_df, "TransactionID", "left")
+    )
 
     scored = (
         model.transform(prepared)
         .withColumn("risk_score", vector_to_array("probability")[1])
         .withColumn(
             "decision",
-            F.when(F.col("risk_score") >= BLOCK_AT, "BLOCK")
+            F.when(
+                F.col("risk_score") >= BLOCK_AT,
+                # Never auto-block on incomplete information: send to an analyst instead.
+                F.when(F.col("features_degraded"), "REVIEW").otherwise("BLOCK")
+            )
              .when(F.col("risk_score") >= REVIEW_AT, "REVIEW")
              .otherwise("APPROVE")
         )
@@ -199,7 +187,8 @@ def handle_batch(kafka_batch, batch_id):
         .select(
             F.col("TransactionID").cast("long").alias("TransactionID"),
             F.col("TransactionDT").cast("double").alias("TransactionDT"),
-            "isFraud", "risk_score", "prediction", "decision", "scored_at"
+            "isFraud", "risk_score", "prediction", "decision",
+            "features_degraded", "scored_at"
         )
         .persist()
     )
@@ -230,11 +219,9 @@ def handle_batch(kafka_batch, batch_id):
         # MySQL uses TransactionID as the primary key, making retries safe.
         save_mysql(rows)
 
-        # Persist raw events only after the score sinks succeed.
+        # Keep the raw events in the HDFS data lake for retraining.
         raw_batch_path = f"{RAW_HISTORY_PATH}/batch_id={batch_id}"
-        new_rows.select(*COLUMNS).write.mode("overwrite").parquet(
-            raw_batch_path
-        )
+        new_raw.write.mode("overwrite").parquet(raw_batch_path)
 
         print(f"Batch {batch_id}: saved {count} scores to HDFS and MySQL")
         scored.groupBy("decision").count().orderBy("decision").show()
@@ -263,8 +250,9 @@ query = (
 print("AfriMarket continuous fraud scoring is running.")
 print("Kafka:", KAFKA, "Topic:", TOPIC)
 print("Historical baseline:", HISTORY_PATH)
+print("Live features: Redis at", f"{REDIS_HOST}:{REDIS_PORT}")
 print("HDFS scores:", OUTPUT_PATH)
-print("Rolling raw history:", RAW_HISTORY_PATH)
+print("Raw event archive:", RAW_HISTORY_PATH)
 print("Checkpoint:", CHECKPOINT_PATH)
 print("Maximum offsets per trigger:", MAX_OFFSETS)
 print("Thresholds: REVIEW >=", REVIEW_AT, "BLOCK >=", BLOCK_AT)

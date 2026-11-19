@@ -23,7 +23,7 @@ def load_dataset(topic):
 
 
 def key_column(topic):
-    return config.TXN_ID_COL if topic == "transactions" else config.COMPLAINT_TXN_COL
+    return config.TXN_KEY_COL if topic == "transactions" else config.COMPLAINT_TXN_COL
 
 
 def row_to_message(row):

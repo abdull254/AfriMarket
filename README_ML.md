@@ -155,19 +155,20 @@ Checks run on this code:
   identical scores. With Redis switched off: all 400 still scored, all flagged, 0 blocked.
 
 Settings: `MODEL_DIR`, `REDIS_HOST` (default `redis`), `REDIS_PORT` (default 6379).
-Seed Redis before going live by replaying the history once through
-`compute_online_features()`, so returning customers aren't treated as new.
+`stream_transactions.py` seeds Redis on its first run by replaying the HDFS history
+once through `compute_online_features()`, so returning customers aren't treated as new.
 
-**Needed from the producer:** use the card number (`card1`) as the Kafka message key, so
-each card's purchases land in one partition and reach Spark in time order. The Redis
-version assumes this.
+The producer keys transaction messages by the card number (`card1`), so each card's
+purchases land in one partition and reach Spark in time order. The Redis version
+assumes this.
 
 ## Known limits
 - `hour_of_day` comes from `TransactionDT`, which counts seconds from an unknown start
   point. It's a 24-hour cycle shifted by an unknown amount, not real clock time.
 - Scoring latency with Redis has not been measured yet. Measure `scored_at - sent_at`
   at the producer's test rates.
-- The Kafka read and the MySQL write in `score_snippet.py` are still placeholders. The
-  integrated streaming job (`spark_processing/stream_transactions.py`) needs to switch to these features.
+- `score_snippet.py` is the minimal example. The integrated streaming job
+  (`spark_processing/stream_transactions.py`) uses the same Redis features, seeds Redis
+  from the HDFS history on its first run, and writes to MySQL.
 - The 36 MB transactions file is stored directly in git. For the full 590K rows, use
   Git LFS or a download script instead.
