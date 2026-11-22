@@ -273,44 +273,193 @@ Do not use docker compose down -v unless you intentionally want to delete the da
 
 The sample transactions, investigation cases, and complaints used during local testing are not automatically transferred to teammates through GitHub.
 
-10. Current Status
 
-Completed
 
-MySQL Docker setup and schema
 
-Cassandra Docker setup and schema
 
-Automatic Cassandra schema initialization
 
-Database persistence testing
+## 11. Updating an Existing Integration Environment
 
-Streamlit dashboard Docker setup
+### Who Should Follow This Section?
 
-Fraud monitoring Overview page
+**This section is only for teammates who have already installed and run a previous version of the Bintou dashboard and have an existing MySQL database.**
 
-Investigation case creation and updates
+**If you have NEVER installed or run the Bintou dashboard before, SKIP this entire section.** Follow the fresh installation instructions in Section 4 instead. The latest database schema is already included, so no manual database updates are required.
 
-Cassandra complaint lookup
+If you have previously run the dashboard and want to update it while preserving your existing data, follow the steps below.
 
-Related complaints displayed in investigations
+### Important: Protect Existing Data
 
-Management dashboard with decision rates and case summaries
+Do not run `docker compose down -v`, delete Docker volumes, or reinitialize the databases.
 
-Local testing using sample records
+The following steps are designed to preserve existing MySQL fraud scores, investigation records, and Cassandra complaints.
 
-Pending Team Integration
+### Step 1 — Get the Latest Bintou Changes
 
-Connect Spark to MySQL and Cassandra
+From the AfriMarket project directory, if you are working directly on the Bintou branch:
 
-Stream complaint records from Kafka into Cassandra
+```bash
+git pull origin Bintou
+```
 
-Store actual fraud prediction results from Spark/ML in MySQL
+If you are working on another branch, fetch the latest Bintou changes and integrate them using the team's Git workflow.
 
-Test the dashboard with real pipeline outputs
+The latest updates include:
 
-Test the complete end-to-end fraud detection workflow
+- Updated Streamlit fraud monitoring dashboard
+- Automatic investigation case creation for new REVIEW transactions
+- MySQL `analyst_decision` column
+- Unique constraint preventing duplicate investigation cases
 
-Perform final dashboard usability and reliability improvements
+### Step 2 — Check and Update the Existing MySQL Schema
 
-Note: The dashboard currently uses locally stored test records. Full pipeline integration is still in progress.
+If the MySQL container is already running, connect to the database:
+
+```bash
+docker compose exec mysql mysql -u root -p fraud
+```
+
+Enter your MySQL root password when prompted.
+
+If MySQL is not running, start it first:
+
+```bash
+docker compose up -d mysql
+```
+
+Then run the MySQL connection command above.
+
+Once connected, inspect the investigation table:
+
+```sql
+SHOW COLUMNS FROM investigation_cases;
+SHOW INDEX FROM investigation_cases;
+```
+
+**A. Add the analyst decision column (only if missing)**
+
+If `analyst_decision` is not listed, run:
+
+```sql
+ALTER TABLE investigation_cases
+ADD COLUMN analyst_decision ENUM('PENDING', 'APPROVE', 'DECLINE')
+NOT NULL DEFAULT 'PENDING';
+```
+
+If the column already exists, skip this command.
+
+**B. Check for duplicate investigation cases**
+
+Before adding a unique constraint, run:
+
+```sql
+SELECT TransactionID, COUNT(*) AS case_count
+FROM investigation_cases
+GROUP BY TransactionID
+HAVING COUNT(*) > 1;
+```
+
+If this query returns any rows, review and resolve the duplicates before continuing.
+
+**C. Add the unique constraint (only if missing)**
+
+If no duplicate transactions exist and `TransactionID` does not already have a unique index, run:
+
+```sql
+ALTER TABLE investigation_cases
+ADD CONSTRAINT uq_investigation_transaction UNIQUE (TransactionID);
+```
+
+If the unique constraint already exists, skip this command.
+
+**D. Verify the database changes**
+
+Run:
+
+```sql
+SHOW COLUMNS FROM investigation_cases;
+SHOW INDEX FROM investigation_cases;
+```
+
+Confirm that:
+
+- `analyst_decision` exists and defaults to `PENDING`.
+- `TransactionID` has a unique index.
+
+Exit MySQL:
+
+```sql
+EXIT;
+```
+
+### Step 3 — Rebuild and Start the Updated Services
+
+After completing any necessary database updates, run:
+
+```bash
+docker compose up -d --build
+```
+
+This rebuilds and starts the services using the latest code while preserving existing Docker volumes.
+
+**Note:** Docker Compose does not automatically update an existing MySQL table when the initialization script changes. That is why Step 2 is necessary for previously initialized databases.
+
+### Step 4 — Verify the Services
+
+Check the containers:
+
+```bash
+docker compose ps -a
+```
+
+Check the dashboard logs:
+
+```bash
+docker compose logs --tail=50 dashboard
+```
+
+Open the Streamlit dashboard:
+
+http://localhost:8501
+
+Verify that the following pages load correctly:
+
+- **Overview:** Fraud monitoring metrics, transaction counts, and decision distribution
+- **Investigations:** Investigation cases, analyst decisions, assignments, and case statuses
+- **Complaints:** Cassandra complaint searches
+- **Management:** Fraud statistics and investigation summaries
+
+If any page displays an error, capture the exact error message for troubleshooting.
+
+### Step 5 — Understand Automatic Investigation Creation
+
+The updated Spark streaming pipeline automatically creates investigation cases for newly processed transactions with a `REVIEW` decision.
+
+For this feature to work:
+
+- Spark must be running the updated streaming code.
+- MySQL must contain the updated investigation schema.
+- Transactions must be processed through the updated streaming pipeline.
+
+Each transaction can have only one investigation case.
+
+**Important:** Existing REVIEW transactions that were scored before the updated streaming pipeline was running will not automatically receive investigation cases simply because the schema was updated.
+
+### Fresh Installations — No Migration Needed
+
+If you have never installed or run the Bintou dashboard, skip all the update steps above.
+
+Follow Section 4 of this README to set up the dashboard normally.
+
+The updated `mysql/init/01_schema.sql` already includes:
+
+- `analyst_decision` with a default value of `PENDING`
+- A unique constraint on `TransactionID`
+
+These are created automatically when MySQL initializes a fresh database.
+
+### Final Reminder
+
+Never delete existing Docker volumes just to update the dashboard or database schema.
+
+Updating the schema addresses the missing `analyst_decision` column and duplicate-case protection. Any unrelated dashboard errors should be investigated separately.
