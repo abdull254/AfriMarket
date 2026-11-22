@@ -515,20 +515,17 @@ if page == "Overview":
             col1, col2, col3, col4 = st.columns(4)
 
             with col1:
-                st.icon(":material/receipt_long:", color="teal")
-                st.metric("Recent Transactions", f"{total:,}")
+                st.metric(":material/receipt_long: Recent Transactions", f"{total:,}")
 
             with col2:
-                st.icon(":material/check_circle:", color="teal")
-                st.metric("Model Approved", f"{approved:,}")
+                st.metric(":material/check_circle: Model Approved", f"{approved:,}")
 
             with col3:
-                st.icon(":material/search:", color="teal")
-                st.metric("Needs Review", f"{review:,}")
+                st.metric(":material/search: Needs Review", f"{review:,}")
 
             with col4:
-                st.icon(":material/shield:", color="teal")
-                st.metric("Model Blocked", f"{blocked:,}")
+                st.metric(":material/shield: Model Blocked", f"{blocked:,}")
+
             left, right = st.columns([3, 2])
             with left:
                 st.subheader("Model Decision Distribution")
@@ -542,15 +539,11 @@ if page == "Overview":
                 avg_risk = float(scores["risk_score"].mean())
                 flagged = review + blocked
 
-                st.icon(":material/speed:", color="teal")
-                st.metric("Average Risk Score", f"{avg_risk:.1%}")
+                st.metric(":material/speed: Average Risk Score", f"{avg_risk:.1%}")
 
-                st.icon(":material/shield:", color="teal")
-                st.metric("Flagged Transactions", f"{flagged:,}")
+                st.metric(":material/shield: Flagged Transactions", f"{flagged:,}")
 
-                st.icon(":material/percent:", color="teal")
-                st.metric("Flagged Rate", f"{flagged / total:.1%}")
-
+                st.metric(":material/percent: Flagged Rate", f"{flagged / total:.1%}")
             st.divider()
             st.subheader("Recent Transactions")
             search = st.text_input("Search displayed Transaction IDs", placeholder="Enter a transaction ID...")
@@ -805,20 +798,14 @@ elif page == "Management":
             col1, col2, col3, col4 = st.columns(4)
 
             with col1:
-                st.icon(":material/receipt_long:", color="teal")
-                st.metric("Total Transactions", f"{total:,}")
-
+                st.metric(":material/receipt_long: Recent Transactions", f"{total:,}")
             with col2:
-                st.icon(":material/check_circle:", color="teal")
-                st.metric("Model Approval Rate", f"{approval_rate:.1%}")
+                st.metric(":material/check_circle: Model Approved", f"{approved:,}")
 
             with col3:
-                st.icon(":material/shield:", color="teal")
-                st.metric("Flagged Rate", f"{flagged_rate:.1%}")
-
+                st.metric(":material/search: Needs Review", f"{review:,}")
             with col4:
-                st.icon(":material/speed:", color="teal")
-                st.metric("Average Risk", f"{avg_risk:.1%}")
+                st.metric(":material/shield: Model Blocked", f"{blocked:,}")
             st.divider()
             st.subheader("Model Decision Analysis")
             decisions = pd.DataFrame({
