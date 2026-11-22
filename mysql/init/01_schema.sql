@@ -22,7 +22,10 @@ CREATE TABLE IF NOT EXISTS investigation_cases (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         ON UPDATE CURRENT_TIMESTAMP,
+    analyst_decision ENUM('PENDING', 'APPROVE', 'DECLINE')
+        NOT NULL DEFAULT 'PENDING',
     PRIMARY KEY (case_id),
+    UNIQUE KEY uq_investigation_transaction (TransactionID),
     FOREIGN KEY (TransactionID) REFERENCES scores(TransactionID),
     CHECK (case_status IN ('OPEN', 'IN_PROGRESS', 'RESOLVED', 'CLOSED'))
 );
