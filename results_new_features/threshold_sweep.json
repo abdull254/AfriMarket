@@ -1,0 +1,311 @@
+{
+  "fp_cost": 15.0,
+  "validation": [
+    {
+      "threshold": 0.05,
+      "fraud_dollars_caught": 31548.62,
+      "pct_fraud_dollars_caught": 0.9942,
+      "false_positives": 3454,
+      "precision": 0.0508,
+      "net_savings": -20261.38
+    },
+    {
+      "threshold": 0.1,
+      "fraud_dollars_caught": 30885.27,
+      "pct_fraud_dollars_caught": 0.9733,
+      "false_positives": 2437,
+      "precision": 0.0677,
+      "net_savings": -5669.73
+    },
+    {
+      "threshold": 0.15,
+      "fraud_dollars_caught": 29479.25,
+      "pct_fraud_dollars_caught": 0.929,
+      "false_positives": 1754,
+      "precision": 0.086,
+      "net_savings": 3169.25
+    },
+    {
+      "threshold": 0.2,
+      "fraud_dollars_caught": 28337.85,
+      "pct_fraud_dollars_caught": 0.893,
+      "false_positives": 1340,
+      "precision": 0.1043,
+      "net_savings": 8237.85
+    },
+    {
+      "threshold": 0.25,
+      "fraud_dollars_caught": 26391.55,
+      "pct_fraud_dollars_caught": 0.8317,
+      "false_positives": 1029,
+      "precision": 0.1243,
+      "net_savings": 10956.55
+    },
+    {
+      "threshold": 0.3,
+      "fraud_dollars_caught": 25596.6,
+      "pct_fraud_dollars_caught": 0.8066,
+      "false_positives": 810,
+      "precision": 0.1465,
+      "net_savings": 13446.6
+    },
+    {
+      "threshold": 0.35,
+      "fraud_dollars_caught": 23728.22,
+      "pct_fraud_dollars_caught": 0.7477,
+      "false_positives": 637,
+      "precision": 0.1727,
+      "net_savings": 14173.22
+    },
+    {
+      "threshold": 0.4,
+      "fraud_dollars_caught": 23110.67,
+      "pct_fraud_dollars_caught": 0.7283,
+      "false_positives": 509,
+      "precision": 0.2009,
+      "net_savings": 15475.67
+    },
+    {
+      "threshold": 0.45,
+      "fraud_dollars_caught": 21951.04,
+      "pct_fraud_dollars_caught": 0.6917,
+      "false_positives": 404,
+      "precision": 0.2305,
+      "net_savings": 15891.04
+    },
+    {
+      "threshold": 0.5,
+      "fraud_dollars_caught": 20048.09,
+      "pct_fraud_dollars_caught": 0.6318,
+      "false_positives": 329,
+      "precision": 0.259,
+      "net_savings": 15113.09
+    },
+    {
+      "threshold": 0.55,
+      "fraud_dollars_caught": 16693.44,
+      "pct_fraud_dollars_caught": 0.526,
+      "false_positives": 264,
+      "precision": 0.2846,
+      "net_savings": 12733.44
+    },
+    {
+      "threshold": 0.6,
+      "fraud_dollars_caught": 13505.44,
+      "pct_fraud_dollars_caught": 0.4256,
+      "false_positives": 216,
+      "precision": 0.3099,
+      "net_savings": 10265.44
+    },
+    {
+      "threshold": 0.65,
+      "fraud_dollars_caught": 12280.38,
+      "pct_fraud_dollars_caught": 0.387,
+      "false_positives": 177,
+      "precision": 0.3371,
+      "net_savings": 9625.38
+    },
+    {
+      "threshold": 0.7,
+      "fraud_dollars_caught": 12019.38,
+      "pct_fraud_dollars_caught": 0.3788,
+      "false_positives": 140,
+      "precision": 0.386,
+      "net_savings": 9919.38
+    },
+    {
+      "threshold": 0.75,
+      "fraud_dollars_caught": 9787.48,
+      "pct_fraud_dollars_caught": 0.3084,
+      "false_positives": 109,
+      "precision": 0.4202,
+      "net_savings": 8152.48
+    },
+    {
+      "threshold": 0.8,
+      "fraud_dollars_caught": 8435.81,
+      "pct_fraud_dollars_caught": 0.2658,
+      "false_positives": 76,
+      "precision": 0.4933,
+      "net_savings": 7295.81
+    },
+    {
+      "threshold": 0.85,
+      "fraud_dollars_caught": 6300.54,
+      "pct_fraud_dollars_caught": 0.1985,
+      "false_positives": 45,
+      "precision": 0.5872,
+      "net_savings": 5625.54
+    },
+    {
+      "threshold": 0.9,
+      "fraud_dollars_caught": 4049.96,
+      "pct_fraud_dollars_caught": 0.1276,
+      "false_positives": 15,
+      "precision": 0.7826,
+      "net_savings": 3824.96
+    },
+    {
+      "threshold": 0.95,
+      "fraud_dollars_caught": 2805.05,
+      "pct_fraud_dollars_caught": 0.0884,
+      "false_positives": 7,
+      "precision": 0.8511,
+      "net_savings": 2700.05
+    }
+  ],
+  "test": [
+    {
+      "threshold": 0.05,
+      "fraud_dollars_caught": 21856.26,
+      "pct_fraud_dollars_caught": 0.8829,
+      "false_positives": 3545,
+      "precision": 0.0369,
+      "net_savings": -31318.74
+    },
+    {
+      "threshold": 0.1,
+      "fraud_dollars_caught": 17860.5,
+      "pct_fraud_dollars_caught": 0.7215,
+      "false_positives": 2546,
+      "precision": 0.0472,
+      "net_savings": -20329.5
+    },
+    {
+      "threshold": 0.15,
+      "fraud_dollars_caught": 15759.47,
+      "pct_fraud_dollars_caught": 0.6366,
+      "false_positives": 1964,
+      "precision": 0.0544,
+      "net_savings": -13700.53
+    },
+    {
+      "threshold": 0.2,
+      "fraud_dollars_caught": 14476.47,
+      "pct_fraud_dollars_caught": 0.5848,
+      "false_positives": 1496,
+      "precision": 0.0667,
+      "net_savings": -7963.53
+    },
+    {
+      "threshold": 0.25,
+      "fraud_dollars_caught": 13722.4,
+      "pct_fraud_dollars_caught": 0.5543,
+      "false_positives": 1208,
+      "precision": 0.0793,
+      "net_savings": -4397.6
+    },
+    {
+      "threshold": 0.3,
+      "fraud_dollars_caught": 13697.4,
+      "pct_fraud_dollars_caught": 0.5533,
+      "false_positives": 973,
+      "precision": 0.0957,
+      "net_savings": -897.6
+    },
+    {
+      "threshold": 0.35,
+      "fraud_dollars_caught": 13072.99,
+      "pct_fraud_dollars_caught": 0.5281,
+      "false_positives": 793,
+      "precision": 0.11,
+      "net_savings": 1177.99
+    },
+    {
+      "threshold": 0.4,
+      "fraud_dollars_caught": 11683.84,
+      "pct_fraud_dollars_caught": 0.472,
+      "false_positives": 649,
+      "precision": 0.1253,
+      "net_savings": 1948.84
+    },
+    {
+      "threshold": 0.45,
+      "fraud_dollars_caught": 10854.84,
+      "pct_fraud_dollars_caught": 0.4385,
+      "false_positives": 538,
+      "precision": 0.1406,
+      "net_savings": 2784.84
+    },
+    {
+      "threshold": 0.5,
+      "fraud_dollars_caught": 10315.89,
+      "pct_fraud_dollars_caught": 0.4167,
+      "false_positives": 433,
+      "precision": 0.1641,
+      "net_savings": 3820.89
+    },
+    {
+      "threshold": 0.55,
+      "fraud_dollars_caught": 9137.92,
+      "pct_fraud_dollars_caught": 0.3691,
+      "false_positives": 361,
+      "precision": 0.1814,
+      "net_savings": 3722.92
+    },
+    {
+      "threshold": 0.6,
+      "fraud_dollars_caught": 8977.24,
+      "pct_fraud_dollars_caught": 0.3626,
+      "false_positives": 289,
+      "precision": 0.2125,
+      "net_savings": 4642.24
+    },
+    {
+      "threshold": 0.65,
+      "fraud_dollars_caught": 7948.41,
+      "pct_fraud_dollars_caught": 0.3211,
+      "false_positives": 241,
+      "precision": 0.2373,
+      "net_savings": 4333.41
+    },
+    {
+      "threshold": 0.7,
+      "fraud_dollars_caught": 7601.01,
+      "pct_fraud_dollars_caught": 0.307,
+      "false_positives": 193,
+      "precision": 0.2662,
+      "net_savings": 4706.01
+    },
+    {
+      "threshold": 0.75,
+      "fraud_dollars_caught": 7248.13,
+      "pct_fraud_dollars_caught": 0.2928,
+      "false_positives": 133,
+      "precision": 0.3317,
+      "net_savings": 5253.13
+    },
+    {
+      "threshold": 0.8,
+      "fraud_dollars_caught": 6842.43,
+      "pct_fraud_dollars_caught": 0.2764,
+      "false_positives": 96,
+      "precision": 0.3806,
+      "net_savings": 5402.43
+    },
+    {
+      "threshold": 0.85,
+      "fraud_dollars_caught": 5422.62,
+      "pct_fraud_dollars_caught": 0.2191,
+      "false_positives": 60,
+      "precision": 0.4545,
+      "net_savings": 4522.62
+    },
+    {
+      "threshold": 0.9,
+      "fraud_dollars_caught": 2798.57,
+      "pct_fraud_dollars_caught": 0.1131,
+      "false_positives": 17,
+      "precision": 0.6909,
+      "net_savings": 2543.57
+    },
+    {
+      "threshold": 0.95,
+      "fraud_dollars_caught": 1000.91,
+      "pct_fraud_dollars_caught": 0.0404,
+      "false_positives": 5,
+      "precision": 0.7727,
+      "net_savings": 925.91
+    }
+  ]
+}

@@ -11,8 +11,14 @@ LABEL = "isFraud"
 TIME = "TransactionDT"          # seconds from a reference point (IEEE-CIS)
 
 BASE_NUMERIC = ["TransactionAmt", "card1", "card2", "card3", "card5", "addr1", "dist1",
-                "C1", "C2", "C5", "C6", "C9", "C11", "C13", "C14", "D1", "D4", "D10", "D15"]
-CATEGORICAL = ["ProductCD", "card4", "card6", "P_emaildomain", "R_emaildomain", "DeviceType"]
+                "C1", "C2", "C3", "C5", "C6", "C9", "C11", "C13", "C14", "D1", "D4", "D10", "D15"]
+# Raw text columns from the data. M2-M6, M9 added after EDA (strong fraud signals).
+RAW_CATEGORICAL = ["ProductCD", "card4", "card6", "P_emaildomain", "R_emaildomain", "DeviceType",
+                   "M2", "M3", "M4", "M5", "M6", "M9"]
+# Text columns we build ourselves in add_row_features().
+ENGINEERED_CATEGORICAL = ["email_match", "P_provider", "R_provider"]
+CATEGORICAL = RAW_CATEGORICAL + ENGINEERED_CATEGORICAL
+
 
 ENGINEERED = ["hour_of_day", "amt_cents", "uid_prev_txns", "txns_last_1h", "txns_last_24h",
               "secs_since_last_txn", "amt_vs_uid_mean"]
@@ -29,9 +35,10 @@ def clean(df):
         if c not in df.columns:
             df = df.withColumn(c, F.lit(None))
         df = df.withColumn(c, F.col(c).cast("double"))
-    for c in CATEGORICAL:
+    for c in RAW_CATEGORICAL:
         if c not in df.columns:
-            df = df.withColumn(c, F.lit(None).cast("string"))
+            df = df.withColumn(c, F.lit(None))
+        df = df.withColumn(c, F.col(c).cast("string"))
     return df
 
 
@@ -39,6 +46,19 @@ def add_uid(df):
     """Rough customer ID: card number + billing address."""
     return df.withColumn("uid", F.concat_ws("_", F.col("card1").cast("long"),
                                             F.col("addr1").cast("long")))
+def email_provider(col):
+    """Groups messy email domains into providers. Rare domains become 'other'."""
+    d = F.lower(F.trim(col))
+    return (F.when(d.isNull(), "missing")
+            .when(d.startswith("gmail"), "google")
+            .when(d.startswith("yahoo") | d.isin("ymail.com", "rocketmail.com"), "yahoo")
+            .when(d.startswith("hotmail") | d.startswith("outlook") | d.startswith("live")
+                  | d.isin("msn.com", "passport.com"), "microsoft")
+            .when(d.isin("aol.com", "aim.com"), "aol")
+            .when(d.isin("icloud.com", "me.com", "mac.com"), "apple")
+            .when(d == "anonymous.com", "anonymous")
+            .when(d.endswith(".net"), "isp")          # comcast, att, verizon, sbcglobal...
+            .otherwise("other"))
 
 
 def add_row_features(df):
@@ -48,7 +68,15 @@ def add_row_features(df):
             # "hour of a 24-hour cycle", shifted by an unknown offset, not clock time.
             .withColumn("hour_of_day", F.floor(F.col(TIME) / 3600) % 24)
             # Cents part of the amount hints at currency conversion, a known IEEE-CIS signal.
-            .withColumn("amt_cents", F.col("TransactionAmt") - F.floor("TransactionAmt")))
+            .withColumn("amt_cents", F.col("TransactionAmt") - F.floor("TransactionAmt"))
+            # EDA: same purchaser/recipient domain -> 8.8% fraud vs 3.1% when different.
+            .withColumn("email_match",
+                        F.when(F.col("R_emaildomain").isNull(), "R_missing")
+                         .when(F.col("P_emaildomain").isNull(), "P_missing")
+                         .when(F.col("P_emaildomain") == F.col("R_emaildomain"), "same")
+                         .otherwise("different"))
+            .withColumn("P_provider", email_provider(F.col("P_emaildomain")))
+            .withColumn("R_provider", email_provider(F.col("R_emaildomain"))))
 
 
 def fill_missing(df):

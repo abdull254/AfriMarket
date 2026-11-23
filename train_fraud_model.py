@@ -22,7 +22,7 @@ import os
 from pyspark.sql import SparkSession, functions as F
 from pyspark.ml import Pipeline
 from pyspark.ml.feature import StringIndexer, OneHotEncoder, VectorAssembler, StandardScaler
-from pyspark.ml.classification import LogisticRegression, GBTClassifier
+from pyspark.ml.classification import LogisticRegression, GBTClassifier, RandomForestClassifier
 from pyspark.ml.evaluation import BinaryClassificationEvaluator
 from pyspark.ml.functions import vector_to_array
 
@@ -95,12 +95,24 @@ def gbt_pipeline(numeric):
     ])
 
 
+
+def rf_pipeline(numeric):
+    return Pipeline(stages=indexers + [
+        VectorAssembler(inputCols=numeric + [c + "_idx" for c in CATEGORICAL],
+                        outputCol="features"),
+        RandomForestClassifier(labelCol=LABEL, weightCol="weight", numTrees=200, maxDepth=10,
+                               maxBins=128, featureSubsetStrategy="sqrt", seed=42),
+    ])
+
+
 CANDIDATES = [
     ("LogisticRegression", lr_pipeline(NUMERIC)),
     ("GradientBoostedTrees", gbt_pipeline(NUMERIC)),
     # Raw card/address numbers are IDs, not amounts. Trees can memorise them.
     # This version keeps the per-customer features but drops the raw IDs.
     ("GradientBoostedTrees_noIDs", gbt_pipeline(NUMERIC_NO_IDS)),
+    ("RandomForest", rf_pipeline(NUMERIC)),
+    ("RandomForest_noIDs", rf_pipeline(NUMERIC_NO_IDS)),
 ]
 
 pr_eval = BinaryClassificationEvaluator(labelCol=LABEL, metricName="areaUnderPR")

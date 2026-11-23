@@ -1,0 +1,103 @@
+{
+  "best_model": "GradientBoostedTrees_noIDs",
+  "chosen_on": "validation",
+  "review_at": 0.45,
+  "block_at": 0.95,
+  "block_reached_target_precision": true,
+  "fp_cost": 15.0,
+  "rows": {
+    "train": 20997,
+    "validation": 4500,
+    "test": 4503
+  },
+  "days": {
+    "validation": 30.9,
+    "test": 31.37
+  },
+  "train_fraud_rate": 0.0343,
+  "test_at_review": {
+    "threshold": 0.45,
+    "fraud_dollars_caught": 10854.84,
+    "pct_fraud_dollars_caught": 0.4385,
+    "false_positives": 538,
+    "precision": 0.1406,
+    "net_savings": 2784.84
+  },
+  "test_at_block": {
+    "threshold": 0.95,
+    "fraud_dollars_caught": 1000.91,
+    "pct_fraud_dollars_caught": 0.0404,
+    "false_positives": 5,
+    "precision": 0.7727,
+    "net_savings": 925.91
+  },
+  "test_net_savings_per_30_days": 2663.4,
+  "fp_cost_sensitivity": [
+    {
+      "fp_cost": 5.0,
+      "review_at": 0.2,
+      "block_at": 0.95,
+      "test_pct_fraud_dollars_caught": 0.5848,
+      "test_false_positives": 1496,
+      "test_net_savings": 6996.47
+    },
+    {
+      "fp_cost": 15.0,
+      "review_at": 0.45,
+      "block_at": 0.95,
+      "test_pct_fraud_dollars_caught": 0.4385,
+      "test_false_positives": 538,
+      "test_net_savings": 2784.84
+    },
+    {
+      "fp_cost": 30.0,
+      "review_at": 0.5,
+      "block_at": 0.95,
+      "test_pct_fraud_dollars_caught": 0.4167,
+      "test_false_positives": 433,
+      "test_net_savings": -2674.11
+    }
+  ],
+  "top_features": [
+    [
+      "P_emaildomain_idx",
+      0.1174
+    ],
+    [
+      "TransactionAmt",
+      0.077
+    ],
+    [
+      "R_emaildomain_idx",
+      0.0621
+    ],
+    [
+      "C1",
+      0.0591
+    ],
+    [
+      "D1",
+      0.0449
+    ],
+    [
+      "D15",
+      0.0448
+    ],
+    [
+      "C13",
+      0.0423
+    ],
+    [
+      "D10",
+      0.0408
+    ],
+    [
+      "hour_of_day",
+      0.039
+    ],
+    [
+      "C14",
+      0.0368
+    ]
+  ]
+}
