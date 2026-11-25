@@ -1,0 +1,401 @@
+seller_id,seller_name,country,city,main_category,joined_date,rating,is_verified
+SEL0001,Sahel Electronics,Egypt,Cairo,Fashion,2023-01-17,4.6,True
+SEL0002,Savanna Depot,Nigeria,Lagos,Digital Vouchers,2025-07-23,3.8,False
+SEL0003,Afya Fashion House,Tanzania,Dar es Salaam,Gaming,2023-02-01,4.5,True
+SEL0004,Upendo Hub,Ghana,Accra,Furniture,2023-08-25,4.6,True
+SEL0005,Amani Store Ltd,Kenya,Kisumu,Digital Vouchers,2025-09-27,4.5,True
+SEL0006,Jua Emporium Ltd,Nigeria,Abuja,Gift Cards,2025-09-12,3.0,False
+SEL0007,Nyota Outlet Ltd,Nigeria,Port Harcourt,Fashion,2024-12-12,4.7,True
+SEL0008,Zuri Emporium Ltd,Kenya,Nairobi,Gift Cards,2023-12-23,4.9,False
+SEL0009,Upendo Mart Ltd,Nigeria,Lagos,Airtime & Data,2023-08-29,4.6,False
+SEL0010,Kijani Outlet Ltd,Kenya,Nairobi,Appliances,2024-10-10,4.2,True
+SEL0011,Mawingu Market,Uganda,Kampala,Gift Cards,2024-06-23,5.0,True
+SEL0012,Tembo Wholesale Ltd,Nigeria,Lagos,Travel & Bus Tickets,2025-09-22,4.2,True
+SEL0013,Mto Market,Kenya,Kisumu,Appliances,2025-10-29,3.8,True
+SEL0014,Sahel Boutique Ltd,South Africa,Johannesburg,Airtime & Data,2023-09-05,3.9,True
+SEL0015,Duma Market Ltd,Tanzania,Dar es Salaam,Digital Vouchers,2024-10-30,4.1,True
+SEL0016,Savanna Outlet,Rwanda,Kigali,Airtime & Data,2023-05-04,3.8,True
+SEL0017,Zuri Market,Tanzania,Dar es Salaam,Digital Vouchers,2025-12-11,2.6,False
+SEL0018,Sahel Express,Tanzania,Dar es Salaam,Gift Cards,2025-12-08,4.3,False
+SEL0019,Mto Traders Ltd,Nigeria,Lagos,Home & Kitchen,2023-05-03,4.2,True
+SEL0020,Amani Emporium,Nigeria,Lagos,Gaming,2025-09-04,4.8,True
+SEL0021,Simba Boutique Ltd,Nigeria,Port Harcourt,Event Tickets,2023-06-24,3.8,False
+SEL0022,Tembo Hub Ltd,Rwanda,Kigali,Beauty,2025-08-17,4.4,True
+SEL0023,Zuri Boutique,Kenya,Nairobi,Furniture,2023-02-22,4.9,False
+SEL0024,Simba Emporium Ltd,South Africa,Cape Town,Travel & Bus Tickets,2024-03-24,3.7,False
+SEL0025,Zuri Boutique Ltd,Kenya,Nairobi,Beauty,2024-07-04,4.1,True
+SEL0026,Jua Depot Ltd,Tanzania,Dodoma,Furniture,2023-12-22,3.7,True
+SEL0027,Zuri Goods Ltd,Nigeria,Port Harcourt,Electronics,2023-07-26,4.6,False
+SEL0028,Kilima Emporium,Tanzania,Dar es Salaam,Event Tickets,2025-01-10,4.2,True
+SEL0029,Baobab Fashion House,Rwanda,Kigali,Furniture,2025-07-21,4.9,True
+SEL0030,Nyota Emporium,Kenya,Nairobi,Beauty,2025-11-22,4.2,False
+SEL0031,Nyota Electronics,Ghana,Kumasi,Beauty,2024-05-12,4.4,True
+SEL0032,Bahari Supplies,Nigeria,Lagos,Airtime & Data,2025-01-08,4.9,True
+SEL0033,Ubuntu Traders,Nigeria,Abuja,Gift Cards,2023-03-25,3.8,True
+SEL0034,Nyota Fashion House Ltd,Kenya,Nairobi,Subscriptions,2025-09-22,4.7,True
+SEL0035,Sahel Supplies,South Africa,Durban,Fashion,2023-06-14,4.6,True
+SEL0036,Amani Electronics Ltd,Nigeria,Kano,Gaming,2025-10-14,4.5,True
+SEL0037,Ubuntu Traders Ltd,Ghana,Accra,Travel & Bus Tickets,2023-12-22,4.5,True
+SEL0038,Imani Depot Ltd,Uganda,Kampala,Groceries,2025-09-24,3.8,False
+SEL0039,Mto Electronics,Nigeria,Abuja,Digital Vouchers,2025-05-31,4.7,False
+SEL0040,Ubuntu Express Ltd,Kenya,Mombasa,Groceries,2024-11-28,4.5,True
+SEL0041,Zuri Hub,Kenya,Nairobi,Event Tickets,2025-04-27,4.7,True
+SEL0042,Kijani Express,Kenya,Mombasa,Travel & Bus Tickets,2025-09-17,4.8,True
+SEL0043,Mto Electronics Ltd,Rwanda,Kigali,Subscriptions,2023-11-28,4.4,True
+SEL0044,Afya Traders Ltd,Nigeria,Kano,Airtime & Data,2023-09-03,4.9,True
+SEL0045,Sahel Traders Ltd,Ghana,Kumasi,Subscriptions,2024-11-29,3.8,True
+SEL0046,Bahari Mart Ltd,Rwanda,Kigali,Digital Vouchers,2023-11-08,3.6,True
+SEL0047,Ubuntu Boutique Ltd,Nigeria,Lagos,Fashion,2024-11-25,4.1,True
+SEL0048,Amani Market Ltd,South Africa,Johannesburg,Groceries,2025-03-24,3.9,True
+SEL0049,Afya Goods,Tanzania,Arusha,Appliances,2023-06-05,4.4,True
+SEL0050,Imani Depot,South Africa,Cape Town,Airtime & Data,2024-05-05,4.0,True
+SEL0051,Kilima Hub Ltd,Kenya,Kisumu,Event Tickets,2025-10-12,4.6,True
+SEL0052,Simba Supplies,Uganda,Kampala,Gaming,2023-11-06,4.9,True
+SEL0053,Mto Wholesale,Tanzania,Dar es Salaam,Gaming,2024-09-20,4.7,True
+SEL0054,Ubuntu Fashion House Ltd,Uganda,Kampala,Travel & Bus Tickets,2025-08-18,4.2,True
+SEL0055,Mawingu Outlet Ltd,Ghana,Accra,Digital Vouchers,2025-02-28,5.0,True
+SEL0056,Upendo Mart,Ghana,Accra,Gift Cards,2024-12-06,4.7,True
+SEL0057,Mto Goods Ltd,South Africa,Johannesburg,Beauty,2025-10-05,4.7,True
+SEL0058,Kijani Electronics,Kenya,Nairobi,Fashion,2023-10-07,3.9,True
+SEL0059,Savanna Hub,Tanzania,Dar es Salaam,Furniture,2025-03-22,4.6,True
+SEL0060,Mawingu Traders,Kenya,Nairobi,Fashion,2025-05-24,3.7,True
+SEL0061,Upendo Goods Ltd,Uganda,Gulu,Beauty,2025-04-25,3.9,True
+SEL0062,Mawingu Emporium Ltd,Nigeria,Ibadan,Beauty,2023-10-21,3.6,True
+SEL0063,Duma Fashion House,Ghana,Accra,Subscriptions,2024-05-27,4.6,True
+SEL0064,Savanna Mart,Uganda,Entebbe,Travel & Bus Tickets,2023-07-11,3.6,True
+SEL0065,Kilima Store,Uganda,Kampala,Appliances,2024-08-07,4.2,True
+SEL0066,Bahari Express,Kenya,Nakuru,Digital Vouchers,2023-11-24,4.5,True
+SEL0067,Kijani Emporium,South Africa,Cape Town,Travel & Bus Tickets,2024-06-30,4.0,True
+SEL0068,Bahari Electronics,Kenya,Nairobi,Appliances,2025-11-23,4.0,False
+SEL0069,Tembo Emporium,Kenya,Nairobi,Furniture,2023-05-04,4.8,True
+SEL0070,Jua Traders,Nigeria,Kano,Electronics,2024-02-03,4.9,True
+SEL0071,Mawingu Emporium,Egypt,Giza,Travel & Bus Tickets,2024-06-06,4.8,True
+SEL0072,Tembo Fashion House Ltd,Egypt,Cairo,Groceries,2025-12-11,4.1,False
+SEL0073,Duma Traders,South Africa,Cape Town,Groceries,2024-01-08,4.0,True
+SEL0074,Upendo Supplies,Uganda,Kampala,Airtime & Data,2023-03-08,3.7,True
+SEL0075,Nyota Fashion House,Kenya,Kisumu,Beauty,2023-12-30,4.3,True
+SEL0076,Ubuntu Mart,Kenya,Nairobi,Home & Kitchen,2023-11-19,4.9,False
+SEL0077,Jua Outlet Ltd,Ghana,Accra,Digital Vouchers,2024-05-14,3.9,False
+SEL0078,Ubuntu Boutique,Uganda,Kampala,Fashion,2023-06-03,3.9,True
+SEL0079,Tembo Wholesale,Ghana,Accra,Appliances,2024-12-21,4.7,True
+SEL0080,Imani Traders,Kenya,Nairobi,Airtime & Data,2024-04-15,4.4,True
+SEL0081,Kilima Traders,Nigeria,Port Harcourt,Groceries,2023-04-08,4.2,True
+SEL0082,Mawingu Mart,Kenya,Nakuru,Beauty,2025-03-26,4.8,True
+SEL0083,Baobab Electronics Ltd,Uganda,Kampala,Beauty,2024-08-04,4.4,True
+SEL0084,Baobab Store Ltd,Nigeria,Ibadan,Home & Kitchen,2025-10-07,4.9,True
+SEL0085,Afya Boutique,Nigeria,Port Harcourt,Groceries,2024-03-19,4.1,True
+SEL0086,Bahari Boutique Ltd,South Africa,Cape Town,Beauty,2024-11-06,4.2,True
+SEL0087,Pamoja Market Ltd,Kenya,Nairobi,Subscriptions,2024-03-31,3.7,True
+SEL0088,Mawingu Fashion House Ltd,Nigeria,Lagos,Travel & Bus Tickets,2025-03-02,4.1,True
+SEL0089,Amani Mart Ltd,Ghana,Tamale,Event Tickets,2023-06-26,3.9,True
+SEL0090,Tembo Express,Nigeria,Abuja,Fashion,2023-01-13,3.6,True
+SEL0091,Pamoja Wholesale,South Africa,Cape Town,Gift Cards,2024-04-25,4.0,True
+SEL0092,Amani Fashion House,Egypt,Cairo,Beauty,2024-02-07,4.3,True
+SEL0093,Duma Supplies Ltd,Kenya,Nairobi,Subscriptions,2024-07-15,3.9,True
+SEL0094,Tembo Store,Kenya,Nairobi,Appliances,2024-12-27,3.8,False
+SEL0095,Pamoja Store,Ghana,Kumasi,Groceries,2024-07-12,4.2,False
+SEL0096,Kilima Depot,South Africa,Durban,Gaming,2024-06-07,3.8,True
+SEL0097,Duma Fashion House Ltd,Egypt,Cairo,Appliances,2023-08-14,3.7,False
+SEL0098,Jua Market,Kenya,Nairobi,Fashion,2023-11-15,4.9,True
+SEL0099,Bahari Traders,Tanzania,Dar es Salaam,Electronics,2024-11-24,4.3,False
+SEL0100,Bahari Electronics Ltd,Nigeria,Lagos,Travel & Bus Tickets,2024-01-31,4.7,False
+SEL0101,Kilima Electronics Ltd,Kenya,Nairobi,Furniture,2023-03-06,3.8,True
+SEL0102,Nyota Traders Ltd,Nigeria,Lagos,Event Tickets,2024-08-25,4.2,True
+SEL0103,Afya Mart Ltd,Nigeria,Port Harcourt,Digital Vouchers,2023-06-06,3.7,True
+SEL0104,Upendo Electronics Ltd,Kenya,Nairobi,Appliances,2024-06-28,4.2,True
+SEL0105,Mawingu Electronics,Kenya,Nakuru,Furniture,2025-06-12,4.8,True
+SEL0106,Mto Hub,Nigeria,Kano,Furniture,2025-04-27,4.8,True
+SEL0107,Zuri Fashion House Ltd,South Africa,Johannesburg,Travel & Bus Tickets,2024-12-08,4.3,True
+SEL0108,Duma Goods,Kenya,Mombasa,Gift Cards,2024-03-07,4.0,True
+SEL0109,Tembo Depot Ltd,Kenya,Nairobi,Fashion,2023-04-06,4.6,False
+SEL0110,Savanna Electronics,Nigeria,Lagos,Event Tickets,2024-09-19,4.5,True
+SEL0111,Tembo Goods,Ghana,Accra,Digital Vouchers,2025-12-18,3.7,False
+SEL0112,Tembo Fashion House,Egypt,Cairo,Gift Cards,2023-12-23,4.3,False
+SEL0113,Zuri Emporium,Kenya,Mombasa,Beauty,2024-12-07,4.3,True
+SEL0114,Duma Electronics,Egypt,Alexandria,Airtime & Data,2024-08-06,4.1,True
+SEL0115,Mto Store,Ghana,Kumasi,Subscriptions,2025-03-21,4.3,True
+SEL0116,Pamoja Traders,Tanzania,Dar es Salaam,Airtime & Data,2024-12-31,3.7,False
+SEL0117,Imani Traders Ltd,South Africa,Durban,Digital Vouchers,2025-09-07,4.4,False
+SEL0118,Baobab Goods,Nigeria,Port Harcourt,Furniture,2024-03-21,4.3,True
+SEL0119,Mawingu Express Ltd,Uganda,Gulu,Beauty,2024-06-23,4.2,True
+SEL0120,Duma Depot,South Africa,Cape Town,Gift Cards,2025-05-08,4.1,True
+SEL0121,Jua Goods,Tanzania,Dar es Salaam,Furniture,2023-09-09,4.5,True
+SEL0122,Jua Hub Ltd,Tanzania,Dar es Salaam,Appliances,2025-04-07,4.3,True
+SEL0123,Mawingu Hub,South Africa,Cape Town,Fashion,2023-12-17,3.7,True
+SEL0124,Mto Hub Ltd,South Africa,Johannesburg,Home & Kitchen,2025-07-09,4.1,True
+SEL0125,Amani Traders Ltd,Nigeria,Port Harcourt,Event Tickets,2025-10-05,3.7,False
+SEL0126,Upendo Outlet,Ghana,Tamale,Gift Cards,2025-06-27,4.1,True
+SEL0127,Sahel Market,Ghana,Tamale,Gaming,2025-12-17,2.7,True
+SEL0128,Imani Hub Ltd,South Africa,Johannesburg,Fashion,2025-04-30,4.1,False
+SEL0129,Nyota Goods Ltd,Kenya,Nairobi,Furniture,2024-11-24,4.1,True
+SEL0130,Sahel Fashion House,Egypt,Cairo,Fashion,2024-04-22,4.0,True
+SEL0131,Sahel Wholesale,Nigeria,Port Harcourt,Airtime & Data,2024-01-05,4.1,True
+SEL0132,Jua Goods Ltd,Kenya,Mombasa,Fashion,2023-08-10,3.7,False
+SEL0133,Simba Market,Kenya,Kisumu,Event Tickets,2024-09-07,5.0,True
+SEL0134,Nyota Express Ltd,Kenya,Nakuru,Groceries,2025-07-15,4.4,False
+SEL0135,Savanna Mart Ltd,Nigeria,Lagos,Groceries,2023-01-18,4.5,True
+SEL0136,Zuri Outlet,Kenya,Nairobi,Gaming,2023-08-17,3.9,True
+SEL0137,Bahari Hub,Kenya,Kisumu,Event Tickets,2023-06-25,4.9,True
+SEL0138,Sahel Goods Ltd,Kenya,Nairobi,Gaming,2023-03-19,4.4,True
+SEL0139,Mawingu Wholesale,Kenya,Nairobi,Travel & Bus Tickets,2023-11-05,4.2,True
+SEL0140,Savanna Emporium,Egypt,Cairo,Home & Kitchen,2023-01-04,4.6,True
+SEL0141,Ubuntu Emporium,South Africa,Cape Town,Digital Vouchers,2024-05-15,4.0,True
+SEL0142,Kilima Express,Kenya,Eldoret,Digital Vouchers,2024-03-30,4.9,True
+SEL0143,Imani Store Ltd,South Africa,Johannesburg,Fashion,2024-02-27,3.8,True
+SEL0144,Pamoja Mart Ltd,South Africa,Cape Town,Gift Cards,2024-05-23,4.8,True
+SEL0145,Upendo Depot Ltd,South Africa,Pretoria,Gift Cards,2024-07-31,5.0,True
+SEL0146,Kijani Boutique,Nigeria,Lagos,Groceries,2024-11-24,4.3,True
+SEL0147,Kijani Fashion House Ltd,South Africa,Cape Town,Furniture,2023-07-30,4.8,True
+SEL0148,Baobab Outlet,Kenya,Nakuru,Home & Kitchen,2024-11-26,3.7,False
+SEL0149,Ubuntu Outlet,Kenya,Nairobi,Airtime & Data,2023-04-03,4.5,True
+SEL0150,Mawingu Store Ltd,Egypt,Cairo,Digital Vouchers,2023-09-15,4.1,True
+SEL0151,Kilima Market,Nigeria,Lagos,Furniture,2022-12-29,4.1,True
+SEL0152,Amani Supplies,Kenya,Nairobi,Furniture,2024-01-01,4.2,True
+SEL0153,Kilima Hub,Kenya,Nairobi,Travel & Bus Tickets,2024-02-19,4.4,True
+SEL0154,Simba Wholesale,Ghana,Accra,Gift Cards,2024-11-19,4.5,True
+SEL0155,Nyota Supplies Ltd,Kenya,Nairobi,Event Tickets,2023-11-24,4.0,True
+SEL0156,Ubuntu Outlet Ltd,Nigeria,Port Harcourt,Gaming,2024-03-09,4.1,True
+SEL0157,Tembo Emporium Ltd,Nigeria,Lagos,Appliances,2024-09-13,3.9,True
+SEL0158,Zuri Electronics,Kenya,Nairobi,Event Tickets,2025-08-24,4.5,True
+SEL0159,Kijani Wholesale Ltd,Nigeria,Lagos,Airtime & Data,2025-10-25,3.7,True
+SEL0160,Simba Electronics Ltd,Kenya,Mombasa,Beauty,2025-03-07,4.2,True
+SEL0161,Tembo Traders,Nigeria,Lagos,Event Tickets,2023-11-02,5.0,True
+SEL0162,Jua Mart,Kenya,Nairobi,Airtime & Data,2023-03-23,5.0,True
+SEL0163,Kilima Goods Ltd,Egypt,Giza,Beauty,2023-03-07,4.3,True
+SEL0164,Imani Mart,South Africa,Durban,Subscriptions,2024-05-05,3.9,False
+SEL0165,Pamoja Goods Ltd,Kenya,Mombasa,Home & Kitchen,2023-05-23,4.4,True
+SEL0166,Mawingu Fashion House,Kenya,Mombasa,Furniture,2025-10-29,4.3,True
+SEL0167,Savanna Express Ltd,Ghana,Accra,Travel & Bus Tickets,2023-05-04,3.7,True
+SEL0168,Sahel Outlet,Ghana,Accra,Airtime & Data,2023-02-04,5.0,True
+SEL0169,Sahel Supplies Ltd,Nigeria,Lagos,Travel & Bus Tickets,2024-09-10,4.1,True
+SEL0170,Zuri Outlet Ltd,Kenya,Kisumu,Fashion,2025-09-16,4.2,True
+SEL0171,Sahel Emporium,South Africa,Pretoria,Event Tickets,2023-10-22,4.3,True
+SEL0172,Duma Outlet Ltd,Kenya,Mombasa,Home & Kitchen,2025-10-19,4.8,True
+SEL0173,Kilima Boutique Ltd,Kenya,Nairobi,Fashion,2024-01-09,4.7,True
+SEL0174,Bahari Store Ltd,Nigeria,Port Harcourt,Gaming,2024-12-03,3.9,True
+SEL0175,Kijani Express Ltd,Ghana,Kumasi,Electronics,2024-04-19,4.6,True
+SEL0176,Pamoja Emporium,Nigeria,Lagos,Furniture,2023-03-22,4.8,True
+SEL0177,Kijani Supplies,Kenya,Nairobi,Appliances,2025-05-29,4.6,True
+SEL0178,Savanna Express,Kenya,Nairobi,Digital Vouchers,2025-09-28,3.8,True
+SEL0179,Jua Supplies Ltd,South Africa,Johannesburg,Furniture,2024-03-14,4.4,True
+SEL0180,Ubuntu Electronics,South Africa,Durban,Travel & Bus Tickets,2023-11-09,4.8,True
+SEL0181,Pamoja Market,Ghana,Accra,Beauty,2024-12-27,3.9,False
+SEL0182,Sahel Market Ltd,South Africa,Cape Town,Gaming,2025-05-16,4.4,True
+SEL0183,Jua Electronics,Nigeria,Lagos,Airtime & Data,2023-11-02,4.5,True
+SEL0184,Afya Goods Ltd,Nigeria,Lagos,Furniture,2023-11-17,4.5,False
+SEL0185,Ubuntu Hub Ltd,Egypt,Alexandria,Home & Kitchen,2023-02-24,3.7,False
+SEL0186,Ubuntu Supplies,Tanzania,Dar es Salaam,Electronics,2023-05-19,4.0,True
+SEL0187,Baobab Wholesale Ltd,Nigeria,Ibadan,Home & Kitchen,2023-10-08,4.4,True
+SEL0188,Kilima Traders Ltd,South Africa,Cape Town,Event Tickets,2025-10-13,3.9,True
+SEL0189,Baobab Boutique Ltd,Kenya,Kisumu,Subscriptions,2025-02-06,4.1,True
+SEL0190,Simba Hub Ltd,Kenya,Nairobi,Gaming,2023-12-22,4.2,True
+SEL0191,Upendo Market Ltd,Nigeria,Abuja,Electronics,2025-11-01,3.6,True
+SEL0192,Mto Depot Ltd,Ghana,Accra,Digital Vouchers,2025-09-09,4.3,True
+SEL0193,Amani Mart,Rwanda,Kigali,Subscriptions,2025-10-02,3.4,False
+SEL0194,Imani Express,Ghana,Accra,Fashion,2023-09-05,4.2,True
+SEL0195,Nyota Wholesale,Ghana,Accra,Event Tickets,2023-10-09,4.0,True
+SEL0196,Pamoja Hub,Kenya,Nairobi,Gaming,2023-03-19,4.0,True
+SEL0197,Mawingu Express,Rwanda,Kigali,Appliances,2025-06-02,4.3,True
+SEL0198,Sahel Mart,Kenya,Nairobi,Beauty,2023-02-14,4.2,False
+SEL0199,Imani Goods,Rwanda,Kigali,Fashion,2025-11-28,3.5,False
+SEL0200,Afya Market,Kenya,Kisumu,Electronics,2024-12-20,4.5,True
+SEL0201,Tembo Boutique,Kenya,Nairobi,Furniture,2023-05-23,4.2,True
+SEL0202,Jua Mart Ltd,South Africa,Cape Town,Electronics,2025-07-18,4.1,False
+SEL0203,Pamoja Express,Kenya,Nakuru,Fashion,2025-10-05,4.4,True
+SEL0204,Upendo Wholesale Ltd,Kenya,Nairobi,Groceries,2023-10-05,4.0,True
+SEL0205,Tembo Supplies,Ghana,Accra,Groceries,2023-10-08,4.2,True
+SEL0206,Bahari Depot,Ghana,Kumasi,Electronics,2025-07-31,4.0,True
+SEL0207,Amani Depot Ltd,Nigeria,Abuja,Electronics,2023-05-02,4.3,True
+SEL0208,Afya Store Ltd,South Africa,Durban,Gaming,2023-06-12,4.4,True
+SEL0209,Savanna Goods,South Africa,Cape Town,Subscriptions,2023-07-29,4.8,True
+SEL0210,Amani Hub Ltd,Kenya,Mombasa,Furniture,2024-09-21,4.0,True
+SEL0211,Ubuntu Fashion House,Nigeria,Lagos,Appliances,2023-03-09,4.9,True
+SEL0212,Kilima Emporium Ltd,South Africa,Johannesburg,Gaming,2025-06-19,4.3,True
+SEL0213,Duma Wholesale,Tanzania,Dar es Salaam,Groceries,2023-08-11,4.6,True
+SEL0214,Upendo Traders,Nigeria,Lagos,Travel & Bus Tickets,2023-06-12,4.5,True
+SEL0215,Afya Depot,Ghana,Tamale,Travel & Bus Tickets,2024-05-13,4.8,True
+SEL0216,Kijani Boutique Ltd,Nigeria,Lagos,Gift Cards,2024-11-08,4.5,True
+SEL0217,Simba Fashion House Ltd,Ghana,Accra,Furniture,2024-06-24,3.6,True
+SEL0218,Baobab Depot,Uganda,Entebbe,Beauty,2025-09-14,4.1,True
+SEL0219,Tembo Depot,South Africa,Johannesburg,Subscriptions,2025-09-30,4.9,True
+SEL0220,Pamoja Supplies,Kenya,Nairobi,Fashion,2024-11-16,4.2,True
+SEL0221,Zuri Supplies,Tanzania,Dodoma,Gift Cards,2025-10-14,4.8,False
+SEL0222,Mto Outlet Ltd,South Africa,Durban,Groceries,2024-01-12,4.8,True
+SEL0223,Pamoja Depot,South Africa,Johannesburg,Airtime & Data,2024-01-07,4.1,False
+SEL0224,Ubuntu Wholesale,Nigeria,Lagos,Event Tickets,2023-05-29,4.8,True
+SEL0225,Kilima Wholesale,Kenya,Mombasa,Gift Cards,2025-01-20,4.1,True
+SEL0226,Nyota Hub,Nigeria,Lagos,Fashion,2023-07-09,3.6,True
+SEL0227,Simba Goods,South Africa,Johannesburg,Gift Cards,2024-12-18,4.6,True
+SEL0228,Jua Traders Ltd,Nigeria,Lagos,Furniture,2024-04-17,4.7,True
+SEL0229,Savanna Outlet Ltd,Kenya,Kisumu,Airtime & Data,2023-07-17,4.2,False
+SEL0230,Jua Fashion House Ltd,Uganda,Kampala,Electronics,2024-10-29,3.8,False
+SEL0231,Sahel Goods,Nigeria,Port Harcourt,Event Tickets,2025-07-10,4.5,True
+SEL0232,Jua Store Ltd,Ghana,Accra,Event Tickets,2023-07-09,4.6,False
+SEL0233,Baobab Emporium,Kenya,Mombasa,Airtime & Data,2025-01-11,4.5,False
+SEL0234,Mawingu Mart Ltd,Nigeria,Abuja,Airtime & Data,2025-03-22,4.1,False
+SEL0235,Amani Depot,Kenya,Nairobi,Electronics,2023-11-21,4.1,True
+SEL0236,Jua Wholesale Ltd,Ghana,Kumasi,Home & Kitchen,2024-04-26,4.4,True
+SEL0237,Pamoja Fashion House Ltd,South Africa,Johannesburg,Travel & Bus Tickets,2025-10-02,3.9,False
+SEL0238,Sahel Traders,Nigeria,Ibadan,Home & Kitchen,2023-03-27,4.8,True
+SEL0239,Duma Store,Egypt,Alexandria,Travel & Bus Tickets,2024-05-11,3.7,True
+SEL0240,Bahari Emporium,Nigeria,Lagos,Subscriptions,2025-01-25,4.3,True
+SEL0241,Amani Supplies Ltd,Nigeria,Abuja,Gift Cards,2025-08-06,4.8,True
+SEL0242,Mto Express,Ghana,Tamale,Appliances,2023-11-21,4.3,True
+SEL0243,Afya Supplies Ltd,South Africa,Johannesburg,Event Tickets,2023-09-02,4.7,True
+SEL0244,Duma Boutique Ltd,South Africa,Johannesburg,Groceries,2023-09-16,3.9,True
+SEL0245,Upendo Emporium,Egypt,Alexandria,Event Tickets,2024-01-13,4.2,True
+SEL0246,Kijani Traders Ltd,Ghana,Accra,Digital Vouchers,2023-05-07,4.6,True
+SEL0247,Sahel Wholesale Ltd,Kenya,Mombasa,Airtime & Data,2024-02-09,4.8,True
+SEL0248,Bahari Hub Ltd,Kenya,Nairobi,Electronics,2025-02-24,4.5,True
+SEL0249,Zuri Market Ltd,Tanzania,Arusha,Electronics,2025-03-17,3.9,True
+SEL0250,Zuri Traders Ltd,Kenya,Nairobi,Home & Kitchen,2024-09-29,3.8,True
+SEL0251,Kijani Depot Ltd,Nigeria,Lagos,Groceries,2023-10-11,4.8,False
+SEL0252,Tembo Market Ltd,Tanzania,Dodoma,Appliances,2025-10-10,4.4,True
+SEL0253,Tembo Mart Ltd,Uganda,Kampala,Furniture,2024-12-24,3.9,True
+SEL0254,Amani Outlet Ltd,Kenya,Nairobi,Subscriptions,2024-08-10,4.3,True
+SEL0255,Upendo Hub Ltd,Ghana,Kumasi,Fashion,2024-03-19,3.8,True
+SEL0256,Amani Outlet,Nigeria,Lagos,Travel & Bus Tickets,2025-06-02,3.7,True
+SEL0257,Mto Fashion House Ltd,Tanzania,Dar es Salaam,Appliances,2025-07-30,4.9,True
+SEL0258,Pamoja Electronics,South Africa,Cape Town,Electronics,2023-04-01,4.4,True
+SEL0259,Amani Traders,South Africa,Pretoria,Subscriptions,2025-07-26,3.9,True
+SEL0260,Pamoja Wholesale Ltd,Kenya,Nairobi,Groceries,2025-08-12,4.8,True
+SEL0261,Imani Mart Ltd,Kenya,Nakuru,Digital Vouchers,2025-04-15,5.0,True
+SEL0262,Bahari Wholesale Ltd,Nigeria,Abuja,Subscriptions,2024-11-11,4.8,True
+SEL0263,Imani Fashion House,Ghana,Accra,Event Tickets,2025-03-23,4.6,True
+SEL0264,Nyota Hub Ltd,South Africa,Cape Town,Home & Kitchen,2023-07-09,4.9,True
+SEL0265,Afya Express Ltd,Tanzania,Dar es Salaam,Electronics,2025-06-24,3.9,True
+SEL0266,Baobab Traders,Kenya,Kisumu,Electronics,2025-06-11,4.8,True
+SEL0267,Nyota Boutique Ltd,Nigeria,Abuja,Electronics,2025-07-03,4.1,True
+SEL0268,Baobab Express Ltd,South Africa,Johannesburg,Event Tickets,2023-12-24,3.6,True
+SEL0269,Simba Market Ltd,South Africa,Johannesburg,Gaming,2023-05-03,3.6,True
+SEL0270,Kijani Electronics Ltd,Nigeria,Lagos,Home & Kitchen,2025-05-17,3.9,True
+SEL0271,Duma Wholesale Ltd,Nigeria,Lagos,Gaming,2024-04-05,4.7,True
+SEL0272,Afya Supplies,Kenya,Nakuru,Airtime & Data,2024-10-11,4.9,True
+SEL0273,Mawingu Depot,Ghana,Kumasi,Gaming,2024-01-25,3.8,False
+SEL0274,Nyota Store,Tanzania,Arusha,Fashion,2023-12-28,4.8,True
+SEL0275,Pamoja Outlet Ltd,Uganda,Kampala,Airtime & Data,2025-01-07,4.7,True
+SEL0276,Afya Mart,Ghana,Accra,Electronics,2024-02-13,3.7,True
+SEL0277,Zuri Store,South Africa,Cape Town,Travel & Bus Tickets,2025-09-06,4.6,True
+SEL0278,Kijani Store,Uganda,Kampala,Electronics,2024-06-15,3.7,True
+SEL0279,Baobab Electronics,Uganda,Kampala,Gift Cards,2023-01-30,4.0,True
+SEL0280,Nyota Market,Kenya,Nairobi,Beauty,2023-04-13,4.3,True
+SEL0281,Ubuntu Wholesale Ltd,Nigeria,Kano,Subscriptions,2025-09-07,4.9,True
+SEL0282,Ubuntu Depot,Tanzania,Arusha,Home & Kitchen,2025-09-04,3.7,True
+SEL0283,Imani Wholesale Ltd,Tanzania,Dar es Salaam,Beauty,2023-07-01,4.1,True
+SEL0284,Mawingu Outlet,Ghana,Tamale,Gift Cards,2025-03-30,4.4,True
+SEL0285,Kilima Mart,Nigeria,Port Harcourt,Travel & Bus Tickets,2023-12-12,4.6,True
+SEL0286,Afya Emporium,Uganda,Kampala,Subscriptions,2024-04-17,4.9,True
+SEL0287,Imani Outlet,Kenya,Nairobi,Groceries,2024-09-05,4.3,False
+SEL0288,Simba Store Ltd,Kenya,Nairobi,Groceries,2024-12-17,4.8,False
+SEL0289,Tembo Outlet Ltd,South Africa,Johannesburg,Furniture,2023-09-18,4.5,False
+SEL0290,Kijani Goods Ltd,South Africa,Cape Town,Beauty,2025-02-07,3.9,True
+SEL0291,Zuri Express Ltd,Nigeria,Abuja,Airtime & Data,2025-09-23,3.7,True
+SEL0292,Kilima Fashion House Ltd,South Africa,Johannesburg,Electronics,2025-03-05,4.0,True
+SEL0293,Afya Electronics Ltd,Ghana,Accra,Digital Vouchers,2023-05-04,4.6,True
+SEL0294,Jua Market Ltd,Kenya,Nairobi,Subscriptions,2023-11-05,4.0,True
+SEL0295,Baobab Supplies Ltd,Nigeria,Ibadan,Home & Kitchen,2024-04-15,4.0,True
+SEL0296,Kijani Hub,Ghana,Accra,Electronics,2025-07-22,4.9,False
+SEL0297,Kijani Outlet,Rwanda,Kigali,Event Tickets,2025-09-15,4.1,False
+SEL0298,Amani Express,Tanzania,Dodoma,Groceries,2024-01-15,4.2,True
+SEL0299,Sahel Boutique,Kenya,Kisumu,Gift Cards,2024-03-17,4.7,True
+SEL0300,Ubuntu Store Ltd,South Africa,Johannesburg,Subscriptions,2025-07-19,5.0,True
+SEL0301,Imani Store,Uganda,Entebbe,Groceries,2025-07-22,3.7,True
+SEL0302,Zuri Fashion House,Kenya,Nakuru,Gift Cards,2024-02-11,4.4,False
+SEL0303,Pamoja Boutique,South Africa,Durban,Groceries,2024-10-07,4.0,True
+SEL0304,Simba Mart,Nigeria,Lagos,Subscriptions,2024-06-28,4.7,True
+SEL0305,Upendo Store Ltd,Ghana,Accra,Event Tickets,2024-02-07,3.7,True
+SEL0306,Nyota Traders,Kenya,Nairobi,Digital Vouchers,2023-06-03,4.7,True
+SEL0307,Baobab Boutique,Nigeria,Lagos,Subscriptions,2025-02-14,3.9,True
+SEL0308,Mto Goods,Nigeria,Port Harcourt,Beauty,2023-11-12,4.2,True
+SEL0309,Ubuntu Supplies Ltd,Nigeria,Lagos,Electronics,2023-05-18,4.7,True
+SEL0310,Mawingu Store,Kenya,Mombasa,Appliances,2023-03-28,3.7,True
+SEL0311,Afya Express,Nigeria,Abuja,Home & Kitchen,2023-01-22,4.9,True
+SEL0312,Mawingu Supplies Ltd,South Africa,Cape Town,Subscriptions,2025-10-29,3.9,True
+SEL0313,Kilima Express Ltd,Kenya,Nairobi,Event Tickets,2025-08-16,4.3,True
+SEL0314,Tembo Store Ltd,Nigeria,Lagos,Appliances,2023-05-14,4.6,True
+SEL0315,Upendo Boutique,Kenya,Nairobi,Digital Vouchers,2025-04-02,3.8,False
+SEL0316,Afya Outlet,Egypt,Giza,Gaming,2025-01-05,4.5,True
+SEL0317,Sahel Express Ltd,Kenya,Nairobi,Electronics,2024-06-29,4.3,False
+SEL0318,Amani Express Ltd,South Africa,Johannesburg,Groceries,2023-12-22,4.4,True
+SEL0319,Mto Fashion House,Nigeria,Lagos,Home & Kitchen,2025-09-24,4.5,True
+SEL0320,Zuri Supplies Ltd,Nigeria,Abuja,Fashion,2023-12-29,4.2,True
+SEL0321,Bahari Boutique,Tanzania,Arusha,Gaming,2025-07-29,4.0,True
+SEL0322,Duma Mart Ltd,Ghana,Tamale,Airtime & Data,2024-10-14,3.9,True
+SEL0323,Savanna Hub Ltd,South Africa,Johannesburg,Appliances,2023-04-11,4.9,True
+SEL0324,Amani Market,Kenya,Nairobi,Electronics,2025-06-25,4.2,True
+SEL0325,Bahari Wholesale,Kenya,Kisumu,Appliances,2025-09-16,4.0,True
+SEL0326,Pamoja Express Ltd,Kenya,Nairobi,Airtime & Data,2024-06-26,3.7,True
+SEL0327,Pamoja Hub Ltd,Nigeria,Lagos,Gift Cards,2025-02-18,4.7,True
+SEL0328,Afya Emporium Ltd,Rwanda,Huye,Airtime & Data,2025-02-20,4.3,True
+SEL0329,Tembo Express Ltd,Nigeria,Abuja,Digital Vouchers,2024-08-19,3.9,False
+SEL0330,Upendo Fashion House Ltd,Nigeria,Lagos,Groceries,2025-05-09,4.9,True
+SEL0331,Upendo Goods,Kenya,Eldoret,Beauty,2025-10-12,4.9,False
+SEL0332,Savanna Wholesale,Nigeria,Lagos,Digital Vouchers,2023-03-16,4.8,True
+SEL0333,Savanna Supplies Ltd,Kenya,Nairobi,Groceries,2023-07-13,4.4,True
+SEL0334,Imani Supplies Ltd,Nigeria,Lagos,Airtime & Data,2024-08-31,4.1,True
+SEL0335,Afya Outlet Ltd,Egypt,Cairo,Electronics,2023-06-23,3.8,True
+SEL0336,Amani Wholesale,South Africa,Johannesburg,Furniture,2023-01-02,4.1,True
+SEL0337,Nyota Express,Kenya,Kisumu,Airtime & Data,2024-09-18,4.5,True
+SEL0338,Mawingu Market Ltd,Nigeria,Kano,Gift Cards,2025-05-24,3.9,True
+SEL0339,Amani Store,South Africa,Cape Town,Event Tickets,2025-04-07,4.2,False
+SEL0340,Ubuntu Depot Ltd,Kenya,Nakuru,Electronics,2023-02-07,4.4,True
+SEL0341,Zuri Traders,Tanzania,Dar es Salaam,Furniture,2023-04-19,4.6,True
+SEL0342,Amani Electronics,South Africa,Johannesburg,Airtime & Data,2023-11-06,3.7,True
+SEL0343,Bahari Market Ltd,Nigeria,Lagos,Gaming,2023-11-28,4.8,True
+SEL0344,Nyota Depot,Ghana,Accra,Fashion,2024-12-19,4.2,True
+SEL0345,Duma Supplies,Kenya,Nairobi,Airtime & Data,2024-05-07,4.4,True
+SEL0346,Bahari Express Ltd,Kenya,Nairobi,Groceries,2024-10-16,4.9,True
+SEL0347,Imani Outlet Ltd,South Africa,Pretoria,Fashion,2024-09-20,3.8,True
+SEL0348,Nyota Emporium Ltd,Kenya,Nairobi,Airtime & Data,2023-10-08,4.8,True
+SEL0349,Savanna Market,Kenya,Kisumu,Event Tickets,2024-04-21,4.7,True
+SEL0350,Imani Emporium,Rwanda,Kigali,Groceries,2024-08-14,5.0,True
+SEL0351,Zuri Electronics Ltd,Uganda,Kampala,Fashion,2025-02-16,4.2,True
+SEL0352,Amani Emporium Ltd,Kenya,Mombasa,Event Tickets,2025-11-01,4.1,False
+SEL0353,Baobab Goods Ltd,Tanzania,Dar es Salaam,Airtime & Data,2024-07-23,3.6,False
+SEL0354,Imani Boutique,Kenya,Nairobi,Airtime & Data,2025-09-11,4.7,True
+SEL0355,Afya Wholesale,Uganda,Kampala,Electronics,2023-11-20,3.8,True
+SEL0356,Savanna Traders,Nigeria,Abuja,Digital Vouchers,2024-11-19,4.0,True
+SEL0357,Baobab Mart,Nigeria,Lagos,Gift Cards,2024-09-01,5.0,False
+SEL0358,Kijani Hub Ltd,Ghana,Accra,Fashion,2023-01-09,4.2,True
+SEL0359,Savanna Store Ltd,Kenya,Nairobi,Appliances,2023-11-21,3.9,True
+SEL0360,Mawingu Boutique,Tanzania,Dar es Salaam,Gift Cards,2025-08-25,4.7,False
+SEL0361,Pamoja Boutique Ltd,Kenya,Nakuru,Travel & Bus Tickets,2023-09-26,4.0,False
+SEL0362,Imani Express Ltd,Rwanda,Kigali,Subscriptions,2025-01-03,4.3,False
+SEL0363,Kijani Mart Ltd,Kenya,Nairobi,Travel & Bus Tickets,2023-09-11,3.8,True
+SEL0364,Baobab Store,Kenya,Mombasa,Fashion,2024-11-04,4.2,True
+SEL0365,Imani Market Ltd,Kenya,Kisumu,Event Tickets,2024-03-21,3.8,False
+SEL0366,Simba Emporium,Nigeria,Lagos,Airtime & Data,2023-11-11,4.7,True
+SEL0367,Imani Goods Ltd,South Africa,Cape Town,Gift Cards,2025-04-25,4.1,True
+SEL0368,Zuri Goods,South Africa,Cape Town,Fashion,2025-06-14,4.0,False
+SEL0369,Kijani Wholesale,Uganda,Kampala,Gaming,2023-11-05,5.0,True
+SEL0370,Baobab Hub,South Africa,Johannesburg,Electronics,2025-08-20,4.8,True
+SEL0371,Nyota Goods,Nigeria,Ibadan,Beauty,2025-12-08,3.7,False
+SEL0372,Simba Mart Ltd,Nigeria,Lagos,Gift Cards,2024-08-09,4.9,True
+SEL0373,Simba Supplies Ltd,South Africa,Johannesburg,Event Tickets,2025-07-27,3.9,True
+SEL0374,Tembo Market,Tanzania,Dar es Salaam,Furniture,2023-08-31,4.4,True
+SEL0375,Mto Express Ltd,Nigeria,Lagos,Travel & Bus Tickets,2023-04-16,4.9,False
+SEL0376,Sahel Electronics Ltd,Nigeria,Lagos,Digital Vouchers,2025-08-25,4.4,False
+SEL0377,Jua Electronics Ltd,Nigeria,Lagos,Appliances,2023-02-28,4.0,True
+SEL0378,Savanna Emporium Ltd,Kenya,Nairobi,Gift Cards,2024-08-29,4.7,True
+SEL0379,Upendo Depot,South Africa,Cape Town,Gaming,2023-12-09,3.8,True
+SEL0380,Jua Express Ltd,Kenya,Nairobi,Event Tickets,2025-01-29,3.8,True
+SEL0381,Bahari Fashion House Ltd,Uganda,Kampala,Gaming,2025-07-10,4.6,False
+SEL0382,Kilima Depot Ltd,Kenya,Mombasa,Subscriptions,2023-01-11,3.7,False
+SEL0383,Pamoja Goods,Kenya,Mombasa,Beauty,2023-12-24,3.7,True
+SEL0384,Tembo Hub,Kenya,Nairobi,Home & Kitchen,2025-02-10,4.1,True
+SEL0385,Bahari Fashion House,Nigeria,Lagos,Furniture,2024-10-28,4.2,True
+SEL0386,Nyota Electronics Ltd,Ghana,Accra,Home & Kitchen,2023-09-06,4.3,True
+SEL0387,Ubuntu Express,Tanzania,Dodoma,Subscriptions,2024-12-22,4.6,True
+SEL0388,Upendo Supplies Ltd,Nigeria,Lagos,Beauty,2023-11-18,4.4,True
+SEL0389,Upendo Fashion House,Kenya,Nairobi,Appliances,2025-09-25,4.6,True
+SEL0390,Baobab Outlet Ltd,Ghana,Kumasi,Airtime & Data,2023-01-11,3.7,True
+SEL0391,Tembo Electronics Ltd,Ghana,Kumasi,Beauty,2023-10-11,4.0,True
+SEL0392,Zuri Hub Ltd,Ghana,Tamale,Electronics,2024-11-17,5.0,True
+SEL0393,Bahari Depot Ltd,Nigeria,Lagos,Digital Vouchers,2024-03-23,4.2,True
+SEL0394,Tembo Mart,South Africa,Pretoria,Home & Kitchen,2025-05-06,3.9,True
+SEL0395,Bahari Supplies Ltd,Kenya,Nairobi,Groceries,2024-07-22,5.0,True
+SEL0396,Amani Boutique Ltd,Kenya,Kisumu,Electronics,2024-10-31,4.2,True
+SEL0397,Imani Electronics,Rwanda,Kigali,Gaming,2025-09-19,4.0,False
+SEL0398,Upendo Store,Kenya,Nakuru,Electronics,2023-07-11,3.9,True
+SEL0399,Zuri Store Ltd,Nigeria,Ibadan,Furniture,2024-08-31,4.5,True
+SEL0400,Duma Emporium,Kenya,Kisumu,Electronics,2025-10-27,3.9,True

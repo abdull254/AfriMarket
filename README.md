@@ -72,10 +72,13 @@ The system is designed to:
 
 - `compose.yaml` – integrated service configuration.
 - `data/` – transaction and complaint datasets.
+- `data/enriched/` – readable star-schema tables (customers, sellers, products, dates, devices, deliveries, refunds, enriched complaints).
+- `data_generation/` – scripts that build the star schema and load it into MySQL.
+- `docs/DATA_DICTIONARY.md` – what every new table and column means.
 - `kafka/config/` – Kafka broker configuration.
 - `ingestion/` – Python producers and Kafka topic utilities.
 - `spark_processing/` – Spark batch and streaming jobs.
-- `mysql/init/` – MySQL database schema.
+- `mysql/init/` – MySQL database schema (`02_star_schema.sql` adds the star-schema tables).
 - `cassandra/init/` – Cassandra keyspace and table definitions.
 - `dashboard/` – Streamlit application and dependencies.
 - `train_fraud_model.py`, `features.py` – model training and shared feature engineering.
@@ -98,6 +101,15 @@ Trained model files are not stored in Git. Running `train_fraud_model.py` create
 - 1,200 synthetic complaint records.
 - Includes ComplaintID, TransactionID, date, category, text, and status.
 - TransactionID links complaints to transactions.
+
+**Star schema (synthetic, linked by TransactionID):** `data/enriched/`
+- `dim_customer`, `dim_seller`, `dim_product`, `dim_date`, `dim_device` and `fact_transaction` turn the anonymous columns into readable customers, sellers, products, real dates and devices.
+- `fact_transaction` adds real UTC and local timestamps, country, city, currency, local amount and an African payment method (M-PESA, Airtel Money, mobile money, card, bank transfer, cash on delivery).
+- `fact_delivery` and `fact_refund` hold shipping results, returns, refunds and chargebacks; `device_ip_history` tracks which devices and IPs each customer uses.
+- `complaints_enriched` has varied complaint text, channel, priority and resolution time, linked to delivery and refund outcomes.
+- Rebuild with `python data_generation/generate_star_schema.py`, load into MySQL with `data_generation/load_star_schema.py --create`, and report on it with `spark_processing/star_schema_report.py`.
+- `ingestion/scripts/scale_transactions.py` grows the transactions to 300,000+ rows or streams new ones into Kafka without stopping.
+- Some new columns are nudged by `isFraud` to tell a believable story; keep them out of the model (see `docs/DATA_DICTIONARY.md`).
 
 ## 6. Fraud Detection Model
 

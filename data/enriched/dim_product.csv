@@ -1,0 +1,631 @@
+product_id,product_name,category,is_physical,unit_price_usd,default_seller_id
+PRD00001,Unlimited Airtime Top-up,Airtime & Data,False,11.61,SEL0334
+PRD00002,Weekly Data Bundle A30,Airtime & Data,False,20.78,SEL0275
+PRD00003,Unlimited Voice Bundle A28,Airtime & Data,False,28.28,SEL0050
+PRD00004,Daily Airtime Top-up,Airtime & Data,False,1.38,SEL0044
+PRD00005,Unlimited Voice Bundle H61,Airtime & Data,False,17.62,SEL0290
+PRD00006,Monthly Data Bundle,Airtime & Data,False,37.79,SEL0229
+PRD00007,Monthly Data Bundle D35,Airtime & Data,False,1.23,SEL0291
+PRD00008,Weekly Airtime Top-up,Airtime & Data,False,1.15,SEL0337
+PRD00009,Daily Voice Bundle,Airtime & Data,False,6.96,SEL0009
+PRD00010,Unlimited Airtime Top-up,Airtime & Data,False,7.13,SEL0246
+PRD00011,Monthly Data Bundle Z69,Airtime & Data,False,3.92,SEL0348
+PRD00012,Daily Airtime Top-up F50,Airtime & Data,False,2.01,SEL0111
+PRD00013,Weekly Data Bundle,Airtime & Data,False,19.63,SEL0050
+PRD00014,Weekly Data Bundle,Airtime & Data,False,28.9,SEL0291
+PRD00015,Weekly Data Bundle K30,Airtime & Data,False,25.44,SEL0359
+PRD00016,Monthly Airtime Top-up H58,Airtime & Data,False,2.18,SEL0016
+PRD00017,Weekly Voice Bundle F69,Airtime & Data,False,2.75,SEL0131
+PRD00018,Weekly Data Bundle,Airtime & Data,False,20.94,SEL0114
+PRD00019,Unlimited Airtime Top-up Z71,Airtime & Data,False,25.15,SEL0149
+PRD00020,Daily Data Bundle,Airtime & Data,False,33.3,SEL0184
+PRD00021,Daily Voice Bundle G77,Airtime & Data,False,2.54,SEL0159
+PRD00022,Unlimited Voice Bundle,Airtime & Data,False,11.7,SEL0014
+PRD00023,Unlimited Voice Bundle,Airtime & Data,False,3.72,SEL0354
+PRD00024,Monthly Airtime Top-up,Airtime & Data,False,52.41,SEL0348
+PRD00025,Weekly Airtime Top-up E68,Airtime & Data,False,9.4,SEL0268
+PRD00026,Weekly Data Bundle H54,Airtime & Data,False,28.34,SEL0273
+PRD00027,Unlimited Data Bundle G65,Airtime & Data,False,49.84,SEL0328
+PRD00028,Daily Data Bundle D66,Airtime & Data,False,9.31,SEL0390
+PRD00029,Daily Airtime Top-up H92,Airtime & Data,False,11.95,SEL0114
+PRD00030,Daily Data Bundle H29,Airtime & Data,False,1.53,SEL0353
+PRD00031,Daily Voice Bundle,Airtime & Data,False,2.1,SEL0328
+PRD00032,Unlimited Data Bundle,Airtime & Data,False,3.01,SEL0342
+PRD00033,Weekly Data Bundle B82,Airtime & Data,False,14.96,SEL0159
+PRD00034,Daily Data Bundle,Airtime & Data,False,3.07,SEL0074
+PRD00035,Monthly Data Bundle,Airtime & Data,False,2.49,SEL0014
+PRD00036,Weekly Voice Bundle,Airtime & Data,False,20.25,SEL0159
+PRD00037,Monthly Voice Bundle Z98,Airtime & Data,False,15.95,SEL0380
+PRD00038,Unlimited Data Bundle,Airtime & Data,False,32.91,SEL0345
+PRD00039,Unlimited Data Bundle,Airtime & Data,False,14.24,SEL0316
+PRD00040,Monthly Voice Bundle,Airtime & Data,False,11.57,SEL0021
+PRD00041,Daily Voice Bundle,Airtime & Data,False,30.95,SEL0326
+PRD00042,Daily Airtime Top-up B65,Airtime & Data,False,22.81,SEL0116
+PRD00043,Monthly Voice Bundle,Airtime & Data,False,39.76,SEL0159
+PRD00044,Weekly Data Bundle,Airtime & Data,False,20.39,SEL0009
+PRD00045,Monthly Voice Bundle,Airtime & Data,False,1.4,SEL0353
+PRD00046,Energy-saver Air Cooler,Appliances,True,141.03,SEL0157
+PRD00047,Double-door Air Cooler F7,Appliances,True,166.75,SEL0377
+PRD00048,Inverter Fridge B12,Appliances,True,213.75,SEL0079
+PRD00049,Double-door Washing Machine,Appliances,True,1448.92,SEL0164
+PRD00050,Inverter Microwave X67,Appliances,True,195.95,SEL0094
+PRD00051,Double-door Washing Machine C10,Appliances,True,356.21,SEL0325
+PRD00052,Portable Air Cooler G29,Appliances,True,409.07,SEL0211
+PRD00053,Double-door Generator,Appliances,True,657.72,SEL0049
+PRD00054,Double-door Air Cooler,Appliances,True,625.85,SEL0079
+PRD00055,Double-door Air Cooler H9,Appliances,True,131.6,SEL0225
+PRD00056,Energy-saver Generator K34,Appliances,True,120.34,SEL0039
+PRD00057,Energy-saver Generator,Appliances,True,166.04,SEL0323
+PRD00058,Double-door Microwave D88,Appliances,True,258.32,SEL0197
+PRD00059,Double-door Microwave,Appliances,True,191.36,SEL0252
+PRD00060,Energy-saver Washing Machine B22,Appliances,True,431.96,SEL0320
+PRD00061,Energy-saver Air Cooler,Appliances,True,169.64,SEL0010
+PRD00062,Portable Microwave C12,Appliances,True,693.74,SEL0325
+PRD00063,Portable Microwave M35,Appliances,True,503.62,SEL0304
+PRD00064,Energy-saver Air Cooler M61,Appliances,True,505.14,SEL0257
+PRD00065,Inverter Air Cooler M28,Appliances,True,162.97,SEL0389
+PRD00066,Double-door Washing Machine,Appliances,True,763.13,SEL0177
+PRD00067,Portable Microwave C16,Appliances,True,249.26,SEL0065
+PRD00068,Energy-saver Fridge A39,Appliances,True,126.86,SEL0157
+PRD00069,Double-door Air Cooler B95,Appliances,True,722.1,SEL0252
+PRD00070,Portable Microwave,Appliances,True,710.16,SEL0389
+PRD00071,Portable Fridge,Appliances,True,556.35,SEL0211
+PRD00072,Energy-saver Generator K42,Appliances,True,73.93,SEL0211
+PRD00073,Inverter Microwave,Appliances,True,109.29,SEL0157
+PRD00074,Double-door Microwave G6,Appliances,True,155.7,SEL0104
+PRD00075,Inverter Generator M72,Appliances,True,141.04,SEL0196
+PRD00076,Energy-saver Air Cooler X72,Appliances,True,165.29,SEL0094
+PRD00077,Inverter Washing Machine G40,Appliances,True,598.25,SEL0161
+PRD00078,Double-door Generator,Appliances,True,455.14,SEL0079
+PRD00079,Inverter Air Cooler K14,Appliances,True,149.55,SEL0359
+PRD00080,Portable Washing Machine,Appliances,True,142.58,SEL0314
+PRD00081,Inverter Air Cooler,Appliances,True,1489.25,SEL0252
+PRD00082,Portable Washing Machine K46,Appliances,True,888.65,SEL0049
+PRD00083,Portable Washing Machine,Appliances,True,555.91,SEL0006
+PRD00084,Inverter Microwave,Appliances,True,70.35,SEL0068
+PRD00085,Portable Air Cooler,Appliances,True,161.84,SEL0049
+PRD00086,Energy-saver Air Cooler C62,Appliances,True,1136.27,SEL0104
+PRD00087,Inverter Generator,Appliances,True,630.94,SEL0006
+PRD00088,Inverter Washing Machine F3,Appliances,True,170.8,SEL0252
+PRD00089,Portable Generator,Appliances,True,282.13,SEL0087
+PRD00090,Energy-saver Generator,Appliances,True,218.38,SEL0310
+PRD00091,Herbal Perfume,Beauty,True,70.6,SEL0062
+PRD00092,Glow Face Cream E64,Beauty,True,6.0,SEL0308
+PRD00093,Shea Hair Oil X2,Beauty,True,15.33,SEL0388
+PRD00094,Glow Soap Pack,Beauty,True,5.12,SEL0198
+PRD00095,Shea Body Lotion F77,Beauty,True,9.87,SEL0261
+PRD00096,Shea Soap Pack,Beauty,True,28.79,SEL0022
+PRD00097,Shea Soap Pack,Beauty,True,4.09,SEL0113
+PRD00098,Herbal Perfume E92,Beauty,True,64.56,SEL0031
+PRD00099,Glow Body Lotion B93,Beauty,True,3.82,SEL0360
+PRD00100,Glow Soap Pack,Beauty,True,9.66,SEL0181
+PRD00101,Natural Hair Oil C37,Beauty,True,26.51,SEL0025
+PRD00102,Glow Hair Oil,Beauty,True,5.33,SEL0022
+PRD00103,Shea Face Cream B98,Beauty,True,14.13,SEL0031
+PRD00104,Argan Hair Oil,Beauty,True,25.67,SEL0383
+PRD00105,Argan Face Cream,Beauty,True,12.59,SEL0308
+PRD00106,Natural Face Cream,Beauty,True,77.67,SEL0082
+PRD00107,Shea Body Lotion,Beauty,True,28.15,SEL0392
+PRD00108,Shea Hair Oil E86,Beauty,True,4.22,SEL0283
+PRD00109,Argan Hair Oil X65,Beauty,True,3.98,SEL0272
+PRD00110,Shea Face Cream,Beauty,True,49.11,SEL0160
+PRD00111,Natural Body Lotion,Beauty,True,31.62,SEL0186
+PRD00112,Shea Body Lotion Z43,Beauty,True,4.15,SEL0388
+PRD00113,Natural Perfume,Beauty,True,9.13,SEL0022
+PRD00114,Glow Body Lotion H9,Beauty,True,12.74,SEL0308
+PRD00115,Glow Perfume,Beauty,True,14.61,SEL0022
+PRD00116,Natural Hair Oil,Beauty,True,23.88,SEL0119
+PRD00117,Natural Face Cream A89,Beauty,True,22.74,SEL0331
+PRD00118,Argan Face Cream Z35,Beauty,True,22.91,SEL0083
+PRD00119,Argan Body Lotion,Beauty,True,8.07,SEL0030
+PRD00120,Shea Soap Pack E46,Beauty,True,69.95,SEL0025
+PRD00121,Shea Hair Oil M89,Beauty,True,46.1,SEL0111
+PRD00122,Argan Body Lotion H28,Beauty,True,57.19,SEL0195
+PRD00123,Argan Perfume A25,Beauty,True,5.19,SEL0163
+PRD00124,Herbal Hair Oil,Beauty,True,27.22,SEL0218
+PRD00125,Shea Soap Pack M78,Beauty,True,22.25,SEL0082
+PRD00126,Shea Body Lotion,Beauty,True,19.46,SEL0030
+PRD00127,Argan Soap Pack,Beauty,True,9.04,SEL0280
+PRD00128,Glow Soap Pack,Beauty,True,35.92,SEL0075
+PRD00129,Glow Body Lotion M33,Beauty,True,18.62,SEL0092
+PRD00130,Herbal Face Cream,Beauty,True,49.74,SEL0239
+PRD00131,Argan Face Cream,Beauty,True,6.97,SEL0318
+PRD00132,Glow Hair Oil,Beauty,True,4.32,SEL0383
+PRD00133,Herbal Hair Oil,Beauty,True,3.16,SEL0280
+PRD00134,Glow Soap Pack D72,Beauty,True,43.23,SEL0388
+PRD00135,Shea Face Cream,Beauty,True,10.07,SEL0283
+PRD00136,Instant Electricity Token,Digital Vouchers,False,5.22,SEL0046
+PRD00137,Prepaid Pay-TV Voucher,Digital Vouchers,False,6.24,SEL0376
+PRD00138,Prepaid Pay-TV Voucher X64,Digital Vouchers,False,33.21,SEL0103
+PRD00139,Instant Pay-TV Voucher X2,Digital Vouchers,False,2.9,SEL0117
+PRD00140,Prepaid Shopping Voucher,Digital Vouchers,False,141.44,SEL0385
+PRD00141,Prepaid Shopping Voucher,Digital Vouchers,False,164.19,SEL0261
+PRD00142,Prepaid Shopping Voucher H35,Digital Vouchers,False,34.36,SEL0066
+PRD00143,Prepaid Electricity Token M55,Digital Vouchers,False,30.97,SEL0077
+PRD00144,Prepaid Shopping Voucher,Digital Vouchers,False,12.7,SEL0246
+PRD00145,Prepaid Electricity Token G64,Digital Vouchers,False,21.03,SEL0356
+PRD00146,Instant Pay-TV Voucher,Digital Vouchers,False,53.55,SEL0315
+PRD00147,Prepaid Electricity Token G38,Digital Vouchers,False,100.9,SEL0150
+PRD00148,Prepaid Electricity Token G85,Digital Vouchers,False,5.62,SEL0306
+PRD00149,Instant Shopping Voucher,Digital Vouchers,False,2.83,SEL0055
+PRD00150,Prepaid Electricity Token B26,Digital Vouchers,False,121.3,SEL0077
+PRD00151,Instant Shopping Voucher,Digital Vouchers,False,25.33,SEL0178
+PRD00152,Prepaid Shopping Voucher F91,Digital Vouchers,False,131.01,SEL0178
+PRD00153,Instant Pay-TV Voucher,Digital Vouchers,False,88.56,SEL0039
+PRD00154,Prepaid Electricity Token,Digital Vouchers,False,15.34,SEL0393
+PRD00155,Instant Pay-TV Voucher D91,Digital Vouchers,False,50.16,SEL0376
+PRD00156,Prepaid Electricity Token,Digital Vouchers,False,5.57,SEL0055
+PRD00157,Prepaid Electricity Token K52,Digital Vouchers,False,22.92,SEL0077
+PRD00158,Prepaid Electricity Token,Digital Vouchers,False,11.56,SEL0332
+PRD00159,Prepaid Pay-TV Voucher,Digital Vouchers,False,3.17,SEL0393
+PRD00160,Prepaid Electricity Token,Digital Vouchers,False,50.27,SEL0393
+PRD00161,Instant Shopping Voucher E69,Digital Vouchers,False,3.91,SEL0052
+PRD00162,Prepaid Shopping Voucher,Digital Vouchers,False,5.69,SEL0261
+PRD00163,Prepaid Shopping Voucher F23,Digital Vouchers,False,196.26,SEL0005
+PRD00164,Prepaid Electricity Token,Digital Vouchers,False,10.55,SEL0017
+PRD00165,Instant Electricity Token,Digital Vouchers,False,4.29,SEL0002
+PRD00166,Instant Shopping Voucher,Digital Vouchers,False,4.38,SEL0142
+PRD00167,Prepaid Pay-TV Voucher D10,Digital Vouchers,False,174.84,SEL0039
+PRD00168,Instant Pay-TV Voucher E8,Digital Vouchers,False,23.6,SEL0103
+PRD00169,Instant Electricity Token,Digital Vouchers,False,19.07,SEL0015
+PRD00170,Instant Shopping Voucher E22,Digital Vouchers,False,198.61,SEL0046
+PRD00171,Prepaid Pay-TV Voucher D68,Digital Vouchers,False,81.93,SEL0356
+PRD00172,Instant Pay-TV Voucher F85,Digital Vouchers,False,17.22,SEL0179
+PRD00173,Instant Pay-TV Voucher F12,Digital Vouchers,False,7.56,SEL0046
+PRD00174,Prepaid Shopping Voucher,Digital Vouchers,False,2.99,SEL0391
+PRD00175,Prepaid Shopping Voucher B75,Digital Vouchers,False,13.25,SEL0393
+PRD00176,Instant Electricity Token D96,Digital Vouchers,False,25.03,SEL0046
+PRD00177,Prepaid Electricity Token,Digital Vouchers,False,14.11,SEL0017
+PRD00178,Prepaid Electricity Token E57,Digital Vouchers,False,60.96,SEL0005
+PRD00179,Instant Electricity Token,Digital Vouchers,False,11.41,SEL0337
+PRD00180,Instant Pay-TV Voucher,Digital Vouchers,False,25.62,SEL0178
+PRD00181,Pro Smartwatch,Electronics,True,61.87,SEL0312
+PRD00182,Solar Earbuds,Electronics,True,129.59,SEL0258
+PRD00183,Pro Phone Z34,Electronics,True,499.26,SEL0249
+PRD00184,Smart Speaker,Electronics,True,362.45,SEL0096
+PRD00185,Wireless Speaker,Electronics,True,183.05,SEL0309
+PRD00186,Smart Power Bank,Electronics,True,8.11,SEL0265
+PRD00187,Smart Earbuds,Electronics,True,151.94,SEL0373
+PRD00188,Wireless Laptop,Electronics,True,154.32,SEL0099
+PRD00189,Mini Earbuds K26,Electronics,True,23.59,SEL0266
+PRD00190,Pro Laptop D11,Electronics,True,863.51,SEL0278
+PRD00191,Mini Charger,Electronics,True,13.35,SEL0265
+PRD00192,Mini Speaker Z79,Electronics,True,788.43,SEL0171
+PRD00193,Solar Speaker F73,Electronics,True,66.17,SEL0279
+PRD00194,Smart Smartwatch B41,Electronics,True,195.71,SEL0059
+PRD00195,Solar Tablet K40,Electronics,True,121.02,SEL0392
+PRD00196,Mini Tablet,Electronics,True,239.96,SEL0265
+PRD00197,Pro Speaker,Electronics,True,322.69,SEL0206
+PRD00198,Ultra Power Bank,Electronics,True,444.18,SEL0175
+PRD00199,Mini Power Bank D36,Electronics,True,259.0,SEL0398
+PRD00200,Pro Tablet C23,Electronics,True,878.75,SEL0355
+PRD00201,Wireless Tablet X20,Electronics,True,159.92,SEL0248
+PRD00202,Solar Tablet,Electronics,True,719.77,SEL0079
+PRD00203,Smart Tablet,Electronics,True,37.26,SEL0276
+PRD00204,Solar Speaker F89,Electronics,True,17.32,SEL0248
+PRD00205,Ultra Charger X84,Electronics,True,434.29,SEL0324
+PRD00206,Pro Smartwatch,Electronics,True,43.29,SEL0348
+PRD00207,Ultra Smartwatch F92,Electronics,True,94.58,SEL0396
+PRD00208,Wireless Smartwatch,Electronics,True,15.49,SEL0258
+PRD00209,Ultra Smartwatch Z68,Electronics,True,42.17,SEL0186
+PRD00210,Smart Power Bank,Electronics,True,8.31,SEL0134
+PRD00211,Ultra Smartwatch M71,Electronics,True,44.9,SEL0292
+PRD00212,Ultra Smartwatch,Electronics,True,405.12,SEL0355
+PRD00213,Pro Phone,Electronics,True,45.32,SEL0206
+PRD00214,Solar Laptop G86,Electronics,True,263.6,SEL0235
+PRD00215,Pro Charger D46,Electronics,True,231.44,SEL0099
+PRD00216,Pro Tablet,Electronics,True,190.38,SEL0235
+PRD00217,Mini Charger,Electronics,True,11.55,SEL0202
+PRD00218,Pro Laptop G15,Electronics,True,22.07,SEL0396
+PRD00219,Ultra Laptop B22,Electronics,True,32.94,SEL0370
+PRD00220,Solar Phone,Electronics,True,94.65,SEL0230
+PRD00221,Pro Earbuds,Electronics,True,577.58,SEL0267
+PRD00222,Pro Charger M48,Electronics,True,138.7,SEL0398
+PRD00223,Smart Phone B57,Electronics,True,9.12,SEL0355
+PRD00224,Mini Phone,Electronics,True,26.33,SEL0258
+PRD00225,Solar Speaker C70,Electronics,True,665.95,SEL0292
+PRD00226,Regular Festival Pass,Event Tickets,False,34.55,SEL0380
+PRD00227,Regular Festival Pass,Event Tickets,False,24.76,SEL0195
+PRD00228,VIP Festival Pass,Event Tickets,False,121.89,SEL0133
+PRD00229,Regular Match Ticket Z94,Event Tickets,False,17.46,SEL0224
+PRD00230,VIP Concert Ticket,Event Tickets,False,9.64,SEL0188
+PRD00231,VIP Concert Ticket,Event Tickets,False,9.26,SEL0133
+PRD00232,VIP Match Ticket D58,Event Tickets,False,7.05,SEL0071
+PRD00233,Regular Festival Pass,Event Tickets,False,22.34,SEL0041
+PRD00234,Regular Festival Pass,Event Tickets,False,63.13,SEL0380
+PRD00235,Early-bird Concert Ticket,Event Tickets,False,10.59,SEL0021
+PRD00236,VIP Festival Pass,Event Tickets,False,127.51,SEL0161
+PRD00237,Early-bird Match Ticket,Event Tickets,False,18.5,SEL0373
+PRD00238,VIP Match Ticket D76,Event Tickets,False,5.1,SEL0102
+PRD00239,VIP Festival Pass,Event Tickets,False,9.69,SEL0352
+PRD00240,Regular Festival Pass,Event Tickets,False,44.21,SEL0137
+PRD00241,VIP Concert Ticket K5,Event Tickets,False,59.84,SEL0388
+PRD00242,Early-bird Match Ticket F29,Event Tickets,False,15.61,SEL0268
+PRD00243,VIP Match Ticket,Event Tickets,False,56.26,SEL0339
+PRD00244,Regular Concert Ticket X29,Event Tickets,False,192.83,SEL0155
+PRD00245,VIP Match Ticket,Event Tickets,False,6.99,SEL0268
+PRD00246,VIP Concert Ticket,Event Tickets,False,149.54,SEL0051
+PRD00247,VIP Concert Ticket D23,Event Tickets,False,53.99,SEL0137
+PRD00248,Early-bird Concert Ticket,Event Tickets,False,14.77,SEL0041
+PRD00249,Early-bird Festival Pass,Event Tickets,False,69.53,SEL0243
+PRD00250,Regular Festival Pass,Event Tickets,False,24.75,SEL0161
+PRD00251,Regular Festival Pass G61,Event Tickets,False,59.05,SEL0380
+PRD00252,VIP Festival Pass,Event Tickets,False,135.63,SEL0171
+PRD00253,VIP Match Ticket,Event Tickets,False,177.38,SEL0349
+PRD00254,Regular Concert Ticket,Event Tickets,False,6.6,SEL0171
+PRD00255,Regular Concert Ticket,Event Tickets,False,66.8,SEL0188
+PRD00256,VIP Festival Pass,Event Tickets,False,163.76,SEL0231
+PRD00257,Regular Concert Ticket,Event Tickets,False,65.29,SEL0051
+PRD00258,Regular Concert Ticket,Event Tickets,False,127.72,SEL0313
+PRD00259,VIP Festival Pass,Event Tickets,False,54.65,SEL0188
+PRD00260,Early-bird Concert Ticket X12,Event Tickets,False,20.35,SEL0339
+PRD00261,Regular Match Ticket,Event Tickets,False,23.96,SEL0161
+PRD00262,Early-bird Concert Ticket F69,Event Tickets,False,64.94,SEL0028
+PRD00263,Early-bird Festival Pass D39,Event Tickets,False,12.25,SEL0102
+PRD00264,VIP Match Ticket,Event Tickets,False,17.59,SEL0051
+PRD00265,Early-bird Concert Ticket,Event Tickets,False,26.48,SEL0305
+PRD00266,VIP Match Ticket E54,Event Tickets,False,6.41,SEL0137
+PRD00267,Regular Festival Pass A97,Event Tickets,False,131.27,SEL0077
+PRD00268,Early-bird Concert Ticket F88,Event Tickets,False,158.73,SEL0263
+PRD00269,Regular Festival Pass,Event Tickets,False,37.7,SEL0041
+PRD00270,Regular Match Ticket,Event Tickets,False,5.93,SEL0108
+PRD00271,Slim-fit Dress C58,Fashion,True,37.71,SEL0194
+PRD00272,Ankara Handbag H43,Fashion,True,137.9,SEL0194
+PRD00273,Cotton Jacket E27,Fashion,True,122.58,SEL0058
+PRD00274,Cotton Shirt D65,Fashion,True,17.95,SEL0351
+PRD00275,Slim-fit Handbag,Fashion,True,145.77,SEL0351
+PRD00276,Classic Dress H85,Fashion,True,63.7,SEL0035
+PRD00277,Kitenge Sandals F77,Fashion,True,25.13,SEL0128
+PRD00278,Ankara Dress Z96,Fashion,True,145.32,SEL0128
+PRD00279,Cotton Sneakers B10,Fashion,True,6.2,SEL0035
+PRD00280,Leather Dress,Fashion,True,46.24,SEL0047
+PRD00281,Leather Sandals,Fashion,True,6.81,SEL0344
+PRD00282,Ankara Handbag,Fashion,True,13.8,SEL0140
+PRD00283,Ankara Kaftan Z60,Fashion,True,7.84,SEL0344
+PRD00284,Cotton Kaftan B10,Fashion,True,149.95,SEL0123
+PRD00285,Leather Sneakers E41,Fashion,True,57.94,SEL0130
+PRD00286,Slim-fit Dress,Fashion,True,54.07,SEL0078
+PRD00287,Cotton Kaftan G77,Fashion,True,142.93,SEL0358
+PRD00288,Slim-fit Sneakers X11,Fashion,True,10.62,SEL0226
+PRD00289,Leather Kaftan,Fashion,True,36.44,SEL0047
+PRD00290,Leather Sandals,Fashion,True,64.76,SEL0041
+PRD00291,Leather Kaftan,Fashion,True,18.05,SEL0320
+PRD00292,Ankara Handbag,Fashion,True,27.47,SEL0123
+PRD00293,Kitenge Sneakers E31,Fashion,True,125.69,SEL0199
+PRD00294,Leather Kaftan,Fashion,True,9.31,SEL0047
+PRD00295,Cotton Sneakers M19,Fashion,True,12.83,SEL0199
+PRD00296,Ankara Shirt E39,Fashion,True,31.13,SEL0170
+PRD00297,Leather Dress,Fashion,True,107.88,SEL0344
+PRD00298,Leather Dress G65,Fashion,True,58.25,SEL0007
+PRD00299,Classic Shirt,Fashion,True,103.72,SEL0090
+PRD00300,Leather Handbag,Fashion,True,23.9,SEL0203
+PRD00301,Cotton Kaftan D16,Fashion,True,21.17,SEL0364
+PRD00302,Leather Handbag,Fashion,True,11.49,SEL0001
+PRD00303,Ankara Sneakers B34,Fashion,True,91.85,SEL0173
+PRD00304,Classic Sandals H37,Fashion,True,21.97,SEL0229
+PRD00305,Slim-fit Sandals M49,Fashion,True,79.59,SEL0374
+PRD00306,Slim-fit Shirt K61,Fashion,True,26.7,SEL0320
+PRD00307,Classic Sneakers H93,Fashion,True,8.57,SEL0206
+PRD00308,Cotton Shirt,Fashion,True,5.1,SEL0320
+PRD00309,Kitenge Sandals,Fashion,True,9.36,SEL0007
+PRD00310,Classic Kaftan,Fashion,True,6.2,SEL0109
+PRD00311,Classic Dress,Fashion,True,5.75,SEL0130
+PRD00312,Slim-fit Sandals A24,Fashion,True,126.29,SEL0128
+PRD00313,Leather Kaftan,Fashion,True,72.46,SEL0060
+PRD00314,Ankara Kaftan A85,Fashion,True,53.96,SEL0047
+PRD00315,Slim-fit Sandals,Fashion,True,36.22,SEL0001
+PRD00316,Office Wardrobe,Furniture,True,245.75,SEL0069
+PRD00317,Mahogany Desk,Furniture,True,1009.0,SEL0399
+PRD00318,Office Sofa G51,Furniture,True,52.97,SEL0004
+PRD00319,Rattan Wardrobe,Furniture,True,92.51,SEL0217
+PRD00320,Mahogany Sofa K42,Furniture,True,68.43,SEL0176
+PRD00321,Rattan Chair A57,Furniture,True,672.49,SEL0152
+PRD00322,Mahogany Sofa M8,Furniture,True,134.3,SEL0228
+PRD00323,Modern Chair,Furniture,True,876.97,SEL0228
+PRD00324,Rattan Chair X58,Furniture,True,305.64,SEL0201
+PRD00325,Office Wardrobe,Furniture,True,1152.76,SEL0166
+PRD00326,Mahogany Chair F36,Furniture,True,820.78,SEL0219
+PRD00327,Mahogany Desk,Furniture,True,267.45,SEL0004
+PRD00328,Modern Sofa K26,Furniture,True,47.17,SEL0253
+PRD00329,Mahogany Bed Frame,Furniture,True,47.03,SEL0186
+PRD00330,Office Chair,Furniture,True,90.65,SEL0066
+PRD00331,Mahogany Wardrobe,Furniture,True,58.72,SEL0147
+PRD00332,Mahogany Desk K6,Furniture,True,680.21,SEL0314
+PRD00333,Mahogany Sofa,Furniture,True,284.7,SEL0336
+PRD00334,Modern Chair K95,Furniture,True,558.66,SEL0069
+PRD00335,Modern Sofa C9,Furniture,True,76.33,SEL0069
+PRD00336,Modern Sofa,Furniture,True,837.09,SEL0179
+PRD00337,Mahogany Chair Z10,Furniture,True,84.43,SEL0220
+PRD00338,Office Sofa,Furniture,True,1093.97,SEL0124
+PRD00339,Office Chair,Furniture,True,85.59,SEL0297
+PRD00340,Office Chair B40,Furniture,True,1181.08,SEL0121
+PRD00341,Modern Sofa,Furniture,True,60.19,SEL0201
+PRD00342,Mahogany Desk,Furniture,True,1037.76,SEL0106
+PRD00343,Mahogany Sofa K80,Furniture,True,716.73,SEL0228
+PRD00344,Modern Wardrobe K96,Furniture,True,172.83,SEL0014
+PRD00345,Mahogany Wardrobe G9,Furniture,True,985.5,SEL0294
+PRD00346,Modern Desk M97,Furniture,True,128.86,SEL0129
+PRD00347,Rattan Wardrobe M35,Furniture,True,40.61,SEL0129
+PRD00348,Mahogany Sofa,Furniture,True,573.94,SEL0294
+PRD00349,Rattan Sofa H96,Furniture,True,120.51,SEL0374
+PRD00350,Rattan Sofa H87,Furniture,True,81.01,SEL0399
+PRD00351,Rattan Chair,Furniture,True,579.1,SEL0034
+PRD00352,Rattan Bed Frame,Furniture,True,366.34,SEL0059
+PRD00353,Mahogany Wardrobe A2,Furniture,True,604.38,SEL0228
+PRD00354,Modern Chair,Furniture,True,58.84,SEL0129
+PRD00355,Rattan Chair K11,Furniture,True,215.59,SEL0118
+PRD00356,Rattan Chair,Furniture,True,51.64,SEL0076
+PRD00357,Rattan Bed Frame,Furniture,True,571.07,SEL0151
+PRD00358,Office Desk,Furniture,True,178.16,SEL0374
+PRD00359,Mahogany Chair Z25,Furniture,True,964.8,SEL0006
+PRD00360,Rattan Bed Frame B58,Furniture,True,643.45,SEL0106
+PRD00361,Premium Game Credits,Gaming,False,11.54,SEL0362
+PRD00362,Premium Game Pass,Gaming,False,2.99,SEL0156
+PRD00363,Starter Game Credits E56,Gaming,False,21.38,SEL0273
+PRD00364,Starter Game Credits,Gaming,False,23.23,SEL0096
+PRD00365,Premium Game Credits,Gaming,False,49.51,SEL0036
+PRD00366,Starter Game Pass H44,Gaming,False,13.28,SEL0190
+PRD00367,Premium Game Pass,Gaming,False,17.63,SEL0050
+PRD00368,Premium Game Pass,Gaming,False,4.66,SEL0343
+PRD00369,Starter Game Credits G44,Gaming,False,4.07,SEL0212
+PRD00370,Starter Game Pass,Gaming,False,7.27,SEL0273
+PRD00371,Starter Game Pass Z2,Gaming,False,24.99,SEL0182
+PRD00372,Starter Game Pass K23,Gaming,False,21.16,SEL0036
+PRD00373,Starter Game Credits D71,Gaming,False,13.32,SEL0381
+PRD00374,Premium Game Credits,Gaming,False,28.79,SEL0020
+PRD00375,Premium Game Credits,Gaming,False,3.16,SEL0212
+PRD00376,Premium Game Pass K68,Gaming,False,7.64,SEL0190
+PRD00377,Starter Game Credits,Gaming,False,7.91,SEL0381
+PRD00378,Premium Game Pass F36,Gaming,False,3.63,SEL0369
+PRD00379,Premium Game Pass,Gaming,False,96.12,SEL0052
+PRD00380,Starter Game Pass,Gaming,False,85.22,SEL0096
+PRD00381,Premium Game Pass F42,Gaming,False,20.58,SEL0190
+PRD00382,Starter Game Pass,Gaming,False,35.56,SEL0208
+PRD00383,Premium Game Pass,Gaming,False,7.45,SEL0321
+PRD00384,Starter Game Pass A78,Gaming,False,4.86,SEL0003
+PRD00385,Premium Game Credits,Gaming,False,6.15,SEL0190
+PRD00386,Starter Game Credits K45,Gaming,False,2.77,SEL0190
+PRD00387,Starter Game Pass X27,Gaming,False,91.78,SEL0369
+PRD00388,Starter Game Pass Z8,Gaming,False,85.49,SEL0169
+PRD00389,Premium Game Credits C20,Gaming,False,74.5,SEL0190
+PRD00390,Premium Game Pass,Gaming,False,8.83,SEL0196
+PRD00391,Premium Game Credits,Gaming,False,2.83,SEL0020
+PRD00392,Starter Game Credits,Gaming,False,19.88,SEL0026
+PRD00393,Starter Game Pass K45,Gaming,False,36.96,SEL0182
+PRD00394,Starter Game Pass X2,Gaming,False,2.6,SEL0271
+PRD00395,Starter Game Pass,Gaming,False,2.8,SEL0208
+PRD00396,Starter Game Credits E81,Gaming,False,30.04,SEL0273
+PRD00397,Premium Game Credits,Gaming,False,5.25,SEL0174
+PRD00398,Starter Game Credits,Gaming,False,34.17,SEL0256
+PRD00399,Premium Game Credits B65,Gaming,False,7.11,SEL0053
+PRD00400,Premium Game Pass,Gaming,False,32.56,SEL0196
+PRD00401,Starter Game Pass,Gaming,False,2.82,SEL0230
+PRD00402,Starter Game Credits K39,Gaming,False,5.26,SEL0262
+PRD00403,Starter Game Pass,Gaming,False,19.43,SEL0359
+PRD00404,Premium Game Pass C27,Gaming,False,9.62,SEL0212
+PRD00405,Starter Game Credits,Gaming,False,25.87,SEL0138
+PRD00406,Digital Gift Card,Gift Cards,False,23.49,SEL0284
+PRD00407,Store Gift Card K9,Gift Cards,False,255.45,SEL0056
+PRD00408,Store Gift Card,Gift Cards,False,96.14,SEL0108
+PRD00409,Digital Gift Card E64,Gift Cards,False,329.47,SEL0011
+PRD00410,Digital Gift Card,Gift Cards,False,306.52,SEL0008
+PRD00411,Store Gift Card C61,Gift Cards,False,125.64,SEL0385
+PRD00412,Store Gift Card,Gift Cards,False,457.63,SEL0154
+PRD00413,Store Gift Card D89,Gift Cards,False,15.15,SEL0302
+PRD00414,Store Gift Card,Gift Cards,False,32.65,SEL0253
+PRD00415,Store Gift Card,Gift Cards,False,85.83,SEL0033
+PRD00416,Store Gift Card,Gift Cards,False,191.59,SEL0263
+PRD00417,Digital Gift Card,Gift Cards,False,54.81,SEL0378
+PRD00418,Digital Gift Card,Gift Cards,False,5.17,SEL0145
+PRD00419,Store Gift Card,Gift Cards,False,5.41,SEL0367
+PRD00420,Digital Gift Card,Gift Cards,False,8.49,SEL0126
+PRD00421,Digital Gift Card,Gift Cards,False,17.69,SEL0299
+PRD00422,Store Gift Card M52,Gift Cards,False,106.36,SEL0112
+PRD00423,Digital Gift Card E41,Gift Cards,False,228.15,SEL0184
+PRD00424,Digital Gift Card K83,Gift Cards,False,11.97,SEL0126
+PRD00425,Store Gift Card,Gift Cards,False,39.3,SEL0227
+PRD00426,Store Gift Card H92,Gift Cards,False,27.6,SEL0056
+PRD00427,Store Gift Card C1,Gift Cards,False,295.32,SEL0338
+PRD00428,Store Gift Card,Gift Cards,False,474.6,SEL0180
+PRD00429,Digital Gift Card,Gift Cards,False,129.49,SEL0216
+PRD00430,Digital Gift Card,Gift Cards,False,353.07,SEL0011
+PRD00431,Digital Gift Card H77,Gift Cards,False,39.02,SEL0299
+PRD00432,Store Gift Card F93,Gift Cards,False,294.4,SEL0372
+PRD00433,Digital Gift Card D38,Gift Cards,False,57.52,SEL0006
+PRD00434,Digital Gift Card,Gift Cards,False,166.55,SEL0018
+PRD00435,Store Gift Card K86,Gift Cards,False,43.65,SEL0241
+PRD00436,Digital Gift Card,Gift Cards,False,156.76,SEL0154
+PRD00437,Store Gift Card,Gift Cards,False,298.8,SEL0357
+PRD00438,Digital Gift Card,Gift Cards,False,489.39,SEL0018
+PRD00439,Store Gift Card,Gift Cards,False,7.41,SEL0386
+PRD00440,Digital Gift Card,Gift Cards,False,153.74,SEL0357
+PRD00441,Store Gift Card H31,Gift Cards,False,93.77,SEL0221
+PRD00442,Digital Gift Card B65,Gift Cards,False,33.48,SEL0227
+PRD00443,Store Gift Card G78,Gift Cards,False,125.99,SEL0327
+PRD00444,Store Gift Card,Gift Cards,False,50.11,SEL0008
+PRD00445,Store Gift Card,Gift Cards,False,419.13,SEL0039
+PRD00446,Store Gift Card X92,Gift Cards,False,15.57,SEL0221
+PRD00447,Store Gift Card,Gift Cards,False,481.02,SEL0283
+PRD00448,Store Gift Card,Gift Cards,False,293.09,SEL0108
+PRD00449,Digital Gift Card D14,Gift Cards,False,5.99,SEL0154
+PRD00450,Digital Gift Card,Gift Cards,False,85.52,SEL0011
+PRD00451,Family Maize Flour 10kg C39,Groceries,True,10.99,SEL0333
+PRD00452,Family Coffee Beans K63,Groceries,True,9.34,SEL0095
+PRD00453,Premium Maize Flour 10kg,Groceries,True,3.26,SEL0038
+PRD00454,Premium Maize Flour 10kg,Groceries,True,10.98,SEL0205
+PRD00455,Organic Tea Leaves,Groceries,True,4.88,SEL0048
+PRD00456,Premium Tea Leaves K15,Groceries,True,3.54,SEL0386
+PRD00457,Value Maize Flour 10kg A50,Groceries,True,2.2,SEL0288
+PRD00458,Premium Maize Flour 10kg,Groceries,True,6.66,SEL0303
+PRD00459,Organic Rice 5kg,Groceries,True,45.53,SEL0081
+PRD00460,Family Maize Flour 10kg Z4,Groceries,True,4.37,SEL0395
+PRD00461,Premium Maize Flour 10kg X88,Groceries,True,25.47,SEL0287
+PRD00462,Organic Rice 5kg,Groceries,True,8.44,SEL0205
+PRD00463,Value Cooking Oil 3L,Groceries,True,2.1,SEL0303
+PRD00464,Organic Maize Flour 10kg,Groceries,True,3.45,SEL0333
+PRD00465,Value Coffee Beans,Groceries,True,4.78,SEL0350
+PRD00466,Value Rice 5kg,Groceries,True,4.18,SEL0073
+PRD00467,Premium Coffee Beans G8,Groceries,True,10.38,SEL0298
+PRD00468,Value Rice 5kg,Groceries,True,47.02,SEL0298
+PRD00469,Value Maize Flour 10kg,Groceries,True,9.32,SEL0303
+PRD00470,Family Cooking Oil 3L B14,Groceries,True,10.47,SEL0048
+PRD00471,Value Rice 5kg E8,Groceries,True,53.4,SEL0077
+PRD00472,Organic Maize Flour 10kg,Groceries,True,30.94,SEL0326
+PRD00473,Value Coffee Beans D86,Groceries,True,34.19,SEL0204
+PRD00474,Premium Rice 5kg G32,Groceries,True,2.66,SEL0260
+PRD00475,Value Cooking Oil 3L D51,Groceries,True,6.91,SEL0287
+PRD00476,Organic Maize Flour 10kg G60,Groceries,True,28.39,SEL0038
+PRD00477,Family Coffee Beans,Groceries,True,6.01,SEL0135
+PRD00478,Family Maize Flour 10kg,Groceries,True,29.5,SEL0316
+PRD00479,Value Cooking Oil 3L,Groceries,True,19.04,SEL0251
+PRD00480,Premium Cooking Oil 3L F16,Groceries,True,6.16,SEL0040
+PRD00481,Family Rice 5kg X96,Groceries,True,4.11,SEL0250
+PRD00482,Premium Maize Flour 10kg C79,Groceries,True,6.89,SEL0081
+PRD00483,Value Maize Flour 10kg E52,Groceries,True,11.0,SEL0072
+PRD00484,Value Tea Leaves F57,Groceries,True,59.52,SEL0395
+PRD00485,Organic Tea Leaves D53,Groceries,True,6.62,SEL0205
+PRD00486,Value Tea Leaves,Groceries,True,27.91,SEL0146
+PRD00487,Organic Tea Leaves,Groceries,True,2.39,SEL0333
+PRD00488,Organic Cooking Oil 3L A53,Groceries,True,7.36,SEL0298
+PRD00489,Value Rice 5kg,Groceries,True,6.86,SEL0288
+PRD00490,Organic Cooking Oil 3L,Groceries,True,54.23,SEL0318
+PRD00491,Family Maize Flour 10kg Z11,Groceries,True,20.74,SEL0330
+PRD00492,Value Maize Flour 10kg,Groceries,True,10.28,SEL0135
+PRD00493,Organic Tea Leaves,Groceries,True,19.15,SEL0222
+PRD00494,Premium Tea Leaves M25,Groceries,True,24.38,SEL0081
+PRD00495,Family Maize Flour 10kg,Groceries,True,38.18,SEL0134
+PRD00496,Family Blender E12,Home & Kitchen,True,110.67,SEL0311
+PRD00497,Steel Jiko Stove,Home & Kitchen,True,19.84,SEL0187
+PRD00498,Compact Cookware Set A19,Home & Kitchen,True,126.11,SEL0238
+PRD00499,Family Dinner Set,Home & Kitchen,True,77.34,SEL0187
+PRD00500,Non-stick Blender F43,Home & Kitchen,True,27.23,SEL0019
+PRD00501,Non-stick Cookware Set,Home & Kitchen,True,14.52,SEL0386
+PRD00502,Family Cookware Set,Home & Kitchen,True,12.17,SEL0311
+PRD00503,Ceramic Dinner Set X14,Home & Kitchen,True,30.23,SEL0319
+PRD00504,Non-stick Jiko Stove C9,Home & Kitchen,True,44.6,SEL0211
+PRD00505,Steel Cookware Set,Home & Kitchen,True,22.28,SEL0384
+PRD00506,Family Blender,Home & Kitchen,True,71.29,SEL0264
+PRD00507,Ceramic Cookware Set X83,Home & Kitchen,True,46.3,SEL0384
+PRD00508,Compact Dinner Set,Home & Kitchen,True,43.83,SEL0394
+PRD00509,Ceramic Kettle,Home & Kitchen,True,15.51,SEL0165
+PRD00510,Compact Kettle,Home & Kitchen,True,22.1,SEL0185
+PRD00511,Steel Jiko Stove B69,Home & Kitchen,True,7.16,SEL0384
+PRD00512,Steel Kettle,Home & Kitchen,True,7.1,SEL0311
+PRD00513,Family Dinner Set,Home & Kitchen,True,23.24,SEL0388
+PRD00514,Compact Cookware Set K74,Home & Kitchen,True,88.1,SEL0238
+PRD00515,Steel Blender,Home & Kitchen,True,135.12,SEL0165
+PRD00516,Ceramic Kettle D76,Home & Kitchen,True,27.28,SEL0076
+PRD00517,Compact Dinner Set Z32,Home & Kitchen,True,122.12,SEL0148
+PRD00518,Compact Dinner Set,Home & Kitchen,True,91.42,SEL0254
+PRD00519,Compact Kettle B79,Home & Kitchen,True,13.94,SEL0148
+PRD00520,Steel Water Filter,Home & Kitchen,True,150.48,SEL0311
+PRD00521,Steel Jiko Stove,Home & Kitchen,True,25.38,SEL0019
+PRD00522,Steel Dinner Set,Home & Kitchen,True,9.14,SEL0084
+PRD00523,Non-stick Dinner Set F87,Home & Kitchen,True,14.74,SEL0386
+PRD00524,Compact Dinner Set E75,Home & Kitchen,True,38.63,SEL0374
+PRD00525,Steel Jiko Stove D78,Home & Kitchen,True,68.72,SEL0055
+PRD00526,Ceramic Water Filter M89,Home & Kitchen,True,109.47,SEL0243
+PRD00527,Ceramic Blender K96,Home & Kitchen,True,56.79,SEL0236
+PRD00528,Ceramic Water Filter,Home & Kitchen,True,20.22,SEL0386
+PRD00529,Steel Water Filter C75,Home & Kitchen,True,16.42,SEL0319
+PRD00530,Steel Jiko Stove B19,Home & Kitchen,True,28.62,SEL0394
+PRD00531,Non-stick Blender,Home & Kitchen,True,61.71,SEL0097
+PRD00532,Steel Blender G3,Home & Kitchen,True,53.25,SEL0055
+PRD00533,Family Blender,Home & Kitchen,True,73.44,SEL0270
+PRD00534,Family Jiko Stove,Home & Kitchen,True,103.56,SEL0238
+PRD00535,Compact Water Filter,Home & Kitchen,True,242.67,SEL0084
+PRD00536,Ceramic Kettle X32,Home & Kitchen,True,97.53,SEL0204
+PRD00537,Steel Blender K39,Home & Kitchen,True,10.61,SEL0250
+PRD00538,Family Water Filter,Home & Kitchen,True,212.4,SEL0341
+PRD00539,Family Cookware Set G9,Home & Kitchen,True,75.2,SEL0146
+PRD00540,Non-stick Jiko Stove,Home & Kitchen,True,11.03,SEL0211
+PRD00541,Monthly Streaming Subscription B95,Subscriptions,False,5.51,SEL0209
+PRD00542,Annual Streaming Subscription,Subscriptions,False,14.15,SEL0240
+PRD00543,Monthly Music Subscription,Subscriptions,False,6.17,SEL0213
+PRD00544,Monthly Streaming Subscription,Subscriptions,False,2.54,SEL0312
+PRD00545,Monthly Cloud Storage Plan,Subscriptions,False,73.45,SEL0304
+PRD00546,Annual Music Subscription G53,Subscriptions,False,8.02,SEL0254
+PRD00547,Monthly Music Subscription,Subscriptions,False,9.86,SEL0262
+PRD00548,Annual Cloud Storage Plan,Subscriptions,False,2.26,SEL0363
+PRD00549,Monthly Music Subscription M89,Subscriptions,False,2.95,SEL0286
+PRD00550,Annual Streaming Subscription F84,Subscriptions,False,77.97,SEL0324
+PRD00551,Annual Music Subscription,Subscriptions,False,70.86,SEL0312
+PRD00552,Monthly Cloud Storage Plan A94,Subscriptions,False,36.24,SEL0063
+PRD00553,Monthly Music Subscription,Subscriptions,False,2.64,SEL0240
+PRD00554,Annual Cloud Storage Plan,Subscriptions,False,7.24,SEL0219
+PRD00555,Monthly Cloud Storage Plan D35,Subscriptions,False,35.31,SEL0387
+PRD00556,Annual Music Subscription Z32,Subscriptions,False,27.39,SEL0093
+PRD00557,Annual Streaming Subscription A88,Subscriptions,False,85.81,SEL0240
+PRD00558,Monthly Streaming Subscription Z14,Subscriptions,False,5.62,SEL0087
+PRD00559,Monthly Music Subscription K3,Subscriptions,False,53.13,SEL0294
+PRD00560,Annual Streaming Subscription H15,Subscriptions,False,9.74,SEL0387
+PRD00561,Monthly Streaming Subscription M28,Subscriptions,False,82.25,SEL0064
+PRD00562,Monthly Music Subscription,Subscriptions,False,2.82,SEL0240
+PRD00563,Monthly Streaming Subscription H21,Subscriptions,False,28.32,SEL0304
+PRD00564,Monthly Cloud Storage Plan,Subscriptions,False,22.96,SEL0382
+PRD00565,Monthly Streaming Subscription,Subscriptions,False,21.61,SEL0193
+PRD00566,Monthly Cloud Storage Plan,Subscriptions,False,3.51,SEL0189
+PRD00567,Annual Cloud Storage Plan A95,Subscriptions,False,74.43,SEL0209
+PRD00568,Annual Streaming Subscription X87,Subscriptions,False,8.16,SEL0280
+PRD00569,Monthly Streaming Subscription,Subscriptions,False,3.96,SEL0312
+PRD00570,Annual Cloud Storage Plan,Subscriptions,False,39.01,SEL0209
+PRD00571,Monthly Music Subscription K90,Subscriptions,False,3.51,SEL0262
+PRD00572,Annual Cloud Storage Plan,Subscriptions,False,18.93,SEL0334
+PRD00573,Annual Cloud Storage Plan,Subscriptions,False,27.38,SEL0304
+PRD00574,Annual Music Subscription,Subscriptions,False,4.18,SEL0307
+PRD00575,Monthly Streaming Subscription F11,Subscriptions,False,5.35,SEL0189
+PRD00576,Monthly Cloud Storage Plan,Subscriptions,False,2.4,SEL0286
+PRD00577,Annual Music Subscription,Subscriptions,False,6.07,SEL0362
+PRD00578,Monthly Cloud Storage Plan,Subscriptions,False,36.32,SEL0063
+PRD00579,Annual Streaming Subscription,Subscriptions,False,108.35,SEL0304
+PRD00580,Annual Cloud Storage Plan Z92,Subscriptions,False,42.57,SEL0043
+PRD00581,Annual Streaming Subscription,Subscriptions,False,19.67,SEL0259
+PRD00582,Annual Streaming Subscription C97,Subscriptions,False,2.54,SEL0165
+PRD00583,Annual Streaming Subscription,Subscriptions,False,98.5,SEL0189
+PRD00584,Monthly Cloud Storage Plan X44,Subscriptions,False,6.01,SEL0240
+PRD00585,Annual Cloud Storage Plan,Subscriptions,False,10.58,SEL0254
+PRD00586,Economy Ferry Ticket,Travel & Bus Tickets,False,18.23,SEL0214
+PRD00587,Express Bus Ticket,Travel & Bus Tickets,False,549.21,SEL0054
+PRD00588,Overnight Ferry Ticket Z73,Travel & Bus Tickets,False,728.48,SEL0285
+PRD00589,Economy Flight Ticket,Travel & Bus Tickets,False,22.71,SEL0054
+PRD00590,Express Ferry Ticket,Travel & Bus Tickets,False,150.09,SEL0012
+PRD00591,Overnight Train Ticket,Travel & Bus Tickets,False,12.93,SEL0024
+PRD00592,Economy Flight Ticket X77,Travel & Bus Tickets,False,118.14,SEL0285
+PRD00593,Express Bus Ticket,Travel & Bus Tickets,False,31.37,SEL0064
+PRD00594,Business Flight Ticket F64,Travel & Bus Tickets,False,12.83,SEL0121
+PRD00595,Overnight Bus Ticket,Travel & Bus Tickets,False,240.06,SEL0167
+PRD00596,Overnight Ferry Ticket,Travel & Bus Tickets,False,149.33,SEL0214
+PRD00597,Economy Flight Ticket E39,Travel & Bus Tickets,False,664.62,SEL0153
+PRD00598,Overnight Ferry Ticket F70,Travel & Bus Tickets,False,8.72,SEL0194
+PRD00599,Express Flight Ticket,Travel & Bus Tickets,False,124.01,SEL0054
+PRD00600,Overnight Train Ticket,Travel & Bus Tickets,False,52.47,SEL0167
+PRD00601,Express Train Ticket G72,Travel & Bus Tickets,False,5.13,SEL0037
+PRD00602,Business Train Ticket H5,Travel & Bus Tickets,False,38.49,SEL0256
+PRD00603,Business Bus Ticket H3,Travel & Bus Tickets,False,223.21,SEL0107
+PRD00604,Business Ferry Ticket C47,Travel & Bus Tickets,False,6.64,SEL0214
+PRD00605,Economy Bus Ticket D51,Travel & Bus Tickets,False,96.02,SEL0169
+PRD00606,Overnight Flight Ticket D16,Travel & Bus Tickets,False,182.0,SEL0375
+PRD00607,Business Flight Ticket D23,Travel & Bus Tickets,False,657.28,SEL0214
+PRD00608,Business Flight Ticket,Travel & Bus Tickets,False,65.95,SEL0277
+PRD00609,Business Ferry Ticket,Travel & Bus Tickets,False,76.51,SEL0256
+PRD00610,Express Flight Ticket A51,Travel & Bus Tickets,False,422.05,SEL0167
+PRD00611,Express Train Ticket,Travel & Bus Tickets,False,138.72,SEL0239
+PRD00612,Business Flight Ticket,Travel & Bus Tickets,False,9.14,SEL0088
+PRD00613,Overnight Train Ticket M43,Travel & Bus Tickets,False,6.23,SEL0042
+PRD00614,Overnight Flight Ticket,Travel & Bus Tickets,False,100.12,SEL0191
+PRD00615,Economy Bus Ticket K23,Travel & Bus Tickets,False,498.76,SEL0363
+PRD00616,Business Flight Ticket G42,Travel & Bus Tickets,False,87.11,SEL0100
+PRD00617,Express Train Ticket,Travel & Bus Tickets,False,27.12,SEL0139
+PRD00618,Overnight Ferry Ticket A4,Travel & Bus Tickets,False,215.69,SEL0167
+PRD00619,Business Bus Ticket H71,Travel & Bus Tickets,False,33.28,SEL0169
+PRD00620,Express Ferry Ticket M55,Travel & Bus Tickets,False,70.74,SEL0024
+PRD00621,Business Ferry Ticket,Travel & Bus Tickets,False,53.5,SEL0375
+PRD00622,Economy Train Ticket G39,Travel & Bus Tickets,False,751.48,SEL0215
+PRD00623,Economy Flight Ticket X40,Travel & Bus Tickets,False,60.99,SEL0037
+PRD00624,Overnight Bus Ticket M6,Travel & Bus Tickets,False,307.65,SEL0239
+PRD00625,Overnight Flight Ticket,Travel & Bus Tickets,False,33.09,SEL0214
+PRD00626,Express Train Ticket X59,Travel & Bus Tickets,False,181.78,SEL0139
+PRD00627,Economy Train Ticket M65,Travel & Bus Tickets,False,5.24,SEL0214
+PRD00628,Express Flight Ticket F60,Travel & Bus Tickets,False,12.78,SEL0169
+PRD00629,Overnight Bus Ticket A80,Travel & Bus Tickets,False,25.92,SEL0012
+PRD00630,Overnight Bus Ticket C25,Travel & Bus Tickets,False,236.18,SEL0071

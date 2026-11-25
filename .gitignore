@@ -24,3 +24,7 @@ data/member2_training_transactions.csv
 
 # Test cache
 .pytest_cache/
+
+# Big generated data (re-create with ingestion/scripts/scale_transactions.py)
+data/generated/
+results/star_schema/

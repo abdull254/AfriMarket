@@ -1,0 +1,55 @@
+{
+  "seed": 42,
+  "fraud_signal": true,
+  "source_transactions": "data/afrimarket_transactions.csv",
+  "rows": {
+    "dim_customer": 9226,
+    "dim_seller": 400,
+    "dim_product": 630,
+    "dim_date": 183,
+    "dim_device": 9927,
+    "fact_transaction": 30000,
+    "fact_delivery": 30000,
+    "fact_refund": 4085,
+    "device_ip_history": 14852,
+    "complaints_enriched": 1732
+  },
+  "fraud_rate_by_payment_method": {
+    "AIRTEL_MONEY": 0.0234,
+    "BANK_TRANSFER": 0.0308,
+    "CARD": 0.0684,
+    "CASH_ON_DELIVERY": 0.0035,
+    "INSTANT_EFT": 0.0166,
+    "M-PESA": 0.0367,
+    "MOBILE_MONEY": 0.0224
+  },
+  "fraud_rate_by_country": {
+    "Egypt": 0.0216,
+    "Ghana": 0.0233,
+    "Kenya": 0.0449,
+    "Nigeria": 0.0415,
+    "Rwanda": 0.046,
+    "South Africa": 0.0371,
+    "Tanzania": 0.0382,
+    "Uganda": 0.0251
+  },
+  "delivery_status": {
+    "DELIVERED": 26832,
+    "RETURNED": 1150,
+    "CANCELLED": 839,
+    "IN_TRANSIT": 718,
+    "LOST": 432,
+    "FAILED": 29
+  },
+  "refund_type": {
+    "REFUND": 1828,
+    "RETURN": 1510,
+    "CHARGEBACK": 747
+  },
+  "complaint_source": {
+    "original": 1200,
+    "generated_from_outcome": 532
+  },
+  "distinct_complaint_texts": 1711,
+  "shared_devices": 271
+}
