@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS scores (
     stored_at TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
     PRIMARY KEY (TransactionID),
     INDEX idx_scores_decision (decision),
+    INDEX idx_scores_stored_at (stored_at),
     CHECK (risk_score >= 0 AND risk_score <= 1),
     CHECK (decision IN ('APPROVE', 'REVIEW', 'BLOCK'))
 );
@@ -22,10 +23,12 @@ CREATE TABLE IF NOT EXISTS investigation_cases (
     created_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
     updated_at TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP
         ON UPDATE CURRENT_TIMESTAMP,
+    resolved_at TIMESTAMP(3) NULL DEFAULT NULL,
     analyst_decision ENUM('PENDING', 'APPROVE', 'DECLINE')
         NOT NULL DEFAULT 'PENDING',
     PRIMARY KEY (case_id),
     UNIQUE KEY uq_investigation_transaction (TransactionID),
+    INDEX idx_cases_created_at (created_at),
     FOREIGN KEY (TransactionID) REFERENCES scores(TransactionID),
     CHECK (case_status IN ('OPEN', 'IN_PROGRESS', 'RESOLVED', 'CLOSED'))
 );

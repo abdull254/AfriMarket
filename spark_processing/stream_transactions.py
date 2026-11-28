@@ -35,6 +35,7 @@ spark = (
     .master("spark://afrimarket-spark-master:7077")
     .appName("AfriMarketContinuousFraudScoring")
     .config("spark.hadoop.fs.defaultFS", HDFS)
+    .config("spark.hadoop.dfs.replication", "1")
     .config("spark.sql.autoBroadcastJoinThreshold", "-1")
     .config("spark.sql.shuffle.partitions", "8")
     .getOrCreate()
@@ -48,6 +49,7 @@ event_schema = baseline_raw.schema
 baseline = (
     features.add_uid(features.clean(baseline_raw))
     .withColumn("_is_new", F.lit(False))
+    .persist()
 )
 
 baseline_ids = baseline.select(
@@ -185,83 +187,88 @@ def handle_batch(kafka_batch, batch_id):
         .withColumn("_is_new", F.lit(True))
     )
 
-    if new_rows.isEmpty():
-        print(f"Batch {batch_id}: all transactions already processed")
-        return
-
-    customer_uids = new_rows.select("uid").distinct()
-
-    customer_history = baseline.join(customer_uids, "uid", "inner")
-
-    if prior_stream is not None:
-        previous_customer_history = prior_stream.join(
-            customer_uids, "uid", "inner"
-        )
-        customer_history = customer_history.unionByName(
-            previous_customer_history, allowMissingColumns=True
-        )
-
-    combined = customer_history.unionByName(
-        new_rows, allowMissingColumns=True
-    )
-
-    prepared = features.add_features(combined).filter(F.col("_is_new"))
-
-    scored = (
-        model.transform(prepared)
-        .withColumn("risk_score", vector_to_array("probability")[1])
-        .withColumn(
-            "decision",
-            F.when(F.col("risk_score") >= BLOCK_AT, "BLOCK")
-             .when(F.col("risk_score") >= REVIEW_AT, "REVIEW")
-             .otherwise("APPROVE")
-        )
-        .withColumn("scored_at", F.current_timestamp())
-        .select(
-            F.col("TransactionID").cast("long").alias("TransactionID"),
-            F.col("TransactionDT").cast("double").alias("TransactionDT"),
-            "isFraud", "risk_score", "prediction", "decision", "scored_at"
-        )
-        .persist()
-    )
+    new_rows.persist()
 
     try:
-        count = scored.count()
-
-        if count == 0:
-            print(f"Batch {batch_id}: no new records to score")
+        if new_rows.isEmpty():
+            print(f"Batch {batch_id}: all transactions already processed")
             return
 
-        # Save scores separately from the existing batch-scoring results.
-        batch_path = f"{OUTPUT_PATH}/batch_id={batch_id}"
-        scored.write.mode("overwrite").parquet(batch_path)
+        customer_uids = F.broadcast(new_rows.select("uid").distinct())
 
-        rows = [
-            (
-                int(r.TransactionID),
-                float(r.TransactionDT) if r.TransactionDT is not None else None,
-                float(r.risk_score),
-                r.decision
+        customer_history = baseline.join(customer_uids, "uid", "inner")
+
+        if prior_stream is not None:
+            previous_customer_history = prior_stream.join(
+                customer_uids, "uid", "inner"
             )
-            for r in scored.select(
-                "TransactionID", "TransactionDT", "risk_score", "decision"
-            ).collect()
-        ]
+            customer_history = customer_history.unionByName(
+                previous_customer_history, allowMissingColumns=True
+            )
 
-        # MySQL uses TransactionID as the primary key, making retries safe.
-        save_mysql(rows)
-
-        # Persist raw events only after the score sinks succeed.
-        raw_batch_path = f"{RAW_HISTORY_PATH}/batch_id={batch_id}"
-        new_rows.select(*COLUMNS).write.mode("overwrite").parquet(
-            raw_batch_path
+        combined = customer_history.unionByName(
+            new_rows, allowMissingColumns=True
         )
 
-        print(f"Batch {batch_id}: saved {count} scores to HDFS and MySQL")
-        scored.groupBy("decision").count().orderBy("decision").show()
+        prepared = features.add_features(combined).filter(F.col("_is_new"))
 
+        scored = (
+            model.transform(prepared)
+            .withColumn("risk_score", vector_to_array("probability")[1])
+            .withColumn(
+                "decision",
+                F.when(F.col("risk_score") >= BLOCK_AT, "BLOCK")
+                 .when(F.col("risk_score") >= REVIEW_AT, "REVIEW")
+                 .otherwise("APPROVE")
+            )
+            .withColumn("scored_at", F.current_timestamp())
+            .select(
+                F.col("TransactionID").cast("long").alias("TransactionID"),
+                F.col("TransactionDT").cast("double").alias("TransactionDT"),
+                "isFraud", "risk_score", "prediction", "decision", "scored_at"
+            )
+            .persist()
+        )
+
+        try:
+            count = scored.count()
+
+            if count == 0:
+                print(f"Batch {batch_id}: no new records to score")
+                return
+
+            # Save scores separately from the existing batch-scoring results.
+            batch_path = f"{OUTPUT_PATH}/batch_id={batch_id}"
+            scored.write.mode("overwrite").parquet(batch_path)
+
+            rows = [
+                (
+                    int(r.TransactionID),
+                    float(r.TransactionDT) if r.TransactionDT is not None else None,
+                    float(r.risk_score),
+                    r.decision
+                )
+                for r in scored.select(
+                    "TransactionID", "TransactionDT", "risk_score", "decision"
+                ).collect()
+            ]
+
+            # MySQL uses TransactionID as the primary key, making retries safe.
+            save_mysql(rows)
+
+            # Persist raw events only after the score sinks succeed.
+            raw_batch_path = f"{RAW_HISTORY_PATH}/batch_id={batch_id}"
+            new_rows.select(*COLUMNS).write.mode("overwrite").parquet(
+                raw_batch_path
+            )
+
+            print(f"Batch {batch_id}: saved {count} scores to HDFS and MySQL")
+            scored.groupBy("decision").count().orderBy("decision").show()
+
+        finally:
+            scored.unpersist()
     finally:
-        scored.unpersist()
+        new_rows.unpersist()
 
 
 query = (

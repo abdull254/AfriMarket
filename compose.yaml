@@ -1,80 +1,439 @@
+name: afrimarket
+networks:
+  default:
+    name: afrimarket_default
 services:
-  mysql:
-    image: mysql:8.4
-    container_name: afrimarket-mysql
-    restart: unless-stopped
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
-      MYSQL_DATABASE: fraud
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-    ports:
-      - "127.0.0.1:3307:3306"
-    volumes:
-      - afrimarket_mysql_data:/var/lib/mysql
-      - ./mysql/init:/docker-entrypoint-initdb.d:ro
-    mem_limit: 1g
-    healthcheck:
-      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 --silent"]
-      interval: 10s
-      timeout: 5s
-      retries: 10
-
   cassandra:
-    image: cassandra:4.1
     container_name: afrimarket-cassandra
-    restart: unless-stopped
     environment:
       CASSANDRA_CLUSTER_NAME: AfriMarketCluster
-      MAX_HEAP_SIZE: 512M
       HEAP_NEWSIZE: 100M
-    volumes:
-      - cassandra_data:/var/lib/cassandra
-    mem_limit: 1500m
-    ports:
-      - "127.0.0.1:9042:9042"
+      MAX_HEAP_SIZE: 512M
     healthcheck:
-      test: ["CMD-SHELL", "cqlsh 127.0.0.1 9042 -e 'DESCRIBE KEYSPACES' >/dev/null 2>&1"]
       interval: 30s
-      timeout: 15s
-      start_period: 120s
       retries: 10
-
-  cassandra-init:
+      start_period: 120s
+      test:
+        - CMD-SHELL
+        - cqlsh 127.0.0.1 9042 -e 'DESCRIBE KEYSPACES' >/dev/null 2>&1
+      timeout: 15s
     image: cassandra:4.1
+    mem_limit: 1500m
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "9042"
+        target: 9042
+    restart: unless-stopped
+    volumes:
+      - source: cassandra_data
+        target: /var/lib/cassandra
+        type: volume
+        volume: {}
+  cassandra-init:
+    command:
+      - cqlsh cassandra 9042 -f /scripts/01_schema.cql
     depends_on:
       cassandra:
         condition: service_healthy
+        required: true
+    entrypoint:
+      - /bin/sh
+      - -c
+    image: cassandra:4.1
+    networks:
+      default: null
+    restart: 'no'
     volumes:
-      - ./cassandra/init:/scripts:ro
-    entrypoint: ["/bin/sh", "-c"]
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./cassandra/init
+        target: /scripts
+        type: bind
+  complaint-consumer:
+    build:
+      context: ./ingestion/python
+      dockerfile: Dockerfile
     command:
-      - "cqlsh cassandra 9042 -f /scripts/01_schema.cql"
-    restart: "no"
-
+      - python
+      - -u
+      - complaint_consumer.py
+    container_name: afrimarket-complaint-consumer
+    depends_on:
+      cassandra:
+        condition: service_healthy
+        required: true
+      cassandra-init:
+        condition: service_completed_successfully
+        required: true
+    environment:
+      CASSANDRA_HOST: cassandra
+      CASSANDRA_KEYSPACE: afrimarket
+      CASSANDRA_PORT: "9042"
+      KAFKA_BOOTSTRAP: kafka:9092
+      KAFKA_GROUP_ID: afrimarket-complaint-cassandra
+      KAFKA_TOPIC: complaints
+    networks:
+      default: null
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./ingestion/scripts
+        target: /scripts
+        type: bind
+    working_dir: /scripts
   dashboard:
     build:
       context: ./dashboard
+      dockerfile: Dockerfile
     container_name: afrimarket-dashboard
-    restart: unless-stopped
-    ports:
-      - "127.0.0.1:8501:8501"
-    environment:
-      MYSQL_HOST: mysql
-      MYSQL_PORT: "3306"
-      MYSQL_DATABASE: fraud
-      MYSQL_USER: ${MYSQL_USER}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
-      CASSANDRA_HOST: cassandra
-      CASSANDRA_PORT: "9042"
     depends_on:
-      mysql:
-        condition: service_healthy
       cassandra-init:
         condition: service_completed_successfully
+        required: true
+      mysql:
+        condition: service_healthy
+        required: true
+    environment:
+      CASSANDRA_HOST: cassandra
+      CASSANDRA_PORT: "9042"
+      MYSQL_DATABASE: fraud
+      MYSQL_HOST: mysql
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_PORT: "3306"
+      MYSQL_USER: ${MYSQL_USER}
     mem_limit: 512m
-
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "8501"
+        target: 8501
+    restart: unless-stopped
+  hadoop:
+    command:
+      - bash
+      - -c
+      - hdfs --daemon start datanode && hdfs namenode
+    container_name: hadoop
+    environment:
+      CORE-SITE.XML_fs.defaultFS: hdfs://hadoop:8020
+      ENSURE_NAMENODE_DIR: /hadoop/dfs/name
+      HDFS-SITE.XML_dfs.datanode.data.dir: /hadoop/dfs/data
+      HDFS-SITE.XML_dfs.namenode.name.dir: /hadoop/dfs/name
+      HDFS-SITE.XML_dfs.namenode.rpc-address: hadoop:8020
+      HDFS-SITE.XML_dfs.permissions.enabled: "false"
+      HDFS-SITE.XML_dfs.replication: "1"
+      HDFS-SITE.XML_dfs.webhdfs.enabled: "true"
+      HDFS_DATANODE_USER: root
+      HDFS_NAMENODE_USER: root
+    hostname: hadoop
+    image: apache/hadoop:3.3.6
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "9871"
+        target: 9870
+    restart: unless-stopped
+    user: '0:0'
+    volumes:
+      - source: hdfs-data
+        target: /hadoop/dfs
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./data
+        target: /shared
+        type: bind
+  kafka:
+    container_name: kafka
+    environment:
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:9092
+      KAFKA_AUTO_CREATE_TOPICS_ENABLE: "false"
+      KAFKA_CONTROLLER_LISTENER_NAMES: CONTROLLER
+      KAFKA_CONTROLLER_QUORUM_VOTERS: 1@kafka:9093
+      KAFKA_GROUP_INITIAL_REBALANCE_DELAY_MS: 0
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: CONTROLLER:PLAINTEXT,PLAINTEXT:PLAINTEXT
+      KAFKA_LISTENERS: PLAINTEXT://:9092,CONTROLLER://:9093
+      KAFKA_LOG_DIRS: /var/lib/kafka/data
+      KAFKA_NODE_ID: 1
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+      KAFKA_PROCESS_ROLES: broker,controller
+      KAFKA_TRANSACTION_STATE_LOG_MIN_ISR: 1
+      KAFKA_TRANSACTION_STATE_LOG_REPLICATION_FACTOR: 1
+    hostname: kafka
+    image: apache/kafka:3.7.0
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "9092"
+        target: 9092
+    restart: unless-stopped
+    user: '0:0'
+    volumes:
+      - source: kafka-data
+        target: /var/lib/kafka/data
+        type: volume
+        volume: {}
+  mysql:
+    container_name: afrimarket-mysql
+    environment:
+      MYSQL_DATABASE: fraud
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+    healthcheck:
+      interval: 10s
+      retries: 10
+      test:
+        - CMD-SHELL
+        - mysqladmin ping -h 127.0.0.1 --silent
+      timeout: 5s
+    image: mysql:8.4
+    mem_limit: 1g
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "3307"
+        target: 3306
+    restart: unless-stopped
+    volumes:
+      - source: afrimarket_mysql_data
+        target: /var/lib/mysql
+        type: volume
+        volume: {}
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./mysql/init
+        target: /docker-entrypoint-initdb.d
+        type: bind
+  python:
+    build:
+      context: ./ingestion/python
+      dockerfile: Dockerfile
+    command:
+      - sleep
+      - infinity
+    container_name: afrimarket-producer
+    depends_on:
+      hadoop:
+        condition: service_started
+        required: true
+      kafka:
+        condition: service_started
+        required: true
+    environment:
+      DATA_DIR: /data
+      HDFS_URL: http://hadoop:9870
+      KAFKA_BOOTSTRAP: kafka:9092
+    networks:
+      default: null
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./data
+        target: /data
+        type: bind
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./ingestion/scripts
+        target: /scripts
+        type: bind
+    working_dir: /scripts
+  spark-master:
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.master.Master
+      - --host
+      - afrimarket-spark-master
+      - --port
+      - "7077"
+      - --webui-port
+      - "8080"
+    container_name: afrimarket-spark-master
+    environment:
+      PYSPARK_DRIVER_PYTHON: /opt/conda/bin/python
+      PYSPARK_PYTHON: /opt/conda/bin/python
+    build:
+      context: ./spark_processing
+      dockerfile: Dockerfile
+    image: afrimarket-spark:validated-v1
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "7077"
+        target: 7077
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "8080"
+        target: 8080
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./data
+        target: /shared_data
+        type: bind
+  spark-streaming:
+    command:
+      - /opt/spark/bin/spark-submit
+      - --master
+      - spark://afrimarket-spark-master:7077
+      - --conf
+      - spark.executor.memory=1g
+      - --conf
+      - spark.hadoop.dfs.replication=1
+      - --conf
+      - spark.cores.max=${SPARK_CORES_MAX:-1}
+      - --conf
+      - spark.driver.host=afrimarket-spark-streaming
+      - --conf
+      - spark.driver.bindAddress=0.0.0.0
+      - --packages
+      - org.apache.spark:spark-sql-kafka-0-10_2.12:3.5.0
+      - --py-files
+      - /app/features.py
+      - /app/stream_transactions.py
+    container_name: afrimarket-spark-streaming
+    depends_on:
+      hadoop:
+        condition: service_started
+        required: true
+      kafka:
+        condition: service_started
+        required: true
+      mysql:
+        condition: service_healthy
+        required: true
+      spark-master:
+        condition: service_started
+        required: true
+    environment:
+      HDFS_URI: hdfs://hadoop:8020
+      KAFKA_BOOTSTRAP: kafka:9092
+      KAFKA_TOPIC: transactions
+      MAX_OFFSETS_PER_TRIGGER: ${MAX_OFFSETS_PER_TRIGGER:-500}
+      MYSQL_DATABASE: fraud
+      MYSQL_HOST: afrimarket-mysql
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_USER: ${MYSQL_USER}
+    build:
+      context: ./spark_processing
+      dockerfile: Dockerfile
+    image: afrimarket-spark:validated-v1
+    networks:
+      default: null
+    pull_policy: never
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./spark_processing/stream_transactions.py
+        target: /app/stream_transactions.py
+        type: bind
+  spark-worker-1:
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.worker.Worker
+      - spark://afrimarket-spark-master:7077
+      - --webui-port
+      - "8081"
+    container_name: afrimarket-spark-worker-1
+    depends_on:
+      spark-master:
+        condition: service_started
+        required: true
+    environment:
+      PYSPARK_PYTHON: /opt/conda/bin/python
+    build:
+      context: ./spark_processing
+      dockerfile: Dockerfile
+    image: afrimarket-spark:validated-v1
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "8081"
+        target: 8081
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./data
+        target: /shared_data
+        type: bind
+  spark-worker-2:
+    command:
+      - /opt/spark/bin/spark-class
+      - org.apache.spark.deploy.worker.Worker
+      - spark://afrimarket-spark-master:7077
+      - --webui-port
+      - "8082"
+    container_name: afrimarket-spark-worker-2
+    depends_on:
+      spark-master:
+        condition: service_started
+        required: true
+    environment:
+      PYSPARK_PYTHON: /opt/conda/bin/python
+    build:
+      context: ./spark_processing
+      dockerfile: Dockerfile
+    image: afrimarket-spark:validated-v1
+    networks:
+      default: null
+    ports:
+      - host_ip: 127.0.0.1
+        mode: ingress
+        protocol: tcp
+        published: "8082"
+        target: 8082
+    restart: unless-stopped
+    volumes:
+      - bind:
+          create_host_path: true
+        read_only: true
+        source: ./data
+        target: /shared_data
+        type: bind
 volumes:
   afrimarket_mysql_data:
     name: afrimarket_mysql_data
   cassandra_data:
+    name: afrimarket_cassandra_data
+  hdfs-data:
+    name: afrimarket_hdfs-data
+  kafka-data:
+    name: afrimarket_kafka-data
